@@ -6,6 +6,8 @@ import { questions2018m2 } from './tests/2018_model2';
 import { questions2018m3 } from './tests/2018_model3';
 import { questions2018m4 } from './tests/2018_model4';
 import { questions2018m5 } from './tests/2018_model5';
+import { questionsTema1 } from './themes/tema1';
+import { questionsTema2 } from './themes/tema2';
 
 // Helper to generate questions
 const generateQuestions = (count, topic) => {
@@ -38,8 +40,8 @@ export const tests2018 = [
 ];
 
 export const themes = [
-    { id: 't1', name: 'Tema 1: Constitución', examen: 'Tema 1: Constitución', preguntes: generateQuestions(60, 'Constitución') },
-    { id: 't2', name: 'Tema 2: Derechos y deberes', examen: 'Tema 2: Derechos y deberes', preguntes: generateQuestions(60, 'Derechos y deberes') },
+    { id: 'theme_1', name: 'Tema 1: Constitución', examen: 'Tema 1: Constitució Espanyola 1978 - Estructura i Principis', preguntes: questionsTema1 },
+    { id: 'theme_2', name: 'Tema 2: Estatut', examen: 'Tema 2: Derechos Fundamentales, TC y Reforma', preguntes: questionsTema2 },
     { id: 't4', name: 'Tema 4: Organización territorial', examen: 'Tema 4: Organización territorial', preguntes: generateQuestions(60, 'Organización territorial') },
     { id: 't5_est', name: 'Tema 5: Estatuto Autonomia', examen: 'Tema 5: Estatuto Autonomia', preguntes: generateQuestions(60, 'Estatuto Autonomia') },
     { id: 't5_cons', name: 'Tema 5: Consejos insulares', examen: 'Tema 5: Consejos insulares', preguntes: generateQuestions(60, 'Consejos insulares') },
