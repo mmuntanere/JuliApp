@@ -8,6 +8,10 @@ import { questions2018m4 } from './tests/2018_model4';
 import { questions2018m5 } from './tests/2018_model5';
 import { questionsTema1 } from './themes/tema1';
 import { questionsTema2 } from './themes/tema2';
+import { questionsTema4 } from './themes/tema4';
+import { questionsTema5Estatut } from './themes/tema5_estatut';
+import { questionsTema5Consejos } from './themes/tema5_consejos';
+import { questionsTema15 } from './themes/tema15';
 
 // Helper to generate questions
 const generateQuestions = (count, topic) => {
@@ -42,10 +46,10 @@ export const tests2018 = [
 export const themes = [
     { id: 'theme_1', name: 'Tema 1: Constitución', examen: 'Tema 1: Constitució Espanyola 1978 - Estructura i Principis', preguntes: questionsTema1 },
     { id: 'theme_2', name: 'Tema 2: Estatut', examen: 'Tema 2: Derechos Fundamentales, TC y Reforma', preguntes: questionsTema2 },
-    { id: 't4', name: 'Tema 4: Organización territorial', examen: 'Tema 4: Organización territorial', preguntes: generateQuestions(60, 'Organización territorial') },
-    { id: 't5_est', name: 'Tema 5: Estatuto Autonomia', examen: 'Tema 5: Estatuto Autonomia', preguntes: generateQuestions(60, 'Estatuto Autonomia') },
-    { id: 't5_cons', name: 'Tema 5: Consejos insulares', examen: 'Tema 5: Consejos insulares', preguntes: generateQuestions(60, 'Consejos insulares') },
-    { id: 't15', name: 'Tema 15: Ley procedimientos', examen: 'Tema 15: Ley procedimientos', preguntes: generateQuestions(60, 'Ley procedimientos') },
+    { id: 't4', name: 'Tema 4: Organización territorial', examen: 'Tema 4: Organización Territorial y Estatutos de Autonomía', preguntes: questionsTema4 },
+    { id: 't5_est', name: 'Tema 5: Estatuto Autonomia', examen: 'Tema 5: Estatuto de Autonomía de las Illes Balears', preguntes: questionsTema5Estatut },
+    { id: 't5_cons', name: 'Tema 5: Consejos insulares', examen: 'Tema 5: Los Consejos Insulares e IMAS', preguntes: questionsTema5Consejos },
+    { id: 't15', name: 'Tema 15: Ley procedimientos', examen: 'Tema 15: Llei 39/2015 del Procediment Administratiu Comú', preguntes: questionsTema15 },
 ];
 
 export const getAllTests = () => {
