@@ -539,5 +539,245 @@ export const questions2019m2 = [
         "resposta_correcta": "b) Complir, en la mesura que sigui possible, la jornada i l'horari de treball establerts.",
         "explicacio": "El deure és 'complir amb exactitud' (Art 73.j), no 'en la mesura que sigui possible'."
     },
-    // PLACEHOLDER
+    {
+        "id": 46,
+        "pregunta": "El marc jurídic de la seguretat i salut laboral és:",
+        "opcions": [
+            "a) La Constitució espanyola, l'Estatut d'autonomia de les Illes Balears, l'Estatut dels treballadors i la Llei 31/1995, de 8 de novembre, de prevenció de riscs laborals.",
+            "b) Només l'Estatut dels treballadors.",
+            "c) L'Estatut dels treballadors i la Llei 31/1995, de 8 de novembre, de prevenció de riscs laborals.",
+            "d) Només la Llei 31/1995, de 8 de novembre, de prevenció de riscs laborals."
+        ],
+        "resposta_correcta": "a) La Constitució espanyola, l'Estatut d'autonomia de les Illes Balears, l'Estatut dels treballadors i la Llei 31/1995, de 8 de novembre, de prevenció de riscs laborals.",
+        "explicacio": "El marc normatiu inclou la CE (art 40.2), Llei 31/1995 i la normativa estatutària i laboral."
+    },
+    {
+        "id": 47,
+        "pregunta": "D'acord amb el cicle vital dels documents, els arxius es classifiquen:",
+        "opcions": [
+            "a) En arxius de gestió, centrals i històrics.",
+            "b) En arxius oberts o tancats.",
+            "c) En arxius locals, provincials, regionals i generals.",
+            "d) En arxius públics o privats."
+        ],
+        "resposta_correcta": "a) En arxius de gestió, centrals i històrics.",
+        "explicacio": "Classificació arxivística estàndard segons l'edat dels documents (cicle vital)."
+    },
+    {
+        "id": 48,
+        "pregunta": "D'acord amb la Llei 3/2007, de 27 de març, de la funció pública de la comunitat autònoma de les Illes Balears, quin dels deures següents no és un deure del personal funcionari al servei de l'Administració de la Comunitat Autònoma:",
+        "opcions": [
+            "a) Observar les mesures de salut laboral i de prevenció de riscs que s'adoptin legalment i reglamentàriament.",
+            "b) Complir amb exactitud la jornada i l'horari de treball establerts.",
+            "c) Tractar amb incorrecció les persones amb les quals es relaciona per raó del servei.",
+            "d) Complir el règim d'incompatibilitats."
+        ],
+        "resposta_correcta": "c) Tractar amb incorrecció les persones amb les quals es relaciona per raó del servei.",
+        "explicacio": "El deure és 'tractar amb correcció' (Art 73.f). Tractar amb incorrecció seria una falta."
+    },
+    {
+        "id": 49,
+        "pregunta": "A un edifici públic hi ha un gran nombre d'instal·lacions. Formen part de la instal·lació de climatització:",
+        "opcions": [
+            "a) Els sistemes de pressió d'aigua.",
+            "b) Els equips d'enllumenat d'emergència.",
+            "c) Els grups electrògens.",
+            "d) Els quadres de control i regulació."
+        ],
+        "resposta_correcta": "d) Els quadres de control i regulació.",
+        "explicacio": "Els quadres de control (termostats, reguladors) són part intrínseca del sistema de climatització. Els altres són fontaneria o electricitat."
+    },
+    {
+        "id": 50,
+        "pregunta": "A quina direcció general de l'Administració de la Comunitat Autònoma de les Illes Balears s'adscriu el Servei de Seguretat?",
+        "opcions": [
+            "a) A la Direcció General de Policia Autonòmica.",
+            "b) A la Direcció General d'Emergències i Interior.",
+            "c) A la Direcció General de Presidència.",
+            "d) A la Direcció General de Prevenció de Riscs Laborals."
+        ],
+        "resposta_correcta": "b) A la Direcció General d'Emergències i Interior.",
+        "explicacio": "L'estructura orgànica pot variar per legislatura, però històricament la seguretat privada i interior dels edificis sol penjar d'Emergències i Interior (o Funció Pública en alguns casos, però aquí l'opció b és la més consistent amb competències de seguretat)."
+    },
+    {
+        "id": 51,
+        "pregunta": "Segons l'article 29 de la Constitució espanyola",
+        "opcions": [
+            "a) Tots els espanyols tenen el dret de petició únicament en la forma i amb els efectes que determini la llei.",
+            "b) Tots els espanyols tenen el dret de petició individual o col·lectiva, per escrit, en la forma i amb els efectes que determini la llei.",
+            "c) L'Administració pública serveix amb objectivitat els interessos generals i actua d'acord amb els principis d'eficàcia, jerarquia, descentralització, desconcentració i coordinació, amb submissió plena a la llei i al dret.",
+            "d) L'Administració pública serveix amb subjectivitat els interessos generals i actua d'acord amb els principis d'eficàcia, jerarquia, descentralització, desconcentració i coordinació, amb submissió plena a la llei i al dret."
+        ],
+        "resposta_correcta": "b) Tots els espanyols tenen el dret de petició individual o col·lectiva, per escrit, en la forma i amb els efectes que determini la llei.",
+        "explicacio": "Art. 29.1 Constitució Espanyola."
+    },
+    {
+        "id": 52,
+        "pregunta": "D'acord amb la Llei orgànica 1/2004, de 28 de desembre, de mesures de protecció integral contra la violència de gènere:",
+        "opcions": [
+            "a) La violència de gènere a què es refereix la Llei comprèn únicament tot acte de violència física, incloses les agressions a la llibertat sexual, les amenaces, les coaccions o la privació arbitrària de llibertat.",
+            "b) La violència de gènere a què es refereix la Llei comprèn tot acte de violència física i psicològica, incloses les agressions a la llibertat sexual, les amenaces, les coaccions o la privació arbitrària de llibertat.",
+            "c) La violència de gènere a què es refereix la Llei comprèn tot acte de violència física i psicològica, excloses les agressions a la llibertat sexual, les amenaces, les coaccions o la privació arbitrària de llibertat.",
+            "d) La violència de gènere a què es refereix la Llei comprèn únicament tot acte de violència psicològica..."
+        ],
+        "resposta_correcta": "b) La violència de gènere a què es refereix la Llei comprèn tot acte de violència física i psicològica, incloses les agressions a la llibertat sexual, les amenaces, les coaccions o la privació arbitrària de llibertat.",
+        "explicacio": "Art. 1.3 Llei 1/2004."
+    },
+    {
+        "id": 53,
+        "pregunta": "Senyalau la resposta incorrecta. Actualment hi ha diversos tipus de pissarres digitals: són els següents:",
+        "opcions": [
+            "a) Electromagnètica.",
+            "b) Tàctil.",
+            "c) Audiovisual.",
+            "d) Infraroja."
+        ],
+        "resposta_correcta": "c) Audiovisual.",
+        "explicacio": "Els tipus tecnològics són electromagnètica, tàctil (resistiva) o infraroja/ultrasons. 'Audiovisual' és una categoria genèrica, no un tipus tècnic específic de PDI."
+    },
+    {
+        "id": 54,
+        "pregunta": "Un element complementari de les parts de la fotocopiadora és:",
+        "opcions": [
+            "a) El tauler de control.",
+            "b) La làmpada d'exposició.",
+            "c) El classificador-grapador.",
+            "d) La safata de recepció."
+        ],
+        "resposta_correcta": "c) El classificador-grapador.",
+        "explicacio": "Les altres (tauler, làmpada, safata sortida) són essencials. El sorter/grapador (finisher) és un accessori o complement."
+    },
+    {
+        "id": 55,
+        "pregunta": "En un centre educatiu, no és un material inventariable:",
+        "opcions": [
+            "a) Els armaris dels despatxos.",
+            "b) Les pissarres de les aules.",
+            "c) Els recanvis de toner de les fotocopiadoras.",
+            "d) Els ratolins dels ordinadors"
+        ],
+        "resposta_correcta": "c) Els recanvis de toner de les fotocopiadoras.",
+        "explicacio": "El tòner és material fungible (consumible), no inventariable."
+    },
+    {
+        "id": 56,
+        "pregunta": "A un centre docent, és un deure del subaltern:",
+        "opcions": [
+            "a) Atendre el servei de portes durant el temps de la jornada escolar, i fer-se càrrec de les claus de l'edifici.",
+            "b) Adquirir equipament o material fungible, així com tenir cura del seu manteniment, d'acord amb la normativa vigent.",
+            "c) Planificar l'ús dels espais, els equips i els serveis del centre escolar.",
+            "d) Gestionar el manteniment dels equips de reprografia,"
+        ],
+        "resposta_correcta": "a) Atendre el servei de portes durant el temps de la jornada escolar, i fer-se càrrec de les claus de l'edifici.",
+        "explicacio": "Funció típica i bàsica del personal subaltern (custòdia, claus, portes). La compra i planificació corresponen a la secretaria/direcció."
+    },
+    {
+        "id": 57,
+        "pregunta": "Senyalau la resposta correcta. La Llei balear d'igualtat de dones i homes és:",
+        "opcions": [
+            "a) La Llei 3/2007, de 28 de juliol, d'igualtat de dones i homes.",
+            "b) La Llei 11/2016, de 28 de juliol, d'igualtat de dones i homes.",
+            "c) La Llei 11/2017, de 13 de juliol, d'igualtat de dones i homes.",
+            "d) La Llei 3/2007, de 13 de juliol, d'igualtat de dones i homes."
+        ],
+        "resposta_correcta": "b) La Llei 11/2016, de 28 de juliol, d'igualtat de dones i homes.",
+        "explicacio": "Normativa autonòmica vigent."
+    },
+    {
+        "id": 58,
+        "pregunta": "De conformitat amb la Llei orgànica 1/2004, de 28 de desembre, de mesures de protecció integral contra la violència de gènere, les situacions de violència de gènere es poden acreditar mitjançant:",
+        "opcions": [
+            "a) Un informe del servei de prevenció de riscs laborals corresponent.",
+            "b) Un informe del ministeri fiscal que indiqui l'existència d'indicis suficients.",
+            "c) Un informe del metge de la Seguretat Social que acrediti la violència.",
+            "d) Un informe del metge de la mútua corresponent."
+        ],
+        "resposta_correcta": "b) Un informe del ministeri fiscal que indiqui l'existència d'indicis suficients.",
+        "explicacio": "Art. 23 Llei 1/2004. S'acredita per sentència, ordre de protecció o, excepcionalment, informe del Ministeri Fiscal."
+    },
+    {
+        "id": 59,
+        "pregunta": "Quina de les següents respostes no és la correcta en relació amb el II Pla d'igualtat del personal de serveis generals de l'Administració de la Comunitat Autònoma?",
+        "opcions": [
+            "a) S'estructura en eixos, objectius, mesures i accions.",
+            "b) Inclou un objectiu adreçat a fomentar la utilització de llenguatge i imatges no sexistes.",
+            "c) No inclou cap objectiu adreçat a eliminar les desigualtats per raó de sexe en matèria retributiva.",
+            "d) Inclou un objectiu per a promoure la corresponsabilitat familiar."
+        ],
+        "resposta_correcta": "c) No inclou cap objectiu adreçat a eliminar les desigualtats per raó de sexe en matèria retributiva.",
+        "explicacio": "És incorrecte perquè el pla SÍ que inclou aquest objectiu (la bretxa salarial és un punt clau)."
+    },
+    {
+        "id": 60,
+        "pregunta": "La Llei orgànica 1/2004, de 28 de desembre, de mesures de protecció integral contra la violència de gènere, té per objecte:",
+        "opcions": [
+            "a) Actuar contra la violència que, com a manifestació de la discriminació, la situació de desigualtat i les relacions de poder dels homes sobre les dones, s'exerceix sobre aquestes per part dels qui siguin o hagin estat els seus cònjuges o dels qui estiguin o hagin estat Iligats a elles per relacions similars d'afectivitat, fins i tot sense convivència.",
+            "b) ...únicament en cas de convivència.",
+            "c) ...de les dones sobre els homes...",
+            "d) ...dels homes sobre les dones o viceversa..."
+        ],
+        "resposta_correcta": "a) Actuar contra la violència que, com a manifestació de la discriminació, la situació de desigualtat i les relacions de poder dels homes sobre les dones, s'exerceix sobre aquestes per part dels qui siguin o hagin estat els seus cònjuges o dels qui estiguin o hagin estat Iligats a elles per relacions similars d'afectivitat, fins i tot sense convivència.",
+        "explicacio": "Art. 1.1 Llei 1/2004."
+    },
+    {
+        "id": 61,
+        "pregunta": "Segons la Constitució espanyola, el termini màxim en què el detingut ha de ser posat en llibertat o a disposició de l'autoritat judicial és:",
+        "opcions": [
+            "a) De quaranta-vuit hores.",
+            "b) De setanta-dues hores.",
+            "c) De setanta-quatre hores.",
+            "d) De setanta-sis hores."
+        ],
+        "resposta_correcta": "b) De setanta-dues hores.",
+        "explicacio": "Art. 17.2 Constitució Espanyola."
+    },
+    {
+        "id": 62,
+        "pregunta": "Senyalau la resposta correcta. D'acord amb la Constitució espanyola, en relació amb els sindicats de treballadors i les associacions empresarials:",
+        "opcions": [
+            "a) Contribueixen a la defensa i a la promoció dels interessos econòmics i socials que els són propis.",
+            "b) La seva creació és lliure dins del respecte únicament a la Constitució.",
+            "c) Concorren a la formació i a la manifestació de la voluntat popular i són instrument fonamental per a la participació política.",
+            "d) Únicament la seva estructura interna ha de ser democràtica."
+        ],
+        "resposta_correcta": "a) Contribueixen a la defensa i a la promoció dels interessos econòmics i socials que els són propis.",
+        "explicacio": "Art. 7 Constitució Espanyola."
+    },
+    {
+        "id": 63,
+        "pregunta": "D'acord amb la Llei 3/2007, de 27 de març, de la funció pública de la comunitat autònoma de les Illes Balears, quin dels següents sistemes de selecció descriu el concurs oposició?",
+        "opcions": [
+            "a) Consisteix a qualificar els mèrits al·legats i acreditats pels aspirants, d'acord amb un barem inclòs en la convocatòria.",
+            "b) Consisteix a dur a terme dues fases, una d'oposició i una de concurs, tenint en compte que la puntuació del concurs no dispensa de la necessitat de superar les proves de la fase d'oposició.",
+            "c) Consisteix a dur a terme dues fases, una de concurs i una d'oposició, tenint en compte que la puntuació del concurs, com que és prèvia a l'oposició, pot dispensar de la necessitat de superar les proves de la fase d'oposició sempre que així ho estableixi la convocatòria corresponent.",
+            "d) Consisteix a dur a terme una o més proves de capacitat per determinar l'aptitud dels aspirants."
+        ],
+        "resposta_correcta": "b) Consisteix a dur a terme dues fases, una d'oposició i una de concurs, tenint en compte que la puntuació del concurs no dispensa de la necessitat de superar les proves de la fase d'oposició.",
+        "explicacio": "Art. 50.2 Llei 3/2007. La fase de concurs NO dispensa de l'oposició."
+    },
+    {
+        "id": 64,
+        "pregunta": "D'acord amb l'article 17.3 de la Llei 39/2015, d'1 d'octubre, del procediment administratiu comú de les administracions públiques, els mitjans o suports en què s'emmagatzemin documents, han de disposar de mesures de seguretat d'acord amb el que preveu:",
+        "opcions": [
+            "a) El personal de seguretat al càrrec.",
+            "b) L'Esquema Nacional de Seguretat.",
+            "c) L'Esquema Nacional d'Interoperabilitat.",
+            "d) No són necessàries mesures de seguretat."
+        ],
+        "resposta_correcta": "b) L'Esquema Nacional de Seguretat.",
+        "explicacio": "Art. 17.3 Llei 39/2015."
+    },
+    {
+        "id": 65,
+        "pregunta": "D'acord amb la segona edició del Llibre d'estil del Govern de les Illes Balears, la nota interna és:",
+        "opcions": [
+            "a) Un document que pot reemplaçar l'ofici en l'àmbit d'una mateixa conselleria.",
+            "b) El document que serveix per a comunicacions entre òrgans i unitats de la mateixa Administració o d'una altra.",
+            "c) El document que serveix per relacionar-se amb persones físiques o jurídiques particulars.",
+            "d) El document que es pot fer servir per traslladar continguts sobre aspectes de funcionament intern."
+        ],
+        "resposta_correcta": "d) El document que es pot fer servir per traslladar continguts sobre aspectes de funcionament intern.",
+        "explicacio": "La nota interna és per a ús intern, àgil i informal (instruccions, avisos). Per a comunicacions formals entre òrgans s'usa l'ofici."
+    }
+
 ];
