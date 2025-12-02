@@ -2,6 +2,10 @@ import { questions2019m1 } from './tests/2019_model1';
 import { questions2019m2 } from './tests/2019_model2';
 import { questions2019m3 } from './tests/2019_model3';
 import { questions2018m1 } from './tests/2018_model1';
+import { questions2018m2 } from './tests/2018_model2';
+import { questions2018m3 } from './tests/2018_model3';
+import { questions2018m4 } from './tests/2018_model4';
+import { questions2018m5 } from './tests/2018_model5';
 
 // Helper to generate questions
 const generateQuestions = (count, topic) => {
@@ -27,10 +31,10 @@ export const tests2019 = [
 
 export const tests2018 = [
     { id: '2018_m1', name: 'Modelo 1', examen: 'Subaltern - Qüestionari A', preguntes: questions2018m1 },
-    { id: '2018_m2', name: 'Modelo 2', examen: 'Test General 2018 - Modelo 2', preguntes: generateQuestions(60, 'Modelo 2 2018') },
-    { id: '2018_m3', name: 'Modelo 3', examen: 'Test General 2018 - Modelo 3', preguntes: generateQuestions(60, 'Modelo 3 2018') },
-    { id: '2018_m4', name: 'Modelo 4', examen: 'Test General 2018 - Modelo 4', preguntes: generateQuestions(60, 'Modelo 4 2018') },
-    { id: '2018_m5', name: 'Modelo 5', examen: 'Test General 2018 - Modelo 5', preguntes: generateQuestions(60, 'Modelo 5 2018') },
+    { id: '2018_m2', name: 'Modelo 2', examen: 'Subaltern - Qüestionari B', preguntes: questions2018m2 },
+    { id: '2018_m3', name: 'Modelo 3', examen: 'Subaltern - Qüestionari C', preguntes: questions2018m3 },
+    { id: '2018_m4', name: 'Modelo 4', examen: 'Subaltern - Qüestionari D', preguntes: questions2018m4 },
+    { id: '2018_m5', name: 'Modelo 5', examen: 'Subaltern - Qüestionari E', preguntes: questions2018m5 },
 ];
 
 export const themes = [

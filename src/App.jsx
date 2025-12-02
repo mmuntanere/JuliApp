@@ -44,9 +44,9 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '2rem', color: 'var(--color-primary)' }}>
-        JuliAPP
-      </h1>
+      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
+        <img src="/logo.png" alt="JuliAPP Logo" style={{ maxHeight: '150px', width: 'auto' }} />
+      </div>
 
       {view === 'menu' && (
         <Menu onSelectTest={handleSelectTest} />
