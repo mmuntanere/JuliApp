@@ -356,7 +356,7 @@ export const questionsTema5Consejos = [
             "c) Solo financian obras.",
             "d) Intervienen las cuentas municipales."
         ],
-        "resposta_correcta": "b) Coordinan o asumen la prestación de servicios.",
+        "resposta_correcta": "b) Coordinan o asumen la prestación de servicios en municipios de menos de 20.000 habitantes.",
         "explicacio": "Coordinan o asumen la prestación de servicios en municipios de menos de 20.000 habitantes."
     }
 ];

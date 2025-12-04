@@ -21,7 +21,7 @@ export const questionsTema15 = [
             "d) Regular la jurisdicción contencioso-administrativa."
         ],
         "resposta_correcta": "b) Regular los requisitos de validez y eficacia de los actos administrativos y el procedimiento administrativo común.",
-        "explicacio": "Art. 1.1 Llei 39/2015."
+        "explicacio": "Art. 1.1 Ley 39/2015."
     },
     {
         "id": 3,
@@ -33,7 +33,7 @@ export const questionsTema15 = [
             "d) No, en ningún caso."
         ],
         "resposta_correcta": "c) Solo mediante ley, de manera motivada y cuando resulte eficaz y necesario.",
-        "explicacio": "Art. 1.2 Llei 39/2015."
+        "explicacio": "Art. 1.2 Ley 39/2015."
     },
     {
         "id": 4,
@@ -45,7 +45,7 @@ export const questionsTema15 = [
             "d) A las empresas privadas que contraten con la administración."
         ],
         "resposta_correcta": "b) Al sector público, que comprende todas las Administraciones Públicas y el sector público institucional.",
-        "explicacio": "Art. 2.1 Llei 39/2015."
+        "explicacio": "Art. 2.1 Ley 39/2015."
     },
     {
         "id": 5,
@@ -57,7 +57,7 @@ export const questionsTema15 = [
             "d) No, son entidades privadas."
         ],
         "resposta_correcta": "a) No, son sector público institucional pero se rigen por su normativa específica.",
-        "explicacio": "Art. 2.2.c Llei 39/2015. Se rigen por su normativa específica y supletoriamente por esta Ley."
+        "explicacio": "Art. 2.2.c Ley 39/2015. Se rigen por su normativa específica y supletoriamente por esta Ley."
     },
     {
         "id": 6,
@@ -69,7 +69,7 @@ export const questionsTema15 = [
             "d) Solo los ciudadanos españoles."
         ],
         "resposta_correcta": "b) Las personas físicas o jurídicas con capacidad de obrar civil y los menores para el ejercicio de sus derechos cuando lo permita el ordenamiento.",
-        "explicacio": "Art. 3 Llei 39/2015."
+        "explicacio": "Art. 3 Ley 39/2015."
     },
     {
         "id": 7,
@@ -81,7 +81,7 @@ export const questionsTema15 = [
             "d) Una curiosidad legítima."
         ],
         "resposta_correcta": "b) Derechos o intereses legítimos individuales o colectivos.",
-        "explicacio": "Art. 4.1.a Llei 39/2015."
+        "explicacio": "Art. 4.1.a Ley 39/2015."
     },
     {
         "id": 8,
@@ -93,7 +93,7 @@ export const questionsTema15 = [
             "d) Solo la Administración."
         ],
         "resposta_correcta": "b) Los que tengan derechos que puedan resultar afectados por la decisión.",
-        "explicacio": "Art. 4.1.b Llei 39/2015."
+        "explicacio": "Art. 4.1.b Ley 39/2015."
     },
     {
         "id": 9,
@@ -105,7 +105,7 @@ export const questionsTema15 = [
             "d) La condición de interesado no es transmisible."
         ],
         "resposta_correcta": "b) El derecho-habiente sucederá en tal condición cualquiera que sea el estado del procedimiento.",
-        "explicacio": "Art. 4.3 Llei 39/2015."
+        "explicacio": "Art. 4.3 Ley 39/2015."
     },
     {
         "id": 10,
@@ -117,7 +117,7 @@ export const questionsTema15 = [
             "d) Cuando el representante es abogado."
         ],
         "resposta_correcta": "c) Para los actos y gestiones de mero trámite.",
-        "explicacio": "Art. 5.3 Llei 39/2015."
+        "explicacio": "Art. 5.3 Ley 39/2015."
     },
     {
         "id": 11,
@@ -129,7 +129,7 @@ export const questionsTema15 = [
             "d) Para solicitar cita previa."
         ],
         "resposta_correcta": "b) Para formular solicitudes, presentar declaraciones responsables, interponer recursos, desistir de acciones y renunciar a derechos.",
-        "explicacio": "Art. 5.3 Llei 39/2015."
+        "explicacio": "Art. 5.3 Ley 39/2015."
     },
     {
         "id": 12,
@@ -141,7 +141,7 @@ export const questionsTema15 = [
             "d) 20 días."
         ],
         "resposta_correcta": "b) 10 días.",
-        "explicacio": "Art. 5.6 Llei 39/2015."
+        "explicacio": "Art. 5.6 Ley 39/2015."
     },
     {
         "id": 13,
@@ -153,7 +153,7 @@ export const questionsTema15 = [
             "d) Un contrato privado."
         ],
         "resposta_correcta": "b) Un poder otorgado mediante comparecencia personal o electrónica ante la Administración.",
-        "explicacio": "Art. 5.4 Llei 39/2015."
+        "explicacio": "Art. 5.4 Ley 39/2015."
     },
     {
         "id": 14,
@@ -165,7 +165,7 @@ export const questionsTema15 = [
             "d) 10 años."
         ],
         "resposta_correcta": "c) 5 años.",
-        "explicacio": "Art. 6.6 Llei 39/2015."
+        "explicacio": "Art. 6.6 Ley 39/2015."
     },
     {
         "id": 15,
@@ -177,7 +177,7 @@ export const questionsTema15 = [
             "d) Se archiva la solicitud."
         ],
         "resposta_correcta": "b) Con el que figure en primer término.",
-        "explicacio": "Art. 7 Llei 39/2015."
+        "explicacio": "Art. 7 Ley 39/2015."
     },
     {
         "id": 16,
@@ -189,7 +189,7 @@ export const questionsTema15 = [
             "d) Se les deniega la personación."
         ],
         "resposta_correcta": "b) Se les comunicará la tramitación del procedimiento.",
-        "explicacio": "Art. 8 Llei 39/2015."
+        "explicacio": "Art. 8 Ley 39/2015."
     },
     {
         "id": 17,
@@ -201,7 +201,7 @@ export const questionsTema15 = [
             "d) Mediante huella dactilar únicamente."
         ],
         "resposta_correcta": "a) Mediante el DNI o documento identificativo equivalente.",
-        "explicacio": "Art. 9.1 Llei 39/2015."
+        "explicacio": "Art. 9.1 Ley 39/2015."
     },
     {
         "id": 18,
@@ -213,7 +213,7 @@ export const questionsTema15 = [
             "d) Correo electrónico simple sin registro previo."
         ],
         "resposta_correcta": "d) Correo electrónico simple sin registro previo.",
-        "explicacio": "Art. 9.2 Llei 39/2015. El correo simple no es un sistema de identificación válido por sí solo."
+        "explicacio": "Art. 9.2 Ley 39/2015. El correo simple no es un sistema de identificación válido por sí solo."
     },
     {
         "id": 19,
@@ -225,7 +225,7 @@ export const questionsTema15 = [
             "d) Solo certificado de representante."
         ],
         "resposta_correcta": "a) Cualquier medio que acredite la autenticidad de la voluntad y consentimiento.",
-        "explicacio": "Art. 10.1 Llei 39/2015."
+        "explicacio": "Art. 10.1 Ley 39/2015."
     },
     {
         "id": 20,
@@ -237,7 +237,7 @@ export const questionsTema15 = [
             "d) Debe ser verificada presencialmente."
         ],
         "resposta_correcta": "b) Se entenderá ya acreditada mediante el propio acto de la firma.",
-        "explicacio": "Art. 10.5 Llei 39/2015."
+        "explicacio": "Art. 10.5 Ley 39/2015."
     },
     {
         "id": 21,
@@ -249,7 +249,7 @@ export const questionsTema15 = [
             "d) Para aportar documentos de trámite."
         ],
         "resposta_correcta": "b) Para formular solicitudes, declaraciones responsables, interponer recursos, desistir y renunciar.",
-        "explicacio": "Art. 11.2 Llei 39/2015."
+        "explicacio": "Art. 11.2 Ley 39/2015."
     },
     {
         "id": 22,
@@ -261,7 +261,7 @@ export const questionsTema15 = [
             "d) El uso de certificado digital cualificado."
         ],
         "resposta_correcta": "b) La acreditación previa de la identidad.",
-        "explicacio": "Art. 11.1 Llei 39/2015."
+        "explicacio": "Art. 11.1 Ley 39/2015."
     },
     {
         "id": 23,
@@ -273,7 +273,7 @@ export const questionsTema15 = [
             "d) Solo si tienen presupuesto."
         ],
         "resposta_correcta": "b) Sí, pondrán a su disposición los canales de acceso necesarios.",
-        "explicacio": "Art. 12.1 Llei 39/2015."
+        "explicacio": "Art. 12.1 Ley 39/2015."
     },
     {
         "id": 24,
@@ -285,7 +285,7 @@ export const questionsTema15 = [
             "d) Un gestor administrativo."
         ],
         "resposta_correcta": "b) Un funcionario público habilitado.",
-        "explicacio": "Art. 12.2 Llei 39/2015."
+        "explicacio": "Art. 12.2 Ley 39/2015."
     },
     {
         "id": 25,
@@ -297,7 +297,7 @@ export const questionsTema15 = [
             "d) Que el interesado sea persona jurídica."
         ],
         "resposta_correcta": "b) Que el interesado se identifique y preste su consentimiento expreso.",
-        "explicacio": "Art. 12.2 Llei 39/2015."
+        "explicacio": "Art. 12.2 Ley 39/2015."
     },
     {
         "id": 26,
@@ -309,7 +309,7 @@ export const questionsTema15 = [
             "d) Registro de incidencias informáticas."
         ],
         "resposta_correcta": "b) Registro de funcionarios habilitados para la identificación y firma.",
-        "explicacio": "Art. 12.3 Llei 39/2015."
+        "explicacio": "Art. 12.3 Ley 39/2015."
     },
     {
         "id": 27,
@@ -321,7 +321,7 @@ export const questionsTema15 = [
             "d) Tributario exclusivamente."
         ],
         "resposta_correcta": "c) Común a todas las Administraciones Públicas, incluyendo el sancionador y el de responsabilidad patrimonial.",
-        "explicacio": "Art. 1.1 Llei 39/2015."
+        "explicacio": "Art. 1.1 Ley 39/2015."
     },
     {
         "id": 28,
@@ -333,7 +333,7 @@ export const questionsTema15 = [
             "d) Un poder notarial en papel."
         ],
         "resposta_correcta": "a) Un poder general (tipo A).",
-        "explicacio": "Art. 6.4.a Llei 39/2015."
+        "explicacio": "Art. 6.4.a Ley 39/2015."
     },
     {
         "id": 29,
@@ -345,7 +345,7 @@ export const questionsTema15 = [
             "d) Solo a funcionarios."
         ],
         "resposta_correcta": "b) Sí, con carácter general o específico (habilitación).",
-        "explicacio": "Art. 5.7 Llei 39/2015."
+        "explicacio": "Art. 5.7 Ley 39/2015."
     },
     {
         "id": 30,

@@ -1,783 +1,782 @@
 export const questions2019m2 = [
     {
         "id": 1,
-        "pregunta": "Senyalau la resposta incorrecta:",
+        "pregunta": "Señale la respuesta incorrecta:",
         "opcions": [
-            "a) La seu del Govern de les Illes Balears serà la ciutat de Palma, encara que podrà reunir-se en qualsevol altre lloc sense requisit previ.",
-            "b) La seu del Govern de les Illes Balears serà la ciutat de Palma.",
-            "c) El Govern de les Illes Balears és l'òrgan col·legiat que exerceix funcions executives i administratives i dirigeix la política general.",
-            "d) El Govern té la potestat reglamentària en relació amb les seves competències."
+            "a) La sede del Gobierno de las Illes Balears será la ciudad de Palma, aunque podrá reunirse en cualquier otro lugar sin requisito previo.",
+            "b) La sede del Gobierno de las Illes Balears será la ciudad de Palma.",
+            "c) El Gobierno de las Illes Balears es el órgano colegiado que ejerce funciones ejecutivas y administrativas y dirige la política general.",
+            "d) El Gobierno tiene la potestad reglamentaria en relación con sus competencias."
         ],
-        "resposta_correcta": "a) La seu del Govern de les Illes Balears serà la ciutat de Palma, encara que podrà reunir-se en qualsevol altre lloc sense requisit previ.",
-        "explicacio": "Art. 4 de la Llei 1/2019 (i Estatut): La seu és Palma. Per reunir-se fora, generalment es requereix convocatòria o acord específic, no 'sense requisit previ' de manera absoluta, però la definició més clara d'error sol estar en els matisos legals. L'Estatut diu que la seu és Palma (Art 6). L'opció 'a' afegeix una llibertat absoluta que pot contradir la formalitat de la seu."
+        "resposta_correcta": "a) La sede del Gobierno de las Illes Balears será la ciudad de Palma, aunque podrá reunirse en cualquier otro lugar sin requisito previo.",
+        "explicacio": "Art. 4 de la Ley 1/2019 (y Estatuto): La sede es Palma. Para reunirse fuera, generalmente se requiere convocatoria o acuerdo específico, no 'sin requisito previo' de manera absoluta, pero la definición más clara de error suele estar en los matices legales. El Estatuto dice que la sede es Palma (Art 6). La opción 'a' añade una libertad absoluta que puede contradecir la formalidad de la sede."
     },
     {
         "id": 2,
-        "pregunta": "Senyalau la resposta correcta:",
+        "pregunta": "Señale la respuesta correcta:",
         "opcions": [
-            "a) El Parlament es reunirà un mínim de vuit mesos a l'any, en dos períodes de sessions.",
-            "b) El Parlament es reunirà durant vuit mesos a l'any, en dos períodes de sessions.",
-            "c) El primer període de sessions del Parlament de les Illes Balears serà de febrer a juny.",
-            "d) El Parlament es reunirà un màxim de vuit mesos a l'any, en diversos períodes de sessions."
+            "a) El Parlamento se reunirá un mínimo de ocho meses al año, en dos periodos de sesiones.",
+            "b) El Parlamento se reunirá durante ocho meses al año, en dos periodos de sesiones.",
+            "c) El primer periodo de sesiones del Parlamento de las Illes Balears será de febrero a junio.",
+            "d) El Parlamento se reunirá un máximo de ocho meses al año, en diversos periodos de sesiones."
         ],
-        "resposta_correcta": "c) El primer període de sessions del Parlament de les Illes Balears serà de febrer a juny.",
-        "explicacio": "Art. 43 Estatut d'Autonomia: El Parlament es reuneix en dos períodes ordinaris: setembre-desembre i febrer-juny."
+        "resposta_correcta": "c) El primer periodo de sesiones del Parlamento de las Illes Balears será de febrero a junio.",
+        "explicacio": "Art. 43 Estatuto de Autonomía: El Parlamento se reúne en dos periodos ordinarios: septiembre-diciembre y febrero-junio."
     },
     {
         "id": 3,
-        "pregunta": "Senyalau la resposta correcta. En relació amb l'elecció del president de les Illes Balears:",
+        "pregunta": "Señale la respuesta correcta. En relación con la elección del presidente de las Illes Balears:",
         "opcions": [
-            "a) Requereix la majoria absoluta dels membres del Parlament de les Illes Balears o la majoria simple dels membres del Parlament de les Illes Balears en una segona votació realitzada a les setanta-dues hores després de l'anterior.",
-            "b) Ha d'obtenir la confiança del Parlament de les Illes Balears en un màxim de cinquanta dies des de la primera votació.",
-            "c) Requereix la majoria absoluta dels membres del Parlament de les Illes Balears o la majoria simple dels membres del Parlament de les Illes Balears en una segona votació realitzada a les quaranta-vuit hores després de l'anterior.",
-            "d) Ha d'obtenir la confiança del Parlament de les Illes Balears en un màxim de seixanta dies des de la seva constitució."
+            "a) Requiere la mayoría absoluta de los miembros del Parlamento de las Illes Balears o la mayoría simple de los miembros del Parlamento de las Illes Balears en una segunda votación realizada a las setenta y dos horas después de la anterior.",
+            "b) Debe obtener la confianza del Parlamento de las Illes Balears en un máximo de cincuenta días desde la primera votación.",
+            "c) Requiere la mayoría absoluta de los miembros del Parlamento de las Illes Balears o la mayoría simple de los miembros del Parlamento de las Illes Balears en una segunda votación realizada a las cuarenta y ocho horas después de la anterior.",
+            "d) Debe obtener la confianza del Parlamento de las Illes Balears en un máximo de sesenta días desde su constitución."
         ],
-        "resposta_correcta": "c) Requereix la majoria absoluta dels membres del Parlament de les Illes Balears o la majoria simple dels membres del Parlament de les Illes Balears en una segona votació realitzada a les quaranta-vuit hores després de l'anterior.",
-        "explicacio": "Art. 53.3 Estatut d'Autonomia."
+        "resposta_correcta": "c) Requiere la mayoría absoluta de los miembros del Parlamento de las Illes Balears o la mayoría simple de los miembros del Parlamento de las Illes Balears en una segunda votación realizada a las cuarenta y ocho horas después de la anterior.",
+        "explicacio": "Art. 53.3 Estatuto de Autonomía."
     },
     {
         "id": 4,
-        "pregunta": "Senyalau la resposta correcta. En relació amb el Consell General del Poder Judicial:",
+        "pregunta": "Señale la respuesta correcta. En relación con el Consejo General del Poder Judicial:",
         "opcions": [
-            "a) Serà integrat pel president del Tribunal Suprem, que el presidirà, i per vint membres nomenats pel rei per un període de cinc anys.",
-            "b) Serà integrat pel president del Tribunal Suprem, que el presidirà, i per vint-i-quatre membres nomenats pel president del Govern per un període de quatre anys.",
-            "c) Serà integrat pel president del Tribunal Suprem, que el presidirà, i per vint-i-quatre membres nomenats pel rei per un període de cinc anys.",
-            "d) Serà integrat pel president del Tribunal Suprem, que el presidirà, i per vint membres nomenats pel rei per un període de quatre anys."
+            "a) Estará integrado por el presidente del Tribunal Supremo, que lo presidirá, y por veinte miembros nombrados por el rey por un periodo de cinco años.",
+            "b) Estará integrado por el presidente del Tribunal Supremo, que lo presidirá, y por veinticuatro miembros nombrados por el presidente del Gobierno por un periodo de cuatro años.",
+            "c) Estará integrado por el presidente del Tribunal Supremo, que lo presidirá, y por veinticuatro miembros nombrados por el rey por un periodo de cinco años.",
+            "d) Estará integrado por el presidente del Tribunal Supremo, que lo presidirá, y por veinte miembros nombrados por el rey por un periodo de cuatro años."
         ],
-        "resposta_correcta": "a) Serà integrat pel president del Tribunal Suprem, que el presidirà, i per vint membres nomenats pel rei per un període de cinc anys.",
-        "explicacio": "Art. 122.3 Constitució Espanyola."
+        "resposta_correcta": "a) Estará integrado por el presidente del Tribunal Supremo, que lo presidirá, y por veinte miembros nombrados por el rey por un periodo de cinco años.",
+        "explicacio": "Art. 122.3 Constitución Española."
     },
     {
         "id": 5,
-        "pregunta": "D'acord amb l'article 103 de la Constitució espanyola, l'Administració pública actua d'acord amb els principis:",
+        "pregunta": "De acuerdo con el artículo 103 de la Constitución española, la Administración pública actúa de acuerdo con los principios:",
         "opcions": [
-            "a) D'eficàcia, jerarquia, descentralització, delegació i coordinació.",
-            "b) D'eficàcia, eficiència, jerarquia, descentralització, desconcentració i coordinació.",
-            "c) D'eficàcia, jerarquia, desconcentració, coordinació i subordinació.",
-            "d) D'eficàcia, jerarquia, descentralització, desconcentració i coordinació."
+            "a) De eficacia, jerarquía, descentralización, delegación y coordinación.",
+            "b) De eficacia, eficiencia, jerarquía, descentralización, desconcentración y coordinación.",
+            "c) De eficacia, jerarquía, desconcentración, coordinación y subordinación.",
+            "d) De eficacia, jerarquía, descentralización, desconcentración y coordinación."
         ],
-        "resposta_correcta": "d) D'eficàcia, jerarquia, descentralització, desconcentració i coordinació.",
-        "explicacio": "Art. 103.1 Constitució Espanyola."
+        "resposta_correcta": "d) De eficacia, jerarquía, descentralización, desconcentración y coordinación.",
+        "explicacio": "Art. 103.1 Constitución Española."
     },
     {
         "id": 6,
-        "pregunta": "D'acord amb la Constitució espanyola, en relació amb l'Administració local, els regidors són elegits pels veïns del municipi:",
+        "pregunta": "De acuerdo con la Constitución española, en relación con la Administración local, los concejales son elegidos por los vecinos del municipio:",
         "opcions": [
-            "a) Mitjançant sufragi universal, igual, lliure, directe i secret, en la forma establerta per una norma reglamentària.",
-            "b) Mitjançant sufragi universal, lliure, paritari i secret, en la forma establerta per una norma reglamentària.",
-            "c) Mitjançant sufragi universal, igual, lliure, directe i secret, en la forma establerta per la llei.",
-            "d) Mitjançant sufragi universal, lliure, paritari i secret, en la forma establerta per la llei."
+            "a) Mediante sufragio universal, igual, libre, directo y secreto, en la forma establecida por una norma reglamentaria.",
+            "b) Mediante sufragio universal, libre, paritario y secreto, en la forma establecida por una norma reglamentaria.",
+            "c) Mediante sufragio universal, igual, libre, directo y secreto, en la forma establecida por la ley.",
+            "d) Mediante sufragio universal, libre, paritario y secreto, en la forma establecida por la ley."
         ],
-        "resposta_correcta": "c) Mitjançant sufragi universal, igual, lliure, directe i secret, en la forma establerta per la llei.",
-        "explicacio": "Art. 140 Constitució Espanyola."
+        "resposta_correcta": "c) Mediante sufragio universal, igual, libre, directo y secreto, en la forma establecida por la ley.",
+        "explicacio": "Art. 140 Constitución Española."
     },
     {
         "id": 7,
-        "pregunta": "Senyalau la resposta correcta. En relació amb la reforma de l'Estatut d'autonomia de les Illes Balears:",
+        "pregunta": "Señale la respuesta correcta. En relación con la reforma del Estatuto de autonomía de las Illes Balears:",
         "opcions": [
-            "a) La proposta de reforma requereix l'aprovació del Parlament mitjançant una llei orgànica.",
-            "b) La proposta de reforma requereix l'aprovació del Parlament per majoria absoluta dels diputats.",
-            "c) En el supòsit de tramitació en el Parlament, el Congrés pot retirar-la per majoria de dos terços dels diputats.",
-            "d) La proposta de reforma requereix l'aprovació del Parlament per majoria de dos terços dels diputats."
+            "a) La propuesta de reforma requiere la aprobación del Parlamento mediante una ley orgánica.",
+            "b) La propuesta de reforma requiere la aprobación del Parlamento por mayoría absoluta de los diputados.",
+            "c) En el supuesto de tramitación en el Parlamento, el Congreso puede retirarla por mayoría de dos tercios de los diputados.",
+            "d) La propuesta de reforma requiere la aprobación del Parlamento por mayoría de dos tercios de los diputados."
         ],
-        "resposta_correcta": "d) La proposta de reforma requereix l'aprovació del Parlament per majoria de dos terços dels diputats.",
-        "explicacio": "Art. 143 i 144 Estatut d'Autonomia."
+        "resposta_correcta": "d) La propuesta de reforma requiere la aprobación del Parlamento por mayoría de dos tercios de los diputados.",
+        "explicacio": "Art. 143 y 144 Estatuto de Autonomía."
     },
     {
         "id": 8,
-        "pregunta": "Senyalau la resposta correcta:",
+        "pregunta": "Señale la respuesta correcta:",
         "opcions": [
-            "a) Pot ser nomenat president de les Illes Balears un ciutadà espanyol no resident a les Illes Balears.",
-            "b) El president de les Illes Balears ha de ser diputat del Parlament de les Illes Balears.",
-            "c) El president de les Illes Balears és nomenat pel Parlament de les Illes Balears.",
-            "d) No cal que el president de les Illes Balears sigui diputat del Parlament de les Illes Balears."
+            "a) Puede ser nombrado presidente de las Illes Balears un ciudadano español no residente en las Illes Balears.",
+            "b) El presidente de las Illes Balears debe ser diputado del Parlamento de las Illes Balears.",
+            "c) El presidente de las Illes Balears es nombrado por el Parlamento de las Illes Balears.",
+            "d) No hace falta que el presidente de las Illes Balears sea diputado del Parlamento de las Illes Balears."
         ],
-        "resposta_correcta": "b) El president de les Illes Balears ha de ser diputat del Parlament de les Illes Balears.",
-        "explicacio": "Art. 53.2 Estatut d'Autonomia: 'El President és elegit pel Parlament d'entre els seus membres...'."
+        "resposta_correcta": "b) El presidente de las Illes Balears debe ser diputado del Parlamento de las Illes Balears.",
+        "explicacio": "Art. 53.2 Estatuto de Autonomía: 'El Presidente es elegido por el Parlamento de entre sus miembros...'."
     },
     {
         "id": 9,
-        "pregunta": "El delegat del govern:",
+        "pregunta": "El delegado del gobierno:",
         "opcions": [
-            "a) Dirigeix l'Administració de l'Estat en el territori de la comunitat autònoma.",
-            "b) Dirigeix l'Administració de l'Estat en cada província.",
-            "c) Està sotmès al Govern i a la comunitat autònoma.",
-            "d) Dirigeix l'Administració de l'Estat en cada província i comunitat autònoma."
+            "a) Dirige la Administración del Estado en el territorio de la comunidad autónoma.",
+            "b) Dirige la Administración del Estado en cada provincia.",
+            "c) Está sometido al Gobierno y a la comunidad autónoma.",
+            "d) Dirige la Administración del Estado en cada provincia y comunidad autónoma."
         ],
-        "resposta_correcta": "a) Dirigeix l'Administració de l'Estat en el territori de la comunitat autònoma.",
-        "explicacio": "Art. 154 Constitució Espanyola."
+        "resposta_correcta": "a) Dirige la Administración del Estado en el territorio de la comunidad autónoma.",
+        "explicacio": "Art. 154 Constitución Española."
     },
     {
         "id": 10,
-        "pregunta": "D'acord amb la Constitució espanyola, els valors superiors de l'ordenament jurídic són:",
+        "pregunta": "De acuerdo con la Constitución española, los valores superiores del ordenamiento jurídico son:",
         "opcions": [
-            "a) La llibertat, la justícia, la igualtat i la seguretat jurídica.",
-            "b) Únicament la llibertat, la justícia i la igualtat.",
-            "c) La llibertat, la justícia, la igualtat i el pluralisme sindical.",
-            "d) La llibertat, la justícia, la igualtat i el pluralisme polític."
+            "a) La libertad, la justicia, la igualdad y la seguridad jurídica.",
+            "b) Únicamente la libertad, la justicia y la igualdad.",
+            "c) La libertad, la justicia, la igualdad y el pluralismo sindical.",
+            "d) La libertad, la justicia, la igualdad y el pluralismo político."
         ],
-        "resposta_correcta": "d) La llibertat, la justícia, la igualtat i el pluralisme polític.",
-        "explicacio": "Art. 1.1 Constitució Espanyola."
+        "resposta_correcta": "d) La libertad, la justicia, la igualdad y el pluralismo político.",
+        "explicacio": "Art. 1.1 Constitución Española."
     },
     {
         "id": 11,
-        "pregunta": "Segons la Constitució espanyola, l'òrgan de govern del poder judicial és:",
+        "pregunta": "Según la Constitución española, el órgano de gobierno del poder judicial es:",
         "opcions": [
-            "a) El Consell General del Poder Judicial.",
-            "b) El ministre de Justícia.",
-            "c) El Consell de Ministres.",
-            "d) El Tribunal Suprem."
+            "a) El Consejo General del Poder Judicial.",
+            "b) El ministro de Justicia.",
+            "c) El Consejo de Ministros.",
+            "d) El Tribunal Supremo."
         ],
-        "resposta_correcta": "a) El Consell General del Poder Judicial.",
-        "explicacio": "Art. 122.2 Constitució Espanyola."
+        "resposta_correcta": "a) El Consejo General del Poder Judicial.",
+        "explicacio": "Art. 122.2 Constitución Española."
     },
     {
         "id": 12,
-        "pregunta": "Senyalau la resposta correcta. D'acord amb la Llei 3/2003, de 26 de març, de règim jurídic de l'Administració de la Comunitat Autònoma de les Illes Balears, aquesta s'estructura:",
+        "pregunta": "Señale la respuesta correcta. De acuerdo con la Ley 3/2003, de 26 de marzo, de régimen jurídico de la Administración de la Comunidad Autónoma de las Illes Balears, esta se estructura:",
         "opcions": [
-            "a) En òrgans centrals, territorials i directius.",
-            "b) En òrgans centrals i perifèrics.",
-            "c) En òrgans centrals i perifèrics, si bé aquests darrers tenen caràcter ordinari.",
-            "d) En òrgans centrals i territorials."
+            "a) En órganos centrales, territoriales y directivos.",
+            "b) En órganos centrales y periféricos.",
+            "c) En órganos centrales y periféricos, si bien estos últimos tienen carácter ordinario.",
+            "d) En órganos centrales y territoriales."
         ],
-        "resposta_correcta": "d) En òrgans centrals i territorials.",
-        "explicacio": "Art. 4.1 Llei 3/2003: L'Administració... s'estructura en òrgans centrals i territorials."
+        "resposta_correcta": "d) En órganos centrales y territoriales.",
+        "explicacio": "Art. 4.1 Ley 3/2003: La Administración... se estructura en órganos centrales y territoriales."
     },
     {
         "id": 13,
-        "pregunta": "Segons la Constitució espanyola, quin principi és la base de l'organització i el funcionament dels tribunals?",
+        "pregunta": "Según la Constitución española, ¿qué principio es la base de la organización y el funcionamiento de los tribunales?",
         "opcions": [
-            "a) El principi de descentralització.",
-            "b) El principi de dependència jeràrquica.",
-            "c) El principi de desconcentració.",
-            "d) El principi d'unitat jurisdiccional."
+            "a) El principio de descentralización.",
+            "b) El principio de dependencia jerárquica.",
+            "c) El principio de desconcentración.",
+            "d) El principio de unidad jurisdiccional."
         ],
-        "resposta_correcta": "d) El principi d'unitat jurisdiccional.",
-        "explicacio": "Art. 117.5 Constitució Espanyola."
+        "resposta_correcta": "d) El principio de unidad jurisdiccional.",
+        "explicacio": "Art. 117.5 Constitución Española."
     },
     {
         "id": 14,
-        "pregunta": "Senyalau la resposta incorrecta. D'acord amb la Llei 40/2015, d'1 d'octubre, de règim jurídic del sector públic, per a les autoritats i el personal al servei de les administracions, són motius d'abstenció en un procediment:",
+        "pregunta": "Señale la respuesta incorrecta. De acuerdo con la Ley 40/2015, de 1 de octubre, de régimen jurídico del sector público, para las autoridades y el personal al servicio de las administraciones, son motivos de abstención en un procedimiento:",
         "opcions": [
-            "a) Tenir un vincle matrimonial o situació de fet assimilable i el parentiu de consanguinitat dins del sisè grau o d'afinitat dins del quart...",
-            "b) Haver intervingut com a pèrit o com a testimoni en el procediment de què es tracti.",
-            "c) Tenir interès personal en l'assumpte de què es tracti...",
-            "d) Tenir relació de servei amb una persona natural o jurídica interessada directament en l'assumpte..."
+            "a) Tener un vínculo matrimonial o situación de hecho asimilable y el parentesco de consanguinidad dentro del sexto grado o de afinidad dentro del cuarto...",
+            "b) Haber intervenido como perito o como testigo en el procedimiento de que se trate.",
+            "c) Tener interés personal en el asunto de que se trate...",
+            "d) Tener relación de servicio con una persona natural o jurídica interesada directamente en el asunto..."
         ],
-        "resposta_correcta": "a) Tenir un vincle matrimonial o situació de fet assimilable i el parentiu de consanguinitat dins del sisè grau o d'afinitat dins del quart...",
-        "explicacio": "Art. 23.2.b Llei 40/2015: Els graus són quart grau de consanguinitat o segon d'afinitat. L'opció 'a' exagera els graus (sisè i quart), per tant és la incorrecta."
+        "resposta_correcta": "a) Tener un vínculo matrimonial o situación de hecho asimilable y el parentesco de consanguinidad dentro del sexto grado o de afinidad dentro del cuarto...",
+        "explicacio": "Art. 23.2.b Ley 40/2015: Los grados son cuarto grado de consanguinidad o segundo de afinidad. La opción 'a' exagera los grados (sexto y cuarto), por tanto es la incorrecta."
     },
     {
         "id": 15,
-        "pregunta": "Senyalau la resposta incorrecta. D'acord amb la Llei 40/2015, d'1 d'octubre, de règim jurídic del sector públic, les administracions públiques han de respectar en la seva actuació i en les seves relacions els principis següents:",
+        "pregunta": "Señale la respuesta incorrecta. De acuerdo con la Ley 40/2015, de 1 de octubre, de régimen jurídico del sector público, las administraciones públicas deben respetar en su actuación y en sus relaciones los principios siguientes:",
         "opcions": [
-            "a) Cooperació, col·laboració i coordinació entre les administracions públiques.",
-            "b) Bona fe, desconfiança legítima i deslleialtat institucional.",
-            "c) Servei efectiu als ciutadans",
-            "d) Simplicitat, claredat i proximitat als ciutadans."
+            "a) Cooperación, colaboración y coordinación entre las administraciones públicas.",
+            "b) Buena fe, desconfianza legítima y deslealtad institucional.",
+            "c) Servicio efectivo a los ciudadanos",
+            "d) Simplicidad, claridad y proximidad a los ciudadanos."
         ],
-        "resposta_correcta": "b) Bona fe, desconfiança legítima i deslleialtat institucional.",
-        "explicacio": "Art. 3 Llei 40/2015. El principi és 'bona fe, confiança legítima i lleialtat institucional'."
+        "resposta_correcta": "b) Buena fe, desconfianza legítima y deslealtad institucional.",
+        "explicacio": "Art. 3 Ley 40/2015. El principio es 'buena fe, confianza legítima y lealtad institucional'."
     },
     {
         "id": 16,
-        "pregunta": "D'acord amb la Llei 39/2015, d'1 d'octubre, del procediment administratiu comú de les administracions públiques, en relació amb el termini per resoldre en els procediments administratius:",
+        "pregunta": "De acuerdo con la Ley 39/2015, de 1 de octubre, del procedimiento administrativo común de las administraciones públicas, en relación con el plazo para resolver en los procedimientos administrativos:",
         "opcions": [
-            "a) Si no s'indica un termini màxim en les normes reguladores, el termini són sis mesos.",
-            "b) Es pot suspendre quan s'hagi de requerir a l'interessat l'esmena de deficiències.",
-            "c) El termini màxim per resoldre són tres mesos en qualsevol cas.",
-            "d) No se suspèn en casos de recusació."
+            "a) Si no se indica un plazo máximo en las normas reguladoras, el plazo son seis meses.",
+            "b) Se puede suspender cuando se deba requerir al interesado la subsanación de deficiencias.",
+            "c) El plazo máximo para resolver son tres meses en cualquier caso.",
+            "d) No se suspende en casos de recusación."
         ],
-        "resposta_correcta": "b) Es pot suspendre quan s'hagi de requerir a l'interessat l'esmena de deficiències.",
-        "explicacio": "Art. 22 Llei 39/2015 (suspensió) i Art. 21 (termini supletori és de 3 mesos, no 6)."
+        "resposta_correcta": "b) Se puede suspender cuando se deba requerir al interesado la subsanación de deficiencias.",
+        "explicacio": "Art. 22 Ley 39/2015 (suspensión) y Art. 21 (plazo supletorio es de 3 meses, no 6)."
     },
     {
         "id": 17,
-        "pregunta": "Senyalau la resposta incorrecta. D'acord amb la Llei 39/2015, d'1 d'octubre, del procediment administratiu comú de les administracions públiques, en relació amb la llengua dels procediments:",
+        "pregunta": "Señale la respuesta incorrecta. De acuerdo con la Ley 39/2015, de 1 de octubre, del procedimiento administrativo común de las administraciones públicas, en relación con la lengua de los procedimientos:",
         "opcions": [
-            "a) Els interessats només es poden dirigir en castellà als òrgans de l'Administració General de l'Estat amb seu en una comunitat autònoma amb llengua cooficial.",
-            "b) L'Administració de la Comunitat Autònoma de les Illes Balears no està obligada a traduir al castellà els documents que hagin de fer efecte a Catalunya.",
-            "c) L'Administració de la Comunitat Autònoma de les Illes Balears ha de traduir al castellà els documents que hagin de fer efecte a Madrid.",
-            "d) L'Administració de la Comunitat Autònoma de les Illes Balears ha de traduir al castellà els documents que així ho sol·licitin els interessats expressament."
+            "a) Los interesados solo se pueden dirigir en castellano a los órganos de la Administración General del Estado con sede en una comunidad autónoma con lengua cooficial.",
+            "b) La Administración de la Comunidad Autónoma de las Illes Balears no está obligada a traducir al castellano los documentos que deban surtir efecto en Cataluña.",
+            "c) La Administración de la Comunidad Autónoma de las Illes Balears debe traducir al castellano los documentos que deban surtir efecto en Madrid.",
+            "d) La Administración de la Comunidad Autónoma de las Illes Balears debe traducir al castellano los documentos que así lo soliciten los interesados expresamente."
         ],
-        "resposta_correcta": "a) Els interessats només es poden dirigir en castellà als òrgans de l'Administració General de l'Estat amb seu en una comunitat autònoma amb llengua cooficial.",
-        "explicacio": "Art. 15 Llei 39/2015. Els interessats poden dirigir-se en qualsevol de les llengües oficials (castellà o cooficial) als òrgans de l'AGE amb seu a la comunitat."
+        "resposta_correcta": "a) Los interesados solo se pueden dirigir en castellano a los órganos de la Administración General del Estado con sede en una comunidad autónoma con lengua cooficial.",
+        "explicacio": "Art. 15 Ley 39/2015. Los interesados pueden dirigirse en cualquiera de las lenguas oficiales (castellano o cooficial) a los órganos de la AGE con sede en la comunidad."
     },
     {
         "id": 18,
-        "pregunta": "Senyalau la resposta correcta. En relació amb el dret a l'educació reconegut per la Constitució espanyola:",
+        "pregunta": "Señale la respuesta correcta. En relación con el derecho a la educación reconocido por la Constitución española:",
         "opcions": [
-            "a) Es reconeix l'autonomia de les universitats, en els termes que la llei estableixi.",
-            "b) Únicament es reconeix la llibertat de creació de centres docents a les persones jurídiques.",
-            "c) Únicament els professors i els alumnes intervenen en el control i la gestió de tots els centres sostinguts per l'Administració amb fons públics.",
-            "d) L'ensenyament universitari és obligatòria i gratuïta."
+            "a) Se reconoce la autonomía de las universidades, en los términos que la ley establezca.",
+            "b) Únicamente se reconoce la libertad de creación de centros docentes a las personas jurídicas.",
+            "c) Únicamente los profesores y los alumnos intervienen en el control y la gestión de todos los centros sostenidos por la Administración con fondos públicos.",
+            "d) La enseñanza universitaria es obligatoria y gratuita."
         ],
-        "resposta_correcta": "a) Es reconeix l'autonomia de les universitats, en els termes que la llei estableixi.",
-        "explicacio": "Art. 27.10 Constitució Espanyola."
+        "resposta_correcta": "a) Se reconoce la autonomía de las universidades, en los términos que la ley establezca.",
+        "explicacio": "Art. 27.10 Constitución Española."
     },
     {
         "id": 19,
-        "pregunta": "Senyalau la resposta correcta. En relació amb les diputacions permanents de cada cambra de les Corts Generals:",
+        "pregunta": "Señale la respuesta correcta. En relación con las diputaciones permanentes de cada cámara de las Cortes Generales:",
         "opcions": [
-            "a) Es componen d'un màxim de vint membres, que representen els grups parlamentaris, en proporció a la seva importància numèrica.",
-            "b) Es componen d'un mínim de vint-i-un membres, que representen els grups parlamentaris, en proporció a la seva importància numèrica.",
-            "c) Es componen d'un màxim de quinze membres, que representen els grups parlamentaris, en proporció a la seva importància numèrica.",
-            "d) Es componen d'un mínim de trenta-un membres, que representen els grups parlamentaris, en proporció a la seva importància numèrica."
+            "a) Se componen de un máximo de veinte miembros, que representan a los grupos parlamentarios, en proporción a su importancia numérica.",
+            "b) Se componen de un mínimo de veintiún miembros, que representan a los grupos parlamentarios, en proporción a su importancia numérica.",
+            "c) Se componen de un máximo de quince miembros, que representan a los grupos parlamentarios, en proporción a su importancia numérica.",
+            "d) Se componen de un mínimo de treinta y un miembros, que representan a los grupos parlamentarios, en proporción a su importancia numérica."
         ],
-        "resposta_correcta": "b) Es componen d'un mínim de vint-i-un membres, que representen els grups parlamentaris, en proporció a la seva importància numèrica.",
-        "explicacio": "Art. 78.1 Constitució Espanyola."
+        "resposta_correcta": "b) Se componen de un mínimo de veintiún miembros, que representan a los grupos parlamentarios, en proporción a su importancia numérica.",
+        "explicacio": "Art. 78.1 Constitución Española."
     },
     {
         "id": 20,
-        "pregunta": "Quina és la majoria que es requereix per tal que se sotmeti a referèndum una reforma constitucional aprovada pel procediment de l'article 167 de la Constitució espanyola?",
+        "pregunta": "¿Cuál es la mayoría que se requiere para que se someta a referéndum una reforma constitucional aprobada por el procedimiento del artículo 167 de la Constitución española?",
         "opcions": [
-            "a) Una majoria absoluta dels membres de qualsevol de les cambres.",
-            "b) Una vintena part dels membres de qualsevol de les cambres.",
-            "c) Una dècima part dels membres de qualsevol de les cambres.",
-            "d) Una majoria simple dels membres de qualsevol de les cambres."
+            "a) Una mayoría absoluta de los miembros de cualquiera de las cámaras.",
+            "b) Una vigésima parte de los miembros de cualquiera de las cámaras.",
+            "c) Una décima parte de los miembros de cualquiera de las cámaras.",
+            "d) Una mayoría simple de los miembros de cualquiera de las cámaras."
         ],
-        "resposta_correcta": "c) Una dècima part dels membres de qualsevol de les cambres.",
-        "explicacio": "Art. 167.3 Constitució Espanyola."
+        "resposta_correcta": "c) Una décima parte de los miembros de cualquiera de las cámaras.",
+        "explicacio": "Art. 167.3 Constitución Española."
     },
     {
         "id": 21,
-        "pregunta": "D'acord amb la Llei 39/2015, d'1 d'octubre, del procediment administratiu comú de les administracions públiques, es consideraran interessats:",
+        "pregunta": "De acuerdo con la Ley 39/2015, de 1 de octubre, del procedimiento administrativo común de las administraciones públicas, se considerarán interesados:",
         "opcions": [
-            "a) Els representants.",
-            "b) Els que promouen el procediment administratiu com a titulars de drets col·lectius",
-            "c) Aquells els interessos legítims dels quals puguin resultar afectats per la resolució i es personin en el procediment en qualsevol moment.",
-            "d) Les associacions amb interessos individuals."
+            "a) Los representantes.",
+            "b) Los que promueven el procedimiento administrativo como titulares de derechos colectivos",
+            "c) Aquellos cuyos intereses legítimos puedan resultar afectados por la resolución y se personen en el procedimiento en cualquier momento.",
+            "d) Las asociaciones con intereses individuales."
         ],
-        "resposta_correcta": "c) Aquells els interessos legítims dels quals puguin resultar afectats per la resolució i es personin en el procediment en qualsevol moment.",
-        "explicacio": "Art. 4.1.c Llei 39/2015."
+        "resposta_correcta": "c) Aquellos cuyos intereses legítimos puedan resultar afectados por la resolución y se personen en el procedimiento en cualquier momento.",
+        "explicacio": "Art. 4.1.c Ley 39/2015."
     },
     {
         "id": 22,
-        "pregunta": "Segons la Constitució espanyola, les Corts Generals:",
+        "pregunta": "Según la Constitución española, las Cortes Generales:",
         "opcions": [
-            "a) Dirigeixen la política interior i exterior.",
-            "b) Exerceixen la potestat legislativa de l'Estat",
-            "c) Elaboren els pressuposts generals de l'Estat.",
-            "d) Exerceixen la potestat reglamentària de l'Estat"
+            "a) Dirigen la política interior y exterior.",
+            "b) Ejercen la potestad legislativa del Estado",
+            "c) Elaboran los presupuestos generales del Estado.",
+            "d) Ejercen la potestad reglamentaria del Estado"
         ],
-        "resposta_correcta": "b) Exerceixen la potestat legislativa de l'Estat",
-        "explicacio": "Art. 66.2 Constitució Espanyola. (Dirigir política = Govern; Elaborar pressuposts = Govern - les Corts els aproven-; Potestat reglamentària = Govern)."
+        "resposta_correcta": "b) Ejercen la potestad legislativa del Estado",
+        "explicacio": "Art. 66.2 Constitución Española. (Dirigir política = Gobierno; Elaborar presupuestos = Gobierno - las Cortes los aprueban-; Potestad reglamentaria = Gobierno)."
     },
     {
         "id": 23,
-        "pregunta": "Quina és la majoria que s'exigeix a les Corts Generals per aprovar una revisió total de la Constitució?",
+        "pregunta": "¿Cuál es la mayoría que se exige a las Cortes Generales para aprobar una revisión total de la Constitución?",
         "opcions": [
-            "a) Una majoria absoluta de cada cambra.",
-            "b) Una majoria simple de cada cambra.",
-            "c) Una majoria de tres cinquenes parts de cada cambra.",
-            "d) Una majoria de dos terços de cada cambra."
+            "a) Una mayoría absoluta de cada cámara.",
+            "b) Una mayoría simple de cada cámara.",
+            "c) Una mayoría de tres quintas partes de cada cámara.",
+            "d) Una mayoría de dos tercios de cada cámara."
         ],
-        "resposta_correcta": "d) Una majoria de dos terços de cada cambra.",
-        "explicacio": "Art. 168.1 Constitució Espanyola."
+        "resposta_correcta": "d) Una mayoría de dos tercios de cada cámara.",
+        "explicacio": "Art. 168.1 Constitución Española."
     },
     {
         "id": 24,
-        "pregunta": "Segons la Constitució espanyola, les associacions:",
+        "pregunta": "Según la Constitución española, las asociaciones:",
         "opcions": [
-            "a) Poden ser secretes i tenir caràcter paramilitar.",
-            "b) S'han d'inscriure en un registre per obtenir l'autorització preceptiva de l'autoritat governativa.",
-            "c) Poden ser dissoltes o suspeses en les seves activitats per resolució de l'autoritat governativa.",
-            "d) S'han d'inscriure en un registre únicament a efectes de publicitat."
+            "a) Pueden ser secretas y tener carácter paramilitar.",
+            "b) Se deben inscribir en un registro para obtener la autorización preceptiva de la autoridad gubernativa.",
+            "c) Pueden ser disueltas o suspendidas en sus actividades por resolución de la autoridad gubernativa.",
+            "d) Se deben inscribir en un registro únicamente a efectos de publicidad."
         ],
-        "resposta_correcta": "d) S'han d'inscriure en un registre únicament a efectes de publicitat.",
-        "explicacio": "Art. 22.3 Constitució Espanyola."
+        "resposta_correcta": "d) Se deben inscribir en un registro únicamente a efectos de publicidad.",
+        "explicacio": "Art. 22.3 Constitución Española."
     },
     {
         "id": 25,
-        "pregunta": "En el control de les persones i els visitants, no es pretén:",
+        "pregunta": "En el control de las personas y los visitantes, no se pretende:",
         "opcions": [
-            "a) Denegar l'entrada o la sortida a les persones no autoritzades.",
-            "b) Obtenir informació de les persones que accedeixen o que estan presents a l'edifici.",
-            "c) Conèixer els detalls del tràmit que han de dur a terme.",
-            "d) Permetre l'entrada i la sortida a les persones autoritzades."
+            "a) Denegar la entrada o la salida a las personas no autorizadas.",
+            "b) Obtener información de las personas que acceden o que están presentes en el edificio.",
+            "c) Conocer los detalles del trámite que deben llevar a cabo.",
+            "d) Permitir la entrada y la salida a las personas autorizadas."
         ],
-        "resposta_correcta": "c) Conèixer els detalls del tràmit que han de dur a terme.",
-        "explicacio": "La funció de control d'accessos no inclou conèixer els detalls privats dels tràmits, només la gestió de l'entrada/sortida."
+        "resposta_correcta": "c) Conocer los detalles del trámite que deben llevar a cabo.",
+        "explicacio": "La función de control de accesos no incluye conocer los detalles privados de los trámites, solo la gestión de la entrada/salida."
     },
     {
         "id": 26,
-        "pregunta": "D'acord amb la Llei 3/2007, de 27 de març, de la funció pública de la comunitat autònoma de les Illes Balears, quina de les següents no és un tipus de sanció establerta en la Llei esmentada?",
+        "pregunta": "De acuerdo con la Ley 3/2007, de 27 de marzo, de la función pública de la comunidad autónoma de las Illes Balears, ¿cuál de los siguientes no es un tipo de sanción establecida en la Ley mencionada?",
         "opcions": [
-            "a) Pèrdua d'un nivell de carrera professional.",
-            "b) Amonestació.",
-            "c) Pèrdua d'un a tres graus personals.",
-            "d) Suspensió de funcions."
+            "a) Pérdida de un nivel de carrera profesional.",
+            "b) Amonestación.",
+            "c) Pérdida de uno a tres grados personales.",
+            "d) Suspensión de funciones."
         ],
-        "resposta_correcta": "a) Pèrdua d'un nivell de carrera professional.",
-        "explicacio": "Art. 126 Llei 3/2007. Existeix la demèrit (pèrdua de grau personal), però la 'pèrdua d'un nivell de carrera' no està tipificada explícitament com a sanció amb aquest nom en aquesta llei."
+        "resposta_correcta": "a) Pérdida de un nivel de carrera profesional.",
+        "explicacio": "Art. 126 Ley 3/2007. Existe el demérito (pérdida de grado personal), pero la 'pérdida de un nivel de carrera' no está tipificada explícitamente como sanción con este nombre en esta ley."
     },
     {
         "id": 27,
-        "pregunta": "Senyalau la resposta correcta. En relació amb l'atenció telefònica a la ciutadania:",
+        "pregunta": "Señale la respuesta correcta. En relación con la atención telefónica a la ciudadanía:",
         "opcions": [
-            "a) El servei del telèfon 012 és totalment gratuït independentment de les condicions del contracte entre la persona usuaria i l'operador amb el qual hagi contractat el servei de telefonia.",
-            "b) El servei del telèfon 012 és restringit a determinats ciutadans prèviament registrats.",
-            "c) El servei del telèfon 012 es pot prestar amb caràcter temporal per a determinades campanyes.",
-            "d) A la pàgina web de la Comunitat Autònoma de les Illes Balears es troba publicada l'oferta completa d'informació a què es pot accedir amb el número 012 i els preus que s'apliquen per a les telefonades o la modalitat de preus."
+            "a) El servicio del teléfono 012 es totalmente gratuito independientemente de las condiciones del contrato entre la persona usuaria y el operador con el cual haya contratado el servicio de telefonía.",
+            "b) El servicio del teléfono 012 es restringido a determinados ciudadanos previamente registrados.",
+            "c) El servicio del teléfono 012 se puede prestar con carácter temporal para determinadas campañas.",
+            "d) En la página web de la Comunidad Autónoma de las Illes Balears se encuentra publicada la oferta completa de información a la que se puede acceder con el número 012 y los precios que se aplican para las llamadas o la modalidad de precios."
         ],
-        "resposta_correcta": "d) A la pàgina web de la Comunitat Autònoma de les Illes Balears es troba publicada l'oferta completa d'informació a què es pot accedir amb el número 012 i els preus que s'apliquen per a les telefonades o la modalitat de preus.",
-        "explicacio": "El 012 sol tenir un cost compartit (no és gratuït com el 112) i la informació de tarifes ha de ser pública."
+        "resposta_correcta": "d) En la página web de la Comunidad Autónoma de las Illes Balears se encuentra publicada la oferta completa de información a la que se puede acceder con el número 012 y los precios que se aplican para las llamadas o la modalidad de precios.",
+        "explicacio": "El 012 suele tener un coste compartido (no es gratuito como el 112) y la información de tarifas debe ser pública."
     },
     {
         "id": 28,
-        "pregunta": "D'acord amb la Llei 3/2007, de 27 de març, de la funció pública de la comunitat autònoma de les Illes Balears, és una falta disciplinària greu:",
+        "pregunta": "De acuerdo con la Ley 3/2007, de 27 de marzo, de la función pública de la comunidad autónoma de las Illes Balears, es una falta disciplinaria grave:",
         "opcions": [
-            "a) La manca notòria de rendiment que comporti inhibició de l'acompliment de les tasques encomanades.",
-            "b) L'abandonament del servei, així com la no assumpció voluntària de les tasques o funcions encomanades.",
-            "c) L'incompliment injustificat de la jornada de treball que acumulat suposi un mínim de deu hores dins un mes natural.",
-            "d) La manca d'assistència injustificada d'un dia."
+            "a) La falta notoria de rendimiento que comporte inhibición del desempeño de las tareas encomendadas.",
+            "b) El abandono del servicio, así como la no asunción voluntaria de las tareas o funciones encomendadas.",
+            "c) El incumplimiento injustificado de la jornada de trabajo que acumulado suponga un mínimo de diez horas dentro de un mes natural.",
+            "d) La falta de asistencia injustificada de un día."
         ],
-        "resposta_correcta": "a) La manca notòria de rendiment que comporti inhibició de l'acompliment de les tasques encomanades.",
-        "explicacio": "Art. 124 Llei 3/2007. L'abandonament del servei és molt greu. L'incompliment de jornada < 10h és lleu, > 20h pot ser molt greu, però la manca notòria de rendiment que no arribi a inhibició total (molt greu) o en aquests termes sol ser greu. *Nota*: L'abandonament de servei és molt greu. La manca notòria de rendiment *amb inhibició* és molt greu (Art 123.g). Per eliminació, si l'enunciat cerca la greu, cal anar amb compte. Art 124.h considera greu la manca de rendiment que *no* constitueixi falta molt greu. Si l'opció 'a' diu 'que comporti inhibició', seria molt greu. Si 'c' diu 'mínim de 10 hores', Art 124.f diu que greu és l'incompliment de jornada que acumuli un mínim de 10 hores i màxim de 20. Per tant, la C és la correcta."
+        "resposta_correcta": "a) La falta notoria de rendimiento que comporte inhibición del desempeño de las tareas encomendadas.",
+        "explicacio": "Art. 124 Ley 3/2007. El abandono del servicio es muy grave. El incumplimiento de jornada < 10h es leve, > 20h puede ser muy grave, pero la falta notoria de rendimiento que no llegue a inhibición total (muy grave) o en estos términos suele ser grave. *Nota*: El abandono de servicio es muy grave. La falta notoria de rendimiento *con inhibición* es muy grave (Art 123.g). Por eliminación, si el enunciado busca la grave, hay que ir con cuidado. Art 124.h considera grave la falta de rendimiento que *no* constituya falta muy grave. Si la opción 'a' dice 'que comporte inhibición', sería muy grave. Si 'c' dice 'mínimo de 10 horas', Art 124.f dice que grave es el incumplimiento de jornada que acumule un mínimo de 10 horas y máximo de 20. Por tanto, la C es la correcta."
     },
     {
         "id": 29,
-        "pregunta": "Què vol dir que un ciutadà es comunica de manera assertiva?",
+        "pregunta": "¿Qué quiere decir que un ciudadano se comunica de manera asertiva?",
         "opcions": [
-            "a) Que està enfadat, però no ho expressa.",
-            "b) Que tendeix a exigir emprant males maneres.",
-            "c) Que no vol influir en els altres.",
-            "d) Que expressa de manera clara, franca i constructiva el que vol."
+            "a) Que está enfadado, pero no lo expresa.",
+            "b) Que tiende a exigir empleando malas maneras.",
+            "c) Que no quiere influir en los demás.",
+            "d) Que expresa de manera clara, franca y constructiva lo que quiere."
         ],
-        "resposta_correcta": "d) Que expressa de manera clara, franca i constructiva el que vol.",
-        "explicacio": "Definició estàndard d'assertivitat."
+        "resposta_correcta": "d) Que expresa de manera clara, franca y constructiva lo que quiere.",
+        "explicacio": "Definición estándar de asertividad."
     },
     {
         "id": 30,
-        "pregunta": "Senyalau la resposta correcta. Que és un accident en missió?",
+        "pregunta": "Señale la respuesta correcta. ¿Qué es un accidente en misión?",
         "opcions": [
-            "a) És l'accident laboral que pateix la persona en anar o tornar del lloc de treball.",
-            "b) És tota lesió corporal que pateix el treballador que implica l'exposició a agents biològics.",
-            "c) Són els accidents de treball que tenen lloc durant el trajecte que s'ha de fer per complir una missió encomanada per l'Administració.",
-            "d) Són els accidents que tenen lloc com a conseqüència del desenvolupament de tasques diferents a les habituals executades en compliment de les ordres del superior o espontàniament en interès del bon funcionament de l'Administració."
+            "a) Es el accidente laboral que sufre la persona al ir o volver del lugar de trabajo.",
+            "b) Es toda lesión corporal que sufre el trabajador que implica la exposición a agentes biológicos.",
+            "c) Son los accidentes de trabajo que tienen lugar durante el trayecto que se debe hacer para cumplir una misión encomendada por la Administración.",
+            "d) Son los accidentes que tienen lugar como consecuencia del desarrollo de tareas diferentes a las habituales ejecutadas en cumplimiento de las órdenes del superior o espontáneamente en interés del buen funcionamiento de la Administración."
         ],
-        "resposta_correcta": "c) Són els accidents de treball que tenen lloc durant el trajecte que s'ha de fer per complir una missió encomanada per l'Administració.",
-        "explicacio": "L'accident 'in itinere' és anar/tornar de casa a la feina. L'accident 'en missió' és durant un desplaçament per complir una tasca (missió)."
+        "resposta_correcta": "c) Son los accidentes de trabajo que tienen lugar durante el trayecto que se debe hacer para cumplir una misión encomendada por la Administración.",
+        "explicacio": "El accidente 'in itinere' es ir/volver de casa al trabajo. El accidente 'en misión' es durante un desplazamiento para cumplir una tarea (misión)."
     },
     {
         "id": 31,
-        "pregunta": "A les persones visitants se'ls ha d'entregar:",
+        "pregunta": "A las personas visitantes se les debe entregar:",
         "opcions": [
-            "a) En alguns casos, una acreditació identificativa que hauran de portar en un lloc visible durant la seva estada i tornar una vegada finalitzada la visita.",
-            "b) Sempre, una acreditació identificativa que hauran de portar i que no serà necessari tornar una vegada finalitzada la visita.",
-            "c) En alguns casos, una acreditació identificativa que hauran de portar en un lloc visible durant la seva estada i que no serà necessari tornar una vegada finalitzada la visita.",
-            "d) Sempre, una acreditació identificativa que hauran de portar en un lloc visible durant la seva estada i tornar una vegada finalitzada la visita."
+            "a) En algunos casos, una acreditación identificativa que deberán llevar en un lugar visible durante su estancia y devolver una vez finalizada la visita.",
+            "b) Siempre, una acreditación identificativa que deberán llevar y que no será necesario devolver una vez finalizada la visita.",
+            "c) En algunos casos, una acreditación identificativa que deberán llevar en un lugar visible durante su estancia y que no será necesario devolver una vez finalizada la visita.",
+            "d) Siempre, una acreditación identificativa que deberán llevar en un lugar visible durante su estancia y devolver una vez finalizada la visita."
         ],
-        "resposta_correcta": "a) En alguns casos, una acreditació identificativa que hauran de portar en un lloc visible durant la seva estada i tornar una vegada finalitzada la visita.",
-        "explicacio": "Normes bàsiques de control d'accessos. No 'sempre' es dona (depèn de la zona, pública o restringida) i s'ha de retornar."
+        "resposta_correcta": "a) En algunos casos, una acreditación identificativa que deberán llevar en un lugar visible durante su estancia y devolver una vez finalizada la visita.",
+        "explicacio": "Normas básicas de control de accesos. No 'siempre' se da (depende de la zona, pública o restringida) y se debe retornar."
     },
     {
         "id": 32,
-        "pregunta": "D'acord amb la Llei 3/2007, de 27 de març, de la funció pública de la comunitat autònoma de les Illes Balears, quina de les afirmacions següents no és correcta en relació amb els òrgans de selecció?",
+        "pregunta": "De acuerdo con la Ley 3/2007, de 27 de marzo, de la función pública de la comunidad autónoma de las Illes Balears, ¿cuál de las afirmaciones siguientes no es correcta en relación con los órganos de selección?",
         "opcions": [
-            "a) Els càrrecs de naturalesa política i el personal eventual de l'Administració no en poden formar part.",
-            "b) Els representants del personal no en poden formar part.",
-            "c) Els funcionaris que ocupen llocs de lliure designació no en poden formar part.",
-            "d) La composició s'ha d'ajustar al criteri de paritat entre homes i dones, sempre que el nombre de membres ho faci possible."
+            "a) Los cargos de naturaleza política y el personal eventual de la Administración no pueden formar parte.",
+            "b) Los representantes del personal no pueden formar parte.",
+            "c) Los funcionarios que ocupan puestos de libre designación no pueden formar parte.",
+            "d) La composición debe ajustarse al criterio de paridad entre hombres y mujeres, siempre que el número de miembros lo haga posible."
         ],
-        "resposta_correcta": "c) Els funcionaris que ocupen llocs de lliure designació no en poden formar part.",
-        "explicacio": "Art. 49 Llei 3/2007. La prohibició afecta a càrrecs polítics, eventuals i representants sindicals (que poden ser observadors però no membres), però no prohibeix explícitament als funcionaris de lliure designació (sempre que siguin funcionaris de carrera)."
+        "resposta_correcta": "c) Los funcionarios que ocupan puestos de libre designación no pueden formar parte.",
+        "explicacio": "Art. 49 Ley 3/2007. La prohibición afecta a cargos políticos, eventuales y representantes sindicales (que pueden ser observadores pero no miembros), pero no prohíbe explícitamente a los funcionarios de libre designación (siempre que sean funcionarios de carrera)."
     },
     {
         "id": 33,
-        "pregunta": "Senyalau la resposta correcta. La presidència dels actes als quals es refereix el Decret 256/1999, de 24 de desembre, pel qual es regula el règim de precedències del càrrecs i institucions públiques de la Comunitat Autònoma de les Illes Balears, correspon:",
+        "pregunta": "Señale la respuesta correcta. La presidencia de los actos a los que se refiere el Decreto 256/1999, de 24 de diciembre, por el que se regula el régimen de precedencias de los cargos e instituciones públicas de la Comunidad Autónoma de las Illes Balears, corresponde:",
         "opcions": [
-            "a) A l'autoritat, càrrec públic o personalitat que els organitzi.",
-            "b) A l'autoritat, càrrec públic o personalitat que els organitzi, tret que en aquest acte n'hi concorri una altra de precedència superior d'acord amb els set primers nombres de la llista de precedència individual.",
-            "c) A l'autoritat, càrrec públic o personalitat que els organitzi, tret que en aquest acte n'hi concorri una altra de precedència superior d'acord amb els cinc primers nombres de la llista de precedència individual.",
-            "d) A l'autoritat, càrrec públic o personalitat que correspongui per ordre de precedència individual."
+            "a) A la autoridad, cargo público o personalidad que los organice.",
+            "b) A la autoridad, cargo público o personalidad que los organice, salvo que en este acto concurra otra de precedencia superior de acuerdo con los siete primeros números de la lista de precedencia individual.",
+            "c) A la autoridad, cargo público o personalidad que los organice, salvo que en este acto concurra otra de precedencia superior de acuerdo con los cinco primeros números de la lista de precedencia individual.",
+            "d) A la autoridad, cargo público o personalidad que corresponda por orden de precedencia individual."
         ],
-        "resposta_correcta": "c) A l'autoritat, càrrec públic o personalitat que els organitzi, tret que en aquest acte n'hi concorri una altra de precedència superior d'acord amb els cinc primers nombres de la llista de precedència individual.",
-        "explicacio": "Art. 4 Decret 256/1999."
+        "resposta_correcta": "c) A la autoridad, cargo público o personalidad que los organice, salvo que en este acto concurra otra de precedencia superior de acuerdo con los cinco primeros números de la lista de precedencia individual.",
+        "explicacio": "Art. 4 Decreto 256/1999."
     },
     {
         "id": 34,
-        "pregunta": "D'acord amb la Llei 3/2007, de 27 de març, de la funció pública de la comunitat autònoma de les Illes Balears, la separació del servei únicament i exclusivament es pot produir per les causes següents:",
+        "pregunta": "De acuerdo con la Ley 3/2007, de 27 de marzo, de la función pública de la comunidad autónoma de las Illes Balears, la separación del servicio únicamente y exclusivamente se puede producir por las causas siguientes:",
         "opcions": [
-            "a) Com a conseqüència de la imposició d'una sanció disciplinària conseqüència d'un expedient disciplinari o de l'aplicació d'una sentència.",
-            "b) Com a conseqüència de la imposició d'una sanció conseqüència d'una sentència condemnatòria d'inhabilitació per ocupar càrrecs públics.",
-            "c) Com a conseqüència de la imposició d'una pena d'inhabilitació absoluta o especial per ocupar càrrecs públics.",
-            "d) Com a conseqüència de la imposició d'una sanció disciplinària o com a conseqüència de la imposició d'una pena, principal o accessòria, d'inhabilitació absoluta o especial per ocupar càrrecs públics."
+            "a) Como consecuencia de la imposición de una sanción disciplinaria consecuencia de un expediente disciplinario o de la aplicación de una sentencia.",
+            "b) Como consecuencia de la imposición de una sanción consecuencia de una sentencia condenatoria de inhabilitación para ocupar cargos públicos.",
+            "c) Como consecuencia de la imposición de una pena de inhabilitación absoluta o especial para ocupar cargos públicos.",
+            "d) Como consecuencia de la imposición de una sanción disciplinaria o como consecuencia de la imposición de una pena, principal o accesoria, de inhabilitación absoluta o especial para ocupar cargos públicos."
         ],
-        "resposta_correcta": "d) Com a conseqüència de la imposició d'una sanció disciplinària o com a conseqüència de la imposició d'una pena, principal o accessòria, d'inhabilitació absoluta o especial per ocupar càrrecs públics.",
-        "explicacio": "Art. 60 Llei 3/2007."
+        "resposta_correcta": "d) Como consecuencia de la imposición de una sanción disciplinaria o como consecuencia de la imposición de una pena, principal o accesoria, de inhabilitación absoluta o especial para ocupar cargos públicos.",
+        "explicacio": "Art. 60 Ley 3/2007."
     },
     {
         "id": 35,
-        "pregunta": "D'acord amb el Decret 256/1999, de 24 de desembre, pel qual es regula el règim de precedències dels càrrecs i institucions públiques de la Comunitat Autònoma de les Illes Balears, senyalau qui dels següents té menys rang de precedència en els actes oficials que se celebrin:",
+        "pregunta": "De acuerdo con el Decreto 256/1999, de 24 de diciembre, por el que se regula el régimen de precedencias de los cargos e instituciones públicas de la Comunidad Autónoma de las Illes Balears, señale quién de los siguientes tiene menos rango de precedencia en los actos oficiales que se celebren:",
         "opcions": [
-            "a) Els consellers del Govern de les Illes Balears.",
-            "b) Els diputats del Parlament de les Illes Balears.",
-            "c) Els portaveus dels grups parlamentaris del Parlament de les Illes Balears.",
-            "d) El síndic major de Comptes de les Illes Balears."
+            "a) Los consejeros del Gobierno de las Illes Balears.",
+            "b) Los diputados del Parlamento de las Illes Balears.",
+            "c) Los portavoces de los grupos parlamentarios del Parlamento de las Illes Balears.",
+            "d) El síndico mayor de Cuentas de las Illes Balears."
         ],
-        "resposta_correcta": "b) Els diputats del Parlament de les Illes Balears.",
-        "explicacio": "Segons la llista de precedències (Art 10), els Consellers estan molt amunt (9), el Síndic (15), Portaveus (12/13), Diputats (23)."
+        "resposta_correcta": "b) Los diputados del Parlamento de las Illes Balears.",
+        "explicacio": "Según la lista de precedencias (Art 10), los Consejeros están muy arriba (9), el Síndico (15), Portavoces (12/13), Diputados (23)."
     },
     {
         "id": 36,
-        "pregunta": "D'acord amb la Llei 3/2007, de 27 de març, de la funció pública de la comunitat autònoma de les Illes Balears, quina de les següents no és una informació que s'hagi d'incloure a les convocatòries de selecció?",
+        "pregunta": "De acuerdo con la Ley 3/2007, de 27 de marzo, de la función pública de la comunidad autónoma de las Illes Balears, ¿cuál de las siguientes no es una información que se deba incluir en las convocatorias de selección?",
         "opcions": [
-            "a) Els llocs de treball que s'ofereixen en la convocatòria.",
-            "b) Els requisits i les condicions que han de complir els aspirants.",
-            "c) La composició dels òrgans de selecció.",
-            "d) El calendari per dur a terme les proves."
+            "a) Los puestos de trabajo que se ofrecen en la convocatoria.",
+            "b) Los requisitos y las condiciones que deben cumplir los aspirantes.",
+            "c) La composición de los órganos de selección.",
+            "d) El calendario para llevar a cabo las pruebas."
         ],
-        "resposta_correcta": "c) La composició dels òrgans de selecció.",
-        "explicacio": "Art. 49.2 Llei 3/2007. La convocatòria ha de contenir les bases, requisits, proves, etc. Però la composició nominal de l'òrgan tècnic sovint es publica posteriorment en un acte separat, encara que les bases sí han de dir 'designació del tribunal'. Si la pregunta es refereix a la *composició nominal* (noms i llinatges), aquesta no sol ser obligatòria a la convocatòria inicial."
+        "resposta_correcta": "c) La composición de los órganos de selección.",
+        "explicacio": "Art. 49.2 Ley 3/2007. La convocatoria debe contener las bases, requisitos, pruebas, etc. Pero la composición nominal del órgano técnico a menudo se publica posteriormente en un acto separado, aunque las bases sí deben decir 'designación del tribunal'. Si la pregunta se refiere a la *composición nominal* (nombres y apellidos), esta no suele ser obligatoria en la convocatoria inicial."
     },
     {
         "id": 37,
-        "pregunta": "D'acord amb l'article 18.3 de la Constitució espanyola:",
+        "pregunta": "De acuerdo con el artículo 18.3 de la Constitución española:",
         "opcions": [
-            "a) Es té dret a la propietat dels enviaments postals.",
-            "b) Es garanteix el secret de les comunicacions i, en especial, de les postals, telegràfiques i telefòniques, excepte resolució judicial.",
-            "c) Es té dret a la prestació d'un servei postal universal de qualitat.",
-            "d) Es garanteix el dret a la inviolabilitat dels enviaments postals."
+            "a) Se tiene derecho a la propiedad de los envíos postales.",
+            "b) Se garantiza el secreto de las comunicaciones y, en especial, de las postales, telegráficas y telefónicas, salvo resolución judicial.",
+            "c) Se tiene derecho a la prestación de un servicio postal universal de calidad.",
+            "d) Se garantiza el derecho a la inviolabilidad de los envíos postales."
         ],
-        "resposta_correcta": "b) Es garanteix el secret de les comunicacions i, en especial, de les postals, telegràfiques i telefòniques, excepte resolució judicial.",
-        "explicacio": "Text literal de l'Art. 18.3 CE."
+        "resposta_correcta": "b) Se garantiza el secreto de las comunicaciones y, en especial, de las postales, telegráficas y telefónicas, salvo resolución judicial.",
+        "explicacio": "Texto literal del Art. 18.3 CE."
     },
     {
         "id": 38,
-        "pregunta": "Senyalau la resposta correcta. En l'atenció a la ciutadania, una habilitat per a l'escolta activa és:",
+        "pregunta": "Señale la respuesta correcta. En la atención a la ciudadanía, una habilidad para la escucha activa es:",
         "opcions": [
-            "a) Tenir disposició psicològica, verbal i física per escoltar.",
-            "b) Intentar donar resposta al problema d'un ciutadà, encara que no hagi acabat d'explicar-lo, ja que nosaltres som els experts.",
-            "c) Oferir ajuda o solucions prematures.",
-            "d) Llevar importància al problema."
+            "a) Tener disposición psicológica, verbal y física para escuchar.",
+            "b) Intentar dar respuesta al problema de un ciudadano, aunque no haya acabado de explicarlo, ya que nosotros somos los expertos.",
+            "c) Ofrecer ayuda o soluciones prematuras.",
+            "d) Quitar importancia al problema."
         ],
-        "resposta_correcta": "a) Tenir disposició psicològica, verbal i física per escoltar.",
-        "explicacio": "Definició d'escolta activa (la resta són barreres o errors)."
+        "resposta_correcta": "a) Tener disposición psicológica, verbal y física para escuchar.",
+        "explicacio": "Definición de escucha activa (el resto son barreras o errores)."
     },
     {
         "id": 39,
-        "pregunta": "D'acord amb la Llei 3/2007, de 27 de març, de la funció pública de la comunitat autònoma de les Illes Balears, no és un criteri de graduació de faltes i sancions:",
+        "pregunta": "De acuerdo con la Ley 3/2007, de 27 de marzo, de la función pública de la comunidad autónoma de las Illes Balears, no es un criterio de graduación de faltas y sanciones:",
         "opcions": [
-            "a) La violació de la neutralitat o la independència política.",
-            "b) La reiteració.",
-            "c) La intencionalitat.",
-            "d) La pertorbació del servei."
+            "a) La violación de la neutralidad o la independencia política.",
+            "b) La reiteración.",
+            "c) La intencionalidad.",
+            "d) La perturbación del servicio."
         ],
-        "resposta_correcta": "a) La violació de la neutralitat o la independència política.",
-        "explicacio": "Art. 129 Llei 3/2007. La violació de neutralitat és una falta (molt greu), no un criteri per graduar la sanció (com sí ho són la intencionalitat, reiteració, dany a l'interès públic/pertorbació)."
+        "resposta_correcta": "a) La violación de la neutralidad o la independencia política.",
+        "explicacio": "Art. 129 Ley 3/2007. La violación de neutralidad es una falta (muy grave), no un criterio para graduar la sanción (como sí lo son la intencionalidad, reiteración, daño al interés público/perturbación)."
     },
     {
         "id": 40,
-        "pregunta": "D'acord amb la Llei 3/2007, de 27 de març, de la funció pública de la comunitat autònoma de les Illes Balears, l'incompliment de la jornada i l'horari legalment establerts dona lloc:",
+        "pregunta": "De acuerdo con la Ley 3/2007, de 27 de marzo, de la función pública de la comunidad autónoma de las Illes Balears, el incumplimiento de la jornada y el horario legalmente establecidos da lugar:",
         "opcions": [
-            "a) A falta greu, en tot cas.",
-            "b) A la deducció de retribucions o l'obertura d'un expedient disciplinari apreciat discrecionalment pel superior jeràrquic.",
-            "c) A falta molt greu.",
-            "d) A la deducció de retribucions en tot cas, i podria ser causa de l'obertura d'un expedient disciplinari."
+            "a) A falta grave, en todo caso.",
+            "b) A la deducción de retribuciones o la apertura de un expediente disciplinario apreciado discrecionalmente por el superior jerárquico.",
+            "c) A falta muy grave.",
+            "d) A la deducción de retribuciones en todo caso, y podría ser causa de la apertura de un expediente disciplinario."
         ],
-        "resposta_correcta": "d) A la deducció de retribucions en tot cas, i podria ser causa de l'obertura d'un expedient disciplinari.",
-        "explicacio": "Art. 128 Llei 3/2007: La deducció de retribucions és automàtica (no sancionadora) pel temps no treballat, sense perjudici de la responsabilitat disciplinària si escau."
+        "resposta_correcta": "d) A la deducción de retribuciones en todo caso, y podría ser causa de la apertura de un expediente disciplinario.",
+        "explicacio": "Art. 128 Ley 3/2007: La deducción de retribuciones es automática (no sancionadora) por el tiempo no trabajado, sin perjuicio de la responsabilidad disciplinaria si procede."
     },
     {
         "id": 41,
-        "pregunta": "Un tipus de suport d'un document d'arxiu pot ser:",
+        "pregunta": "Un tipo de soporte de un documento de archivo puede ser:",
         "opcions": [
-            "a) Un pergamí.",
-            "b) Un expedient.",
-            "c) Un gràfic.",
-            "d) L'idioma en què està escrit"
+            "a) Un pergamino.",
+            "b) Un expediente.",
+            "c) Un gráfico.",
+            "d) El idioma en que está escrito"
         ],
-        "resposta_correcta": "a) Un pergamí.",
-        "explicacio": "El suport és la base material (paper, pergamí, disc magnètic). L'expedient és un conjunt lògic, el gràfic és contingut, l'idioma és llenguatge."
+        "resposta_correcta": "a) Un pergamino.",
+        "explicacio": "El soporte es la base material (papel, pergamino, disco magnético). El expediente es un conjunto lógico, el gráfico es contenido, el idioma es lenguaje."
     },
     {
         "id": 42,
-        "pregunta": "D'acord amb la Llei 3/2007, de 27 de març, de la funció pública de la comunitat autònoma de les Illes Balears, quina de les següents funcions o llocs no queden reservats al personal funcionari de carrera?",
+        "pregunta": "De acuerdo con la Ley 3/2007, de 27 de marzo, de la función pública de la comunidad autónoma de las Illes Balears, ¿cuál de las siguientes funciones o puestos no quedan reservados al personal funcionario de carrera?",
         "opcions": [
-            "a) Els llocs corresponents a les àrees de manteniment i de conservació d'edificis, d'equips i d'instal·lacions.",
-            "b) Els de control i fiscalització interna de la gestió economicofinancera i pressupostària, els de comptabilitat i tresoreria.",
-            "c) Els que impliquen exercici d'autoritat, fe pública o assessorament legal.",
-            "d) Els llocs que comporten prefectura orgànica."
+            "a) Los puestos correspondientes a las áreas de mantenimiento y de conservación de edificios, de equipos y de instalaciones.",
+            "b) Los de control y fiscalización interna de la gestión económico-financiera y presupuestaria, los de contabilidad y tesorería.",
+            "c) Los que implican ejercicio de autoridad, fe pública o asesoramiento legal.",
+            "d) Los puestos que conllevan jefatura orgánica."
         ],
-        "resposta_correcta": "a) Els llocs corresponents a les àrees de manteniment i de conservació d'edificis, d'equips i d'instal·lacions.",
-        "explicacio": "Art. 18.2 Llei 3/2007. Els llocs de manteniment, oficis, vigilància, etc., poden ser ocupats per personal laboral."
+        "resposta_correcta": "a) Los puestos correspondientes a las áreas de mantenimiento y de conservación de edificios, de equipos y de instalaciones.",
+        "explicacio": "Art. 18.2 Ley 3/2007. Los puestos de mantenimiento, oficios, vigilancia, etc., pueden ser ocupados por personal laboral."
     },
     {
         "id": 43,
-        "pregunta": "D'acord amb la Llei 3/2007, de 27 de març, de la funció pública de la comunitat autònoma dels Illes Balears, el personal al servei de l'Administració de la comunitat autònoma de les Illes Balears, amb caràcter general, depèn orgànicament:",
+        "pregunta": "De acuerdo con la Ley 3/2007, de 27 de marzo, de la función pública de la comunidad autónoma de las Illes Balears, el personal al servicio de la Administración de la comunidad autónoma de las Illes Balears, con carácter general, depende orgánicamente:",
         "opcions": [
-            "a) De la Comissió de Personal.",
-            "b) Del president o presidenta de la Comunitat Autònoma de les Illes Balears.",
-            "c) Del conseller o consellera competent en matèria de funció pública.",
-            "d) Del conseller o consellera competent en matèria de treball."
+            "a) De la Comisión de Personal.",
+            "b) Del presidente o presidenta de la Comunidad Autónoma de las Illes Balears.",
+            "c) Del consejero o consejera competente en materia de función pública.",
+            "d) Del consejero o consejera competente en materia de trabajo."
         ],
-        "resposta_correcta": "c) Del conseller o consellera competent en matèria de funció pública.",
-        "explicacio": "Art. 16 Llei 3/2007: 'El personal... depèn orgànicament del conseller competent en matèria de funció pública i funcionalment del conseller del qual depengui la unitat...'."
+        "resposta_correcta": "c) Del consejero o consejera competente en materia de función pública.",
+        "explicacio": "Art. 16 Ley 3/2007: 'El personal... depende orgánicamente del consejero competente en materia de función pública y funcionalmente del consejero del cual dependa la unidad...'."
     },
     {
         "id": 44,
-        "pregunta": "D'acord amb la Llei 3/2007, de 27 de març, de la funció pública de la comunitat autònoma de les Illes Balears, els sistemes de selecció per a l'accés als cossos, escales i especialitats funcionarials o a les categories professionals de personal laboral fix, són:",
+        "pregunta": "De acuerdo con la Ley 3/2007, de 27 de marzo, de la función pública de la comunidad autónoma de las Illes Balears, los sistemas de selección para el acceso a los cuerpos, escalas y especialidades funcionariales o a las categorías profesionales de personal laboral fijo, son:",
         "opcions": [
-            "a) Oposició, concurs oposició i, excepcionalment, concurs.",
-            "b) Oposició i concurs oposició.",
-            "c) Oposició lliure i concurs oposició restringit.",
-            "d) Únicament oposició."
+            "a) Oposición, concurso oposición y, excepcionalmente, concurso.",
+            "b) Oposición y concurso oposición.",
+            "c) Oposición libre y concurso oposición restringido.",
+            "d) Únicamente oposición."
         ],
-        "resposta_correcta": "a) Oposició, concurs oposició i, excepcionalment, concurs.",
-        "explicacio": "Art. 50 Llei 3/2007."
+        "resposta_correcta": "a) Oposición, concurso oposición y, excepcionalmente, concurso.",
+        "explicacio": "Art. 50 Ley 3/2007."
     },
     {
         "id": 45,
-        "pregunta": "D'acord amb la Llei 3/2007, de 27 de març, de la funció pública de la comunitat autònoma de les Illes Balears, quin dels deures següents no és un deure del personal funcionari al servei de l'Administració de la Comunitat Autònoma:",
+        "pregunta": "De acuerdo con la Ley 3/2007, de 27 de marzo, de la función pública de la comunidad autónoma de las Illes Balears, ¿cuál de los deberes siguientes no es un deber del personal funcionario al servicio de la Administración de la Comunidad Autónoma:",
         "opcions": [
-            "a) Respectar la igualtat entre homes i dones en el servei públic.",
-            "b) Complir, en la mesura que sigui possible, la jornada i l'horari de treball establerts.",
-            "c) Vetlar pel propi perfeccionament professional.",
-            "d) Complir el règim d'incompatibilitats."
+            "a) Respetar la igualdad entre hombres y mujeres en el servicio público.",
+            "b) Cumplir, en la medida de lo posible, la jornada y el horario de trabajo establecidos.",
+            "c) Velar por el propio perfeccionamiento profesional.",
+            "d) Cumplir el régimen de incompatibilidades."
         ],
-        "resposta_correcta": "b) Complir, en la mesura que sigui possible, la jornada i l'horari de treball establerts.",
-        "explicacio": "El deure és 'complir amb exactitud' (Art 73.j), no 'en la mesura que sigui possible'."
+        "resposta_correcta": "b) Cumplir, en la medida de lo posible, la jornada y el horario de trabajo establecidos.",
+        "explicacio": "El deber es 'cumplir con exactitud' (Art 73.j), no 'en la medida de lo posible'."
     },
     {
         "id": 46,
-        "pregunta": "El marc jurídic de la seguretat i salut laboral és:",
+        "pregunta": "El marco jurídico de la seguridad y salud laboral es:",
         "opcions": [
-            "a) La Constitució espanyola, l'Estatut d'autonomia de les Illes Balears, l'Estatut dels treballadors i la Llei 31/1995, de 8 de novembre, de prevenció de riscs laborals.",
-            "b) Només l'Estatut dels treballadors.",
-            "c) L'Estatut dels treballadors i la Llei 31/1995, de 8 de novembre, de prevenció de riscs laborals.",
-            "d) Només la Llei 31/1995, de 8 de novembre, de prevenció de riscs laborals."
+            "a) La Constitución española, el Estatuto de autonomía de las Illes Balears, el Estatuto de los trabajadores y la Ley 31/1995, de 8 de noviembre, de prevención de riesgos laborales.",
+            "b) Solo el Estatuto de los trabajadores.",
+            "c) El Estatuto de los trabajadores y la Ley 31/1995, de 8 de noviembre, de prevención de riesgos laborales.",
+            "d) Solo la Ley 31/1995, de 8 de noviembre, de prevención de riesgos laborales."
         ],
-        "resposta_correcta": "a) La Constitució espanyola, l'Estatut d'autonomia de les Illes Balears, l'Estatut dels treballadors i la Llei 31/1995, de 8 de novembre, de prevenció de riscs laborals.",
-        "explicacio": "El marc normatiu inclou la CE (art 40.2), Llei 31/1995 i la normativa estatutària i laboral."
+        "resposta_correcta": "a) La Constitución española, el Estatuto de autonomía de las Illes Balears, el Estatuto de los trabajadores y la Ley 31/1995, de 8 de noviembre, de prevención de riesgos laborales.",
+        "explicacio": "El marco normativo incluye la CE (art 40.2), Ley 31/1995 y la normativa estatutaria y laboral."
     },
     {
         "id": 47,
-        "pregunta": "D'acord amb el cicle vital dels documents, els arxius es classifiquen:",
+        "pregunta": "De acuerdo con el ciclo vital de los documentos, los archivos se clasifican:",
         "opcions": [
-            "a) En arxius de gestió, centrals i històrics.",
-            "b) En arxius oberts o tancats.",
-            "c) En arxius locals, provincials, regionals i generals.",
-            "d) En arxius públics o privats."
+            "a) En archivos de gestión, centrales e históricos.",
+            "b) En archivos abiertos o cerrados.",
+            "c) En archivos locales, provinciales, regionales y generales.",
+            "d) En archivos públicos o privados."
         ],
-        "resposta_correcta": "a) En arxius de gestió, centrals i històrics.",
-        "explicacio": "Classificació arxivística estàndard segons l'edat dels documents (cicle vital)."
+        "resposta_correcta": "a) En archivos de gestión, centrales e históricos.",
+        "explicacio": "Clasificación archivística estándar según la edad de los documentos (ciclo vital)."
     },
     {
         "id": 48,
-        "pregunta": "D'acord amb la Llei 3/2007, de 27 de març, de la funció pública de la comunitat autònoma de les Illes Balears, quin dels deures següents no és un deure del personal funcionari al servei de l'Administració de la Comunitat Autònoma:",
+        "pregunta": "De acuerdo con la Ley 3/2007, de 27 de marzo, de la función pública de la comunidad autónoma de las Illes Balears, ¿cuál de los deberes siguientes no es un deber del personal funcionario al servicio de la Administración de la Comunidad Autónoma:",
         "opcions": [
-            "a) Observar les mesures de salut laboral i de prevenció de riscs que s'adoptin legalment i reglamentàriament.",
-            "b) Complir amb exactitud la jornada i l'horari de treball establerts.",
-            "c) Tractar amb incorrecció les persones amb les quals es relaciona per raó del servei.",
-            "d) Complir el règim d'incompatibilitats."
+            "a) Observar las medidas de salud laboral y de prevención de riesgos que se adopten legal y reglamentariamente.",
+            "b) Cumplir con exactitud la jornada y el horario de trabajo establecidos.",
+            "c) Tratar con incorrección a las personas con las que se relaciona por razón del servicio.",
+            "d) Cumplir el régimen de incompatibilidades."
         ],
-        "resposta_correcta": "c) Tractar amb incorrecció les persones amb les quals es relaciona per raó del servei.",
-        "explicacio": "El deure és 'tractar amb correcció' (Art 73.f). Tractar amb incorrecció seria una falta."
+        "resposta_correcta": "c) Tratar con incorrección a las personas con las que se relaciona por razón del servicio.",
+        "explicacio": "El deber es 'tratar con corrección' (Art 73.f). Tratar con incorrección sería una falta."
     },
     {
         "id": 49,
-        "pregunta": "A un edifici públic hi ha un gran nombre d'instal·lacions. Formen part de la instal·lació de climatització:",
+        "pregunta": "En un edificio público hay un gran número de instalaciones. Forman parte de la instalación de climatización:",
         "opcions": [
-            "a) Els sistemes de pressió d'aigua.",
-            "b) Els equips d'enllumenat d'emergència.",
-            "c) Els grups electrògens.",
-            "d) Els quadres de control i regulació."
+            "a) Los sistemas de presión de agua.",
+            "b) Los equipos de alumbrado de emergencia.",
+            "c) Los grupos electrógenos.",
+            "d) Los cuadros de control y regulación."
         ],
-        "resposta_correcta": "d) Els quadres de control i regulació.",
-        "explicacio": "Els quadres de control (termostats, reguladors) són part intrínseca del sistema de climatització. Els altres són fontaneria o electricitat."
+        "resposta_correcta": "d) Los cuadros de control y regulación.",
+        "explicacio": "Los cuadros de control (termostatos, reguladores) son parte intrínseca del sistema de climatización. Los otros son fontanería o electricidad."
     },
     {
         "id": 50,
-        "pregunta": "A quina direcció general de l'Administració de la Comunitat Autònoma de les Illes Balears s'adscriu el Servei de Seguretat?",
+        "pregunta": "¿A qué dirección general de la Administración de la Comunidad Autónoma de las Illes Balears se adscribe el Servicio de Seguridad?",
         "opcions": [
-            "a) A la Direcció General de Policia Autonòmica.",
-            "b) A la Direcció General d'Emergències i Interior.",
-            "c) A la Direcció General de Presidència.",
-            "d) A la Direcció General de Prevenció de Riscs Laborals."
+            "a) A la Dirección General de Policía Autonómica.",
+            "b) A la Dirección General de Emergencias e Interior.",
+            "c) A la Dirección General de Presidencia.",
+            "d) A la Dirección General de Prevención de Riesgos Laborales."
         ],
-        "resposta_correcta": "b) A la Direcció General d'Emergències i Interior.",
-        "explicacio": "L'estructura orgànica pot variar per legislatura, però històricament la seguretat privada i interior dels edificis sol penjar d'Emergències i Interior (o Funció Pública en alguns casos, però aquí l'opció b és la més consistent amb competències de seguretat)."
+        "resposta_correcta": "b) A la Dirección General de Emergencias e Interior.",
+        "explicacio": "La estructura orgánica puede variar por legislatura, pero históricamente la seguridad privada e interior de los edificios suele colgar de Emergencias e Interior (o Función Pública en algunos casos, pero aquí la opción b es la más consistente con competencias de seguridad)."
     },
     {
         "id": 51,
-        "pregunta": "Segons l'article 29 de la Constitució espanyola",
+        "pregunta": "Según el artículo 29 de la Constitución española",
         "opcions": [
-            "a) Tots els espanyols tenen el dret de petició únicament en la forma i amb els efectes que determini la llei.",
-            "b) Tots els espanyols tenen el dret de petició individual o col·lectiva, per escrit, en la forma i amb els efectes que determini la llei.",
-            "c) L'Administració pública serveix amb objectivitat els interessos generals i actua d'acord amb els principis d'eficàcia, jerarquia, descentralització, desconcentració i coordinació, amb submissió plena a la llei i al dret.",
-            "d) L'Administració pública serveix amb subjectivitat els interessos generals i actua d'acord amb els principis d'eficàcia, jerarquia, descentralització, desconcentració i coordinació, amb submissió plena a la llei i al dret."
+            "a) Todos los españoles tienen el derecho de petición únicamente en la forma y con los efectos que determine la ley.",
+            "b) Todos los españoles tienen el derecho de petición individual o colectiva, por escrito, en la forma y con los efectos que determine la ley.",
+            "c) La Administración pública sirve con objetividad los intereses generales y actúa de acuerdo con los principios de eficacia, jerarquía, descentralización, desconcentración y coordinación, con sumisión plena a la ley y al derecho.",
+            "d) La Administración pública sirve con subjetividad los intereses generales y actúa de acuerdo con los principios de eficacia, jerarquía, descentralización, desconcentración y coordinación, con sumisión plena a la ley y al derecho."
         ],
-        "resposta_correcta": "b) Tots els espanyols tenen el dret de petició individual o col·lectiva, per escrit, en la forma i amb els efectes que determini la llei.",
-        "explicacio": "Art. 29.1 Constitució Espanyola."
+        "resposta_correcta": "b) Todos los españoles tienen el derecho de petición individual o colectiva, por escrito, en la forma y con los efectos que determine la ley.",
+        "explicacio": "Art. 29.1 Constitución Española."
     },
     {
         "id": 52,
-        "pregunta": "D'acord amb la Llei orgànica 1/2004, de 28 de desembre, de mesures de protecció integral contra la violència de gènere:",
+        "pregunta": "De acuerdo con la Ley orgánica 1/2004, de 28 de diciembre, de medidas de protección integral contra la violencia de género:",
         "opcions": [
-            "a) La violència de gènere a què es refereix la Llei comprèn únicament tot acte de violència física, incloses les agressions a la llibertat sexual, les amenaces, les coaccions o la privació arbitrària de llibertat.",
-            "b) La violència de gènere a què es refereix la Llei comprèn tot acte de violència física i psicològica, incloses les agressions a la llibertat sexual, les amenaces, les coaccions o la privació arbitrària de llibertat.",
-            "c) La violència de gènere a què es refereix la Llei comprèn tot acte de violència física i psicològica, excloses les agressions a la llibertat sexual, les amenaces, les coaccions o la privació arbitrària de llibertat.",
-            "d) La violència de gènere a què es refereix la Llei comprèn únicament tot acte de violència psicològica..."
+            "a) La violencia de género a que se refiere la Ley comprende únicamente todo acto de violencia física, incluidas las agresiones a la libertad sexual, las amenazas, las coacciones o la privación arbitraria de libertad.",
+            "b) La violencia de género a que se refiere la Ley comprende todo acto de violencia física y psicológica, incluidas las agresiones a la libertad sexual, las amenazas, las coacciones o la privación arbitraria de libertad.",
+            "c) La violencia de género a que se refiere la Ley comprende todo acto de violencia física y psicológica, excluidas las agresiones a la libertad sexual, las amenazas, las coacciones o la privación arbitraria de libertad.",
+            "d) La violencia de género a que se refiere la Ley comprende únicamente todo acto de violencia psicológica..."
         ],
-        "resposta_correcta": "b) La violència de gènere a què es refereix la Llei comprèn tot acte de violència física i psicològica, incloses les agressions a la llibertat sexual, les amenaces, les coaccions o la privació arbitrària de llibertat.",
-        "explicacio": "Art. 1.3 Llei 1/2004."
+        "resposta_correcta": "b) La violencia de género a que se refiere la Ley comprende todo acto de violencia física y psicológica, incluidas las agresiones a la libertad sexual, las amenazas, las coacciones o la privación arbitraria de libertad.",
+        "explicacio": "Art. 1.3 Ley 1/2004."
     },
     {
         "id": 53,
-        "pregunta": "Senyalau la resposta incorrecta. Actualment hi ha diversos tipus de pissarres digitals: són els següents:",
+        "pregunta": "Señale la respuesta incorrecta. Actualmente hay diversos tipos de pizarras digitales: son los siguientes:",
         "opcions": [
-            "a) Electromagnètica.",
-            "b) Tàctil.",
+            "a) Electromagnética.",
+            "b) Táctil.",
             "c) Audiovisual.",
-            "d) Infraroja."
+            "d) Infrarroja."
         ],
         "resposta_correcta": "c) Audiovisual.",
-        "explicacio": "Els tipus tecnològics són electromagnètica, tàctil (resistiva) o infraroja/ultrasons. 'Audiovisual' és una categoria genèrica, no un tipus tècnic específic de PDI."
+        "explicacio": "Los tipos tecnológicos son electromagnética, táctil (resistiva) o infrarroja/ultrasonidos. 'Audiovisual' es una categoría genérica, no un tipo técnico específico de PDI."
     },
     {
         "id": 54,
-        "pregunta": "Un element complementari de les parts de la fotocopiadora és:",
+        "pregunta": "Un elemento complementario de las partes de la fotocopiadora es:",
         "opcions": [
-            "a) El tauler de control.",
-            "b) La làmpada d'exposició.",
-            "c) El classificador-grapador.",
-            "d) La safata de recepció."
+            "a) El tablero de control.",
+            "b) La lámpara de exposición.",
+            "c) El clasificador-grapador.",
+            "d) La bandeja de recepción."
         ],
-        "resposta_correcta": "c) El classificador-grapador.",
-        "explicacio": "Les altres (tauler, làmpada, safata sortida) són essencials. El sorter/grapador (finisher) és un accessori o complement."
+        "resposta_correcta": "c) El clasificador-grapador.",
+        "explicacio": "Las otras (tablero, lámpara, bandeja salida) son esenciales. El sorter/grapador (finisher) es un accesorio o complemento."
     },
     {
         "id": 55,
-        "pregunta": "En un centre educatiu, no és un material inventariable:",
+        "pregunta": "En un centro educativo, no es un material inventariable:",
         "opcions": [
-            "a) Els armaris dels despatxos.",
-            "b) Les pissarres de les aules.",
-            "c) Els recanvis de toner de les fotocopiadoras.",
-            "d) Els ratolins dels ordinadors"
+            "a) Los armarios de los despachos.",
+            "b) Las pizarras de las aulas.",
+            "c) Los recambios de tóner de las fotocopiadoras.",
+            "d) Los ratones de los ordenadores"
         ],
-        "resposta_correcta": "c) Els recanvis de toner de les fotocopiadoras.",
-        "explicacio": "El tòner és material fungible (consumible), no inventariable."
+        "resposta_correcta": "c) Los recambios de tóner de las fotocopiadoras.",
+        "explicacio": "El tóner es material fungible (consumible), no inventariable."
     },
     {
         "id": 56,
-        "pregunta": "A un centre docent, és un deure del subaltern:",
+        "pregunta": "En un centro docente, es un deber del subalterno:",
         "opcions": [
-            "a) Atendre el servei de portes durant el temps de la jornada escolar, i fer-se càrrec de les claus de l'edifici.",
-            "b) Adquirir equipament o material fungible, així com tenir cura del seu manteniment, d'acord amb la normativa vigent.",
-            "c) Planificar l'ús dels espais, els equips i els serveis del centre escolar.",
-            "d) Gestionar el manteniment dels equips de reprografia,"
+            "a) Atender el servicio de puertas durante el tiempo de la jornada escolar, y hacerse cargo de las llaves del edificio.",
+            "b) Adquirir equipamiento o material fungible, así como cuidar de su mantenimiento, de acuerdo con la normativa vigente.",
+            "c) Planificar el uso de los espacios, los equipos y los servicios del centro escolar.",
+            "d) Gestionar el mantenimiento de los equipos de reprografía,"
         ],
-        "resposta_correcta": "a) Atendre el servei de portes durant el temps de la jornada escolar, i fer-se càrrec de les claus de l'edifici.",
-        "explicacio": "Funció típica i bàsica del personal subaltern (custòdia, claus, portes). La compra i planificació corresponen a la secretaria/direcció."
+        "resposta_correcta": "a) Atender el servicio de puertas durante el tiempo de la jornada escolar, y hacerse cargo de las llaves del edificio.",
+        "explicacio": "Función típica y básica del personal subalterno (custodia, llaves, puertas). La compra y planificación corresponden a la secretaría/dirección."
     },
     {
         "id": 57,
-        "pregunta": "Senyalau la resposta correcta. La Llei balear d'igualtat de dones i homes és:",
+        "pregunta": "Señale la respuesta correcta. La Ley balear de igualdad de mujeres y hombres es:",
         "opcions": [
-            "a) La Llei 3/2007, de 28 de juliol, d'igualtat de dones i homes.",
-            "b) La Llei 11/2016, de 28 de juliol, d'igualtat de dones i homes.",
-            "c) La Llei 11/2017, de 13 de juliol, d'igualtat de dones i homes.",
-            "d) La Llei 3/2007, de 13 de juliol, d'igualtat de dones i homes."
+            "a) La Ley 3/2007, de 28 de julio, de igualdad de mujeres y hombres.",
+            "b) La Ley 11/2016, de 28 de julio, de igualdad de mujeres y hombres.",
+            "c) La Ley 11/2017, de 13 de julio, de igualdad de mujeres y hombres.",
+            "d) La Ley 3/2007, de 13 de julio, de igualdad de mujeres y hombres."
         ],
-        "resposta_correcta": "b) La Llei 11/2016, de 28 de juliol, d'igualtat de dones i homes.",
-        "explicacio": "Normativa autonòmica vigent."
+        "resposta_correcta": "b) La Ley 11/2016, de 28 de julio, de igualdad de mujeres y hombres.",
+        "explicacio": "Normativa autonómica vigente."
     },
     {
         "id": 58,
-        "pregunta": "De conformitat amb la Llei orgànica 1/2004, de 28 de desembre, de mesures de protecció integral contra la violència de gènere, les situacions de violència de gènere es poden acreditar mitjançant:",
+        "pregunta": "De conformidad con la Ley orgánica 1/2004, de 28 de diciembre, de medidas de protección integral contra la violencia de género, las situaciones de violencia de género se pueden acreditar mediante:",
         "opcions": [
-            "a) Un informe del servei de prevenció de riscs laborals corresponent.",
-            "b) Un informe del ministeri fiscal que indiqui l'existència d'indicis suficients.",
-            "c) Un informe del metge de la Seguretat Social que acrediti la violència.",
-            "d) Un informe del metge de la mútua corresponent."
+            "a) Un informe del servicio de prevención de riesgos laborales correspondiente.",
+            "b) Un informe del ministerio fiscal que indique la existencia de indicios suficientes.",
+            "c) Un informe del médico de la Seguridad Social que acredite la violencia.",
+            "d) Un informe del médico de la mutua correspondiente."
         ],
-        "resposta_correcta": "b) Un informe del ministeri fiscal que indiqui l'existència d'indicis suficients.",
-        "explicacio": "Art. 23 Llei 1/2004. S'acredita per sentència, ordre de protecció o, excepcionalment, informe del Ministeri Fiscal."
+        "resposta_correcta": "b) Un informe del ministerio fiscal que indique la existencia de indicios suficientes.",
+        "explicacio": "Art. 23 Ley 1/2004. Se acredita por sentencia, orden de protección o, excepcionalmente, informe del Ministerio Fiscal."
     },
     {
         "id": 59,
-        "pregunta": "Quina de les següents respostes no és la correcta en relació amb el II Pla d'igualtat del personal de serveis generals de l'Administració de la Comunitat Autònoma?",
+        "pregunta": "¿Cuál de las siguientes respuestas no es la correcta en relación con el II Plan de igualdad del personal de servicios generales de la Administración de la Comunidad Autónoma?",
         "opcions": [
-            "a) S'estructura en eixos, objectius, mesures i accions.",
-            "b) Inclou un objectiu adreçat a fomentar la utilització de llenguatge i imatges no sexistes.",
-            "c) No inclou cap objectiu adreçat a eliminar les desigualtats per raó de sexe en matèria retributiva.",
-            "d) Inclou un objectiu per a promoure la corresponsabilitat familiar."
+            "a) Se estructura en ejes, objetivos, medidas y acciones.",
+            "b) Incluye un objetivo dirigido a fomentar la utilización de lenguaje e imágenes no sexistas.",
+            "c) No incluye ningún objetivo dirigido a eliminar las desigualdades por razón de sexo en materia retributiva.",
+            "d) Incluye un objetivo para promover la corresponsabilidad familiar."
         ],
-        "resposta_correcta": "c) No inclou cap objectiu adreçat a eliminar les desigualtats per raó de sexe en matèria retributiva.",
-        "explicacio": "És incorrecte perquè el pla SÍ que inclou aquest objectiu (la bretxa salarial és un punt clau)."
+        "resposta_correcta": "c) No incluye ningún objetivo dirigido a eliminar las desigualdades por razón de sexo en materia retributiva.",
+        "explicacio": "Es incorrecto porque el plan SÍ incluye este objetivo (la brecha salarial es un punto clave)."
     },
     {
         "id": 60,
-        "pregunta": "La Llei orgànica 1/2004, de 28 de desembre, de mesures de protecció integral contra la violència de gènere, té per objecte:",
+        "pregunta": "La Ley orgánica 1/2004, de 28 de diciembre, de medidas de protección integral contra la violencia de género, tiene por objeto:",
         "opcions": [
-            "a) Actuar contra la violència que, com a manifestació de la discriminació, la situació de desigualtat i les relacions de poder dels homes sobre les dones, s'exerceix sobre aquestes per part dels qui siguin o hagin estat els seus cònjuges o dels qui estiguin o hagin estat Iligats a elles per relacions similars d'afectivitat, fins i tot sense convivència.",
-            "b) ...únicament en cas de convivència.",
-            "c) ...de les dones sobre els homes...",
-            "d) ...dels homes sobre les dones o viceversa..."
+            "a) Actuar contra la violencia que, como manifestación de la discriminación, la situación de desigualdad y las relaciones de poder de los hombres sobre las mujeres, se ejerce sobre estas por parte de quienes sean o hayan sido sus cónyuges o de quienes estén o hayan estado ligados a ellas por relaciones similares de afectividad, aun sin convivencia.",
+            "b) ...únicamente en caso de convivencia.",
+            "c) ...de las mujeres sobre los hombres...",
+            "d) ...de los hombres sobre las mujeres o viceversa..."
         ],
-        "resposta_correcta": "a) Actuar contra la violència que, com a manifestació de la discriminació, la situació de desigualtat i les relacions de poder dels homes sobre les dones, s'exerceix sobre aquestes per part dels qui siguin o hagin estat els seus cònjuges o dels qui estiguin o hagin estat Iligats a elles per relacions similars d'afectivitat, fins i tot sense convivència.",
-        "explicacio": "Art. 1.1 Llei 1/2004."
+        "resposta_correcta": "a) Actuar contra la violencia que, como manifestación de la discriminación, la situación de desigualdad y las relaciones de poder de los hombres sobre las mujeres, se ejerce sobre estas por parte de quienes sean o hayan sido sus cónyuges o de quienes estén o hayan estado ligados a ellas por relaciones similares de afectividad, aun sin convivencia.",
+        "explicacio": "Art. 1.1 Ley 1/2004."
     },
     {
         "id": 61,
-        "pregunta": "Segons la Constitució espanyola, el termini màxim en què el detingut ha de ser posat en llibertat o a disposició de l'autoritat judicial és:",
+        "pregunta": "Según la Constitución española, el plazo máximo en que el detenido debe ser puesto en libertad o a disposición de la autoridad judicial es:",
         "opcions": [
-            "a) De quaranta-vuit hores.",
-            "b) De setanta-dues hores.",
-            "c) De setanta-quatre hores.",
-            "d) De setanta-sis hores."
+            "a) De cuarenta y ocho horas.",
+            "b) De setenta y dos horas.",
+            "c) De setenta y cuatro horas.",
+            "d) De setenta y seis horas."
         ],
-        "resposta_correcta": "b) De setanta-dues hores.",
-        "explicacio": "Art. 17.2 Constitució Espanyola."
+        "resposta_correcta": "b) De setenta y dos horas.",
+        "explicacio": "Art. 17.2 Constitución Española."
     },
     {
         "id": 62,
-        "pregunta": "Senyalau la resposta correcta. D'acord amb la Constitució espanyola, en relació amb els sindicats de treballadors i les associacions empresarials:",
+        "pregunta": "Señale la respuesta correcta. De acuerdo con la Constitución española, en relación con los sindicatos de trabajadores y las asociaciones empresariales:",
         "opcions": [
-            "a) Contribueixen a la defensa i a la promoció dels interessos econòmics i socials que els són propis.",
-            "b) La seva creació és lliure dins del respecte únicament a la Constitució.",
-            "c) Concorren a la formació i a la manifestació de la voluntat popular i són instrument fonamental per a la participació política.",
-            "d) Únicament la seva estructura interna ha de ser democràtica."
+            "a) Contribuyen a la defensa y a la promoción de los intereses económicos y sociales que les son propios.",
+            "b) Su creación es libre dentro del respeto únicamente a la Constitución.",
+            "c) Concurren a la formación y a la manifestación de la voluntad popular y son instrumento fundamental para la participación política.",
+            "d) Únicamente su estructura interna debe ser democrática."
         ],
-        "resposta_correcta": "a) Contribueixen a la defensa i a la promoció dels interessos econòmics i socials que els són propis.",
-        "explicacio": "Art. 7 Constitució Espanyola."
+        "resposta_correcta": "a) Contribuyen a la defensa y a la promoción de los intereses económicos y sociales que les son propios.",
+        "explicacio": "Art. 7 Constitución Española."
     },
     {
         "id": 63,
-        "pregunta": "D'acord amb la Llei 3/2007, de 27 de març, de la funció pública de la comunitat autònoma de les Illes Balears, quin dels següents sistemes de selecció descriu el concurs oposició?",
+        "pregunta": "De acuerdo con la Ley 3/2007, de 27 de marzo, de la función pública de la comunidad autónoma de las Illes Balears, ¿cuál de los siguientes sistemas de selección describe el concurso oposición?",
         "opcions": [
-            "a) Consisteix a qualificar els mèrits al·legats i acreditats pels aspirants, d'acord amb un barem inclòs en la convocatòria.",
-            "b) Consisteix a dur a terme dues fases, una d'oposició i una de concurs, tenint en compte que la puntuació del concurs no dispensa de la necessitat de superar les proves de la fase d'oposició.",
-            "c) Consisteix a dur a terme dues fases, una de concurs i una d'oposició, tenint en compte que la puntuació del concurs, com que és prèvia a l'oposició, pot dispensar de la necessitat de superar les proves de la fase d'oposició sempre que així ho estableixi la convocatòria corresponent.",
-            "d) Consisteix a dur a terme una o més proves de capacitat per determinar l'aptitud dels aspirants."
+            "a) Consiste en calificar los méritos alegados y acreditados por los aspirantes, de acuerdo con un baremo incluido en la convocatoria.",
+            "b) Consiste en llevar a cabo dos fases, una de oposición y una de concurso, teniendo en cuenta que la puntuación del concurso no dispensa de la necesidad de superar las pruebas de la fase de oposición.",
+            "c) Consiste en llevar a cabo dos fases, una de concurso y una de oposición, teniendo en cuenta que la puntuación del concurso, al ser previa a la oposición, puede dispensar de la necesidad de superar las pruebas de la fase de oposición siempre que así lo establezca la convocatoria correspondiente.",
+            "d) Consiste en llevar a cabo una o más pruebas de capacidad para determinar la aptitud de los aspirantes."
         ],
-        "resposta_correcta": "b) Consisteix a dur a terme dues fases, una d'oposició i una de concurs, tenint en compte que la puntuació del concurs no dispensa de la necessitat de superar les proves de la fase d'oposició.",
-        "explicacio": "Art. 50.2 Llei 3/2007. La fase de concurs NO dispensa de l'oposició."
+        "resposta_correcta": "b) Consiste en llevar a cabo dos fases, una de oposición y una de concurso, teniendo en cuenta que la puntuación del concurso no dispensa de la necesidad de superar las pruebas de la fase de oposición.",
+        "explicacio": "Art. 50.2 Ley 3/2007. La fase de concurso NO dispensa de la oposición."
     },
     {
         "id": 64,
-        "pregunta": "D'acord amb l'article 17.3 de la Llei 39/2015, d'1 d'octubre, del procediment administratiu comú de les administracions públiques, els mitjans o suports en què s'emmagatzemin documents, han de disposar de mesures de seguretat d'acord amb el que preveu:",
+        "pregunta": "De acuerdo con el artículo 17.3 de la Ley 39/2015, de 1 de octubre, del procedimiento administrativo común de las administraciones públicas, los medios o soportes en que se almacenen documentos, deben disponer de medidas de seguridad de acuerdo con lo que prevé:",
         "opcions": [
-            "a) El personal de seguretat al càrrec.",
-            "b) L'Esquema Nacional de Seguretat.",
-            "c) L'Esquema Nacional d'Interoperabilitat.",
-            "d) No són necessàries mesures de seguretat."
+            "a) El personal de seguridad al cargo.",
+            "b) El Esquema Nacional de Seguridad.",
+            "c) El Esquema Nacional de Interoperabilidad.",
+            "d) No son necesarias medidas de seguridad."
         ],
-        "resposta_correcta": "b) L'Esquema Nacional de Seguretat.",
-        "explicacio": "Art. 17.3 Llei 39/2015."
+        "resposta_correcta": "b) El Esquema Nacional de Seguridad.",
+        "explicacio": "Art. 17.3 Ley 39/2015."
     },
     {
         "id": 65,
-        "pregunta": "D'acord amb la segona edició del Llibre d'estil del Govern de les Illes Balears, la nota interna és:",
+        "pregunta": "De acuerdo con la segunda edición del Libro de estilo del Gobierno de las Illes Balears, la nota interna es:",
         "opcions": [
-            "a) Un document que pot reemplaçar l'ofici en l'àmbit d'una mateixa conselleria.",
-            "b) El document que serveix per a comunicacions entre òrgans i unitats de la mateixa Administració o d'una altra.",
-            "c) El document que serveix per relacionar-se amb persones físiques o jurídiques particulars.",
-            "d) El document que es pot fer servir per traslladar continguts sobre aspectes de funcionament intern."
+            "a) Un documento que puede reemplazar el oficio en el ámbito de una misma consejería.",
+            "b) El documento que sirve para comunicaciones entre órganos y unidades de la misma Administración o de otra.",
+            "c) El documento que sirve para relacionarse con personas físicas o jurídicas particulares.",
+            "d) El documento que se puede utilizar para trasladar contenidos sobre aspectos de funcionamiento interno."
         ],
-        "resposta_correcta": "d) El document que es pot fer servir per traslladar continguts sobre aspectes de funcionament intern.",
-        "explicacio": "La nota interna és per a ús intern, àgil i informal (instruccions, avisos). Per a comunicacions formals entre òrgans s'usa l'ofici."
+        "resposta_correcta": "d) El documento que se puede utilizar para trasladar contenidos sobre aspectos de funcionamiento interno.",
+        "explicacio": "La nota interna es para uso interno, ágil e informal (instrucciones, avisos). Para comunicaciones formales entre órganos se usa el oficio."
     }
-
 ];

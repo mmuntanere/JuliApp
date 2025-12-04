@@ -7,6 +7,7 @@ const TestGame = ({ test, onFinish, onExit }) => {
     const [isAnswered, setIsAnswered] = useState(false);
     const [score, setScore] = useState(0);
     const [failedQuestions, setFailedQuestions] = useState([]);
+    const [userAnswers, setUserAnswers] = useState({});
 
     useEffect(() => {
         if (test && test.preguntes) {
@@ -49,6 +50,7 @@ const TestGame = ({ test, onFinish, onExit }) => {
             setFailedQuestions([]);
             setIsAnswered(false);
             setSelectedOption(null);
+            setUserAnswers({});
         }
     }, [test]);
 
@@ -65,6 +67,12 @@ const TestGame = ({ test, onFinish, onExit }) => {
         setSelectedOption(option);
         setIsAnswered(true);
 
+        // Save answer
+        setUserAnswers(prev => ({
+            ...prev,
+            [currentQuestionIndex]: option
+        }));
+
         const isCorrect = option === currentQuestion.resposta_correcta;
         if (isCorrect) {
             setScore(score + 1);
@@ -75,11 +83,35 @@ const TestGame = ({ test, onFinish, onExit }) => {
 
     const handleNext = () => {
         if (currentQuestionIndex < totalQuestions - 1) {
-            setCurrentQuestionIndex(currentQuestionIndex + 1);
-            setSelectedOption(null);
-            setIsAnswered(false);
+            const nextIndex = currentQuestionIndex + 1;
+            setCurrentQuestionIndex(nextIndex);
+
+            // Check if next question was already answered
+            if (userAnswers[nextIndex]) {
+                setSelectedOption(userAnswers[nextIndex]);
+                setIsAnswered(true);
+            } else {
+                setSelectedOption(null);
+                setIsAnswered(false);
+            }
         } else {
             onFinish(score, failedQuestions);
+        }
+    };
+
+    const handlePrevious = () => {
+        if (currentQuestionIndex > 0) {
+            const prevIndex = currentQuestionIndex - 1;
+            setCurrentQuestionIndex(prevIndex);
+
+            // Restore previous answer
+            if (userAnswers[prevIndex]) {
+                setSelectedOption(userAnswers[prevIndex]);
+                setIsAnswered(true);
+            } else {
+                setSelectedOption(null);
+                setIsAnswered(false);
+            }
         }
     };
 
@@ -125,18 +157,29 @@ const TestGame = ({ test, onFinish, onExit }) => {
                     ))}
                 </div>
 
-                {isAnswered && (
-                    <div className="feedback-section fade-in">
-                        <p className="explanation">
-                            <strong>{selectedOption === currentQuestion.resposta_correcta ? '¡Correcto!' : 'Incorrecto'}</strong>
-                            <br />
-                            {currentQuestion.explicacio}
-                        </p>
-                        <button className="btn btn-primary next-btn" onClick={handleNext}>
-                            {currentQuestionIndex < totalQuestions - 1 ? 'Siguiente Pregunta' : 'Finalizar Test'}
-                        </button>
-                    </div>
-                )}
+                <div className="navigation-actions" style={{ marginTop: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <button
+                        className="btn glass-panel"
+                        onClick={handlePrevious}
+                        disabled={currentQuestionIndex === 0}
+                        style={{ opacity: currentQuestionIndex === 0 ? 0.5 : 1 }}
+                    >
+                        ← Anterior
+                    </button>
+
+                    {isAnswered && (
+                        <div className="feedback-section fade-in" style={{ flex: 1, marginLeft: '1rem' }}>
+                            <p className="explanation" style={{ marginBottom: '1rem' }}>
+                                <strong>{selectedOption === currentQuestion.resposta_correcta ? '¡Correcto!' : 'Incorrecto'}</strong>
+                                <br />
+                                {currentQuestion.explicacio}
+                            </p>
+                            <button className="btn btn-primary next-btn" onClick={handleNext} style={{ width: '100%' }}>
+                                {currentQuestionIndex < totalQuestions - 1 ? 'Siguiente Pregunta' : 'Finalizar Test'}
+                            </button>
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
     );
