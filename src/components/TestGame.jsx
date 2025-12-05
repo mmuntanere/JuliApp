@@ -10,38 +10,33 @@ const TestGame = ({ test, onFinish, onExit }) => {
     const [userAnswers, setUserAnswers] = useState({});
 
     useEffect(() => {
-        if (test && test.preguntes) {
-            const newQuestions = test.preguntes.map(q => {
-                // 1. Parse options to extract text
-                const parsedOptions = q.opcions.map(opt => {
-                    // Match "(a) ", "a) ", etc.
-                    const match = opt.match(/^(\([a-d]\)|[a-d]\))\s+(.*)/);
-                    return match ? match[2] : opt;
-                });
+        if (test && test.questions) {
+            const newQuestions = test.questions.map(q => {
+                // Shuffle options
+                const originalOptions = q.options;
+                // Create an array of indices [0, 1, 2, 3]
+                const indices = originalOptions.map((_, i) => i);
+                // Shuffle indices
+                const shuffledIndices = [...indices].sort(() => Math.random() - 0.5);
 
-                // 2. Parse correct answer to extract text
-                const correctMatch = q.resposta_correcta.match(/^(\([a-d]\)|[a-d]\))\s+(.*)/);
-                const correctText = correctMatch ? correctMatch[2] : q.resposta_correcta;
+                // Map new options based on shuffled indices
+                const newOptions = shuffledIndices.map(i => originalOptions[i]);
 
-                // 3. Shuffle options text
-                const shuffledOptionsText = [...parsedOptions].sort(() => Math.random() - 0.5);
-
-                // 4. Re-assign prefixes
-                const prefixes = ['(a)', '(b)', '(c)', '(d)'];
-                const newOptions = shuffledOptionsText.map((text, index) => `${prefixes[index]} ${text}`);
-
-                // 5. Find new correct answer
-                const newCorrectIndex = shuffledOptionsText.findIndex(text => text === correctText);
-                const newCorrectAnswer = newCorrectIndex !== -1 ? newOptions[newCorrectIndex] : q.resposta_correcta;
+                // Find new correct answer index
+                // The original correct answer index is q.correct_answer
+                // We need to find where that index moved to in shuffledIndices
+                // shuffledIndices[newIndex] = originalIndex
+                // So if shuffledIndices[2] == q.correct_answer, then new correct answer is 2.
+                const newCorrectAnswerIndex = shuffledIndices.indexOf(q.correct_answer);
 
                 return {
                     ...q,
-                    opcions: newOptions,
-                    resposta_correcta: newCorrectAnswer
+                    options: newOptions,
+                    correct_answer: newCorrectAnswerIndex
                 };
             });
 
-            // 6. Shuffle questions
+            // Shuffle questions order
             newQuestions.sort(() => Math.random() - 0.5);
 
             setShuffledQuestions(newQuestions);
@@ -61,19 +56,19 @@ const TestGame = ({ test, onFinish, onExit }) => {
     const currentQuestion = shuffledQuestions[currentQuestionIndex];
     const totalQuestions = shuffledQuestions.length;
 
-    const handleOptionClick = (option) => {
+    const handleOptionClick = (index) => {
         if (isAnswered) return;
 
-        setSelectedOption(option);
+        setSelectedOption(index);
         setIsAnswered(true);
 
         // Save answer
         setUserAnswers(prev => ({
             ...prev,
-            [currentQuestionIndex]: option
+            [currentQuestionIndex]: index
         }));
 
-        const isCorrect = option === currentQuestion.resposta_correcta;
+        const isCorrect = index === currentQuestion.correct_answer;
         if (isCorrect) {
             setScore(score + 1);
         } else {
@@ -87,7 +82,7 @@ const TestGame = ({ test, onFinish, onExit }) => {
             setCurrentQuestionIndex(nextIndex);
 
             // Check if next question was already answered
-            if (userAnswers[nextIndex]) {
+            if (userAnswers[nextIndex] !== undefined) {
                 setSelectedOption(userAnswers[nextIndex]);
                 setIsAnswered(true);
             } else {
@@ -105,7 +100,7 @@ const TestGame = ({ test, onFinish, onExit }) => {
             setCurrentQuestionIndex(prevIndex);
 
             // Restore previous answer
-            if (userAnswers[prevIndex]) {
+            if (userAnswers[prevIndex] !== undefined) {
                 setSelectedOption(userAnswers[prevIndex]);
                 setIsAnswered(true);
             } else {
@@ -115,14 +110,14 @@ const TestGame = ({ test, onFinish, onExit }) => {
         }
     };
 
-    const getOptionClass = (option) => {
+    const getOptionClass = (index) => {
         if (!isAnswered) return 'btn glass-panel option-btn';
 
-        if (option === currentQuestion.resposta_correcta) {
+        if (index === currentQuestion.correct_answer) {
             return 'btn glass-panel option-btn correct';
         }
 
-        if (option === selectedOption && option !== currentQuestion.resposta_correcta) {
+        if (index === selectedOption && index !== currentQuestion.correct_answer) {
             return 'btn glass-panel option-btn incorrect';
         }
 
@@ -142,14 +137,20 @@ const TestGame = ({ test, onFinish, onExit }) => {
             </div>
 
             <div className="question-card glass-panel">
-                <h3 className="question-text">{currentQuestion.pregunta}</h3>
+                <h3 className="question-text">{currentQuestion.question}</h3>
+
+                {currentQuestion.image && (
+                    <div className="question-image" style={{ marginBottom: '1rem', textAlign: 'center' }}>
+                        <img src={currentQuestion.image} alt="Pregunta" style={{ maxWidth: '100%', maxHeight: '300px', borderRadius: '8px' }} />
+                    </div>
+                )}
 
                 <div className="options-grid">
-                    {currentQuestion.opcions.map((option, index) => (
+                    {currentQuestion.options.map((option, index) => (
                         <button
                             key={index}
-                            className={getOptionClass(option)}
-                            onClick={() => handleOptionClick(option)}
+                            className={getOptionClass(index)}
+                            onClick={() => handleOptionClick(index)}
                             disabled={isAnswered}
                         >
                             {option}
@@ -170,9 +171,9 @@ const TestGame = ({ test, onFinish, onExit }) => {
                     {isAnswered && (
                         <div className="feedback-section fade-in" style={{ flex: 1, marginLeft: '1rem' }}>
                             <p className="explanation" style={{ marginBottom: '1rem' }}>
-                                <strong>{selectedOption === currentQuestion.resposta_correcta ? '¡Correcto!' : 'Incorrecto'}</strong>
+                                <strong>{selectedOption === currentQuestion.correct_answer ? '¡Correcto!' : 'Incorrecto'}</strong>
                                 <br />
-                                {currentQuestion.explicacio}
+                                {currentQuestion.explanation}
                             </p>
                             <button className="btn btn-primary next-btn" onClick={handleNext} style={{ width: '100%' }}>
                                 {currentQuestionIndex < totalQuestions - 1 ? 'Siguiente Pregunta' : 'Finalizar Test'}

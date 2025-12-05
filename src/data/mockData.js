@@ -30,26 +30,26 @@ const generateQuestions = (count, topic) => {
 };
 
 export const tests2019 = [
-    { id: '2019_m1', name: 'Modelo 1', examen: 'Subalterno - Modelo 1', preguntes: questions2019m1 },
-    { id: '2019_m2', name: 'Modelo 2', examen: 'Subalterno - Modelo 2', preguntes: questions2019m2 },
-    { id: '2019_m3', name: 'Modelo 3', examen: 'Subalterno - Modelo 3', preguntes: questions2019m3 },
+    { id: '2019_m1', name: 'Modelo 1', examen: 'Subalterno - Modelo 1', questions: questions2019m1.questions },
+    { id: '2019_m2', name: 'Modelo 2', examen: 'Subalterno - Modelo 2', questions: questions2019m2.questions },
+    { id: '2019_m3', name: 'Modelo 3', examen: 'Subalterno - Modelo 3', questions: questions2019m3.questions },
 ];
 
 export const tests2018 = [
-    { id: '2018_m1', name: 'Modelo 1', examen: 'Subalterno - Cuestionario A', preguntes: questions2018m1 },
-    { id: '2018_m2', name: 'Modelo 2', examen: 'Subalterno - Cuestionario B', preguntes: questions2018m2 },
-    { id: '2018_m3', name: 'Modelo 3', examen: 'Subalterno - Cuestionario C', preguntes: questions2018m3 },
-    { id: '2018_m4', name: 'Modelo 4', examen: 'Subalterno - Cuestionario D', preguntes: questions2018m4 },
-    { id: '2018_m5', name: 'Modelo 5', examen: 'Subalterno - Cuestionario E', preguntes: questions2018m5 },
+    { id: '2018_m1', name: 'Modelo 1', examen: 'Subalterno - Cuestionario A', questions: questions2018m1.questions },
+    { id: '2018_m2', name: 'Modelo 2', examen: 'Subalterno - Cuestionario B', questions: questions2018m2.questions },
+    { id: '2018_m3', name: 'Modelo 3', examen: 'Subalterno - Cuestionario C', questions: questions2018m3.questions },
+    { id: '2018_m4', name: 'Modelo 4', examen: 'Subalterno - Cuestionario D', questions: questions2018m4.questions },
+    { id: '2018_m5', name: 'Modelo 5', examen: 'Subalterno - Cuestionario E', questions: questions2018m5.questions },
 ];
 
 export const themes = [
-    { id: 'theme_1', name: 'Tema 1: Constitución', examen: 'Tema 1: Constitución Española 1978 - Estructura y Principios', preguntes: questionsTema1 },
-    { id: 'theme_2', name: 'Tema 2: Estatut', examen: 'Tema 2: Derechos Fundamentales, TC y Reforma', preguntes: questionsTema2 },
-    { id: 't4', name: 'Tema 4: Organización territorial', examen: 'Tema 4: Organización Territorial y Estatutos de Autonomía', preguntes: questionsTema4 },
-    { id: 't5_est', name: 'Tema 5: Estatuto Autonomia', examen: 'Tema 5: Estatuto de Autonomía de las Illes Balears', preguntes: questionsTema5Estatut },
-    { id: 't5_cons', name: 'Tema 5: Consejos insulares', examen: 'Tema 5: Los Consejos Insulares e IMAS', preguntes: questionsTema5Consejos },
-    { id: 't15', name: 'Tema 15: Ley procedimientos', examen: 'Tema 15: Ley 39/2015 del Procedimiento Administrativo Común', preguntes: questionsTema15 },
+    { id: 'theme_1', name: 'Tema 1: Constitución', examen: 'Tema 1: Constitución Española 1978 - Estructura y Principios', questions: questionsTema1.questions },
+    { id: 'theme_2', name: 'Tema 2: Estatut', examen: 'Tema 2: Derechos Fundamentales, TC y Reforma', questions: questionsTema2.questions },
+    { id: 't4', name: 'Tema 4: Organización territorial', examen: 'Tema 4: Organización Territorial y Estatutos de Autonomía', questions: questionsTema4.questions },
+    { id: 't5_est', name: 'Tema 5: Estatuto Autonomia', examen: 'Tema 5: Estatuto de Autonomía de las Illes Balears', questions: questionsTema5Estatut.questions },
+    { id: 't5_cons', name: 'Tema 5: Consejos insulares', examen: 'Tema 5: Los Consejos Insulares e IMAS', questions: questionsTema5Consejos.questions },
+    { id: 't15', name: 'Tema 15: Ley procedimientos', examen: 'Tema 15: Ley 39/2015 del Procedimiento Administrativo Común', questions: questionsTema15.questions },
 ];
 
 export const getAllTests = () => {

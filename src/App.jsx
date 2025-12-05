@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Menu from './components/Menu';
 import TestGame from './components/TestGame';
 import Results from './components/Results';
+import Login from './pages/Login';
+import AdminImport from './pages/AdminImport';
+import PrivateRoute from './components/PrivateRoute';
 import './index.css';
 
-function App() {
+function MainApp() {
   const [view, setView] = useState('menu'); // menu, game, results
   const [currentTest, setCurrentTest] = useState(null);
   const [testResults, setTestResults] = useState({ score: 0, failedQuestions: [] });
@@ -20,7 +24,7 @@ function App() {
 
     // Save score logic could go here
     if (currentTest && currentTest.id) {
-      const percentage = Math.round((score / currentTest.preguntes.length) * 100);
+      const percentage = Math.round((score / currentTest.questions.length) * 100);
       localStorage.setItem(`score_${currentTest.id}`, percentage);
     }
   };
@@ -30,7 +34,7 @@ function App() {
       id: `retry_${Date.now()}`,
       name: 'Repaso de Fallos',
       examen: `Repaso: ${currentTest.examen}`,
-      preguntes: failedQuestions
+      questions: failedQuestions
     };
     setCurrentTest(retryTest);
     setView('game');
@@ -63,13 +67,39 @@ function App() {
       {view === 'results' && (
         <Results
           score={testResults.score}
-          totalQuestions={currentTest.preguntes.length}
+          totalQuestions={currentTest.questions.length}
           failedQuestions={testResults.failedQuestions}
           onRetry={handleRetryFailed}
           onMenu={handleBackToMenu}
         />
       )}
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route
+          path="/"
+          element={
+            <PrivateRoute>
+              <MainApp />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin"
+          element={
+            <PrivateRoute>
+              <AdminImport />
+            </PrivateRoute>
+          }
+        />
+      </Routes>
+    </Router>
   );
 }
 
