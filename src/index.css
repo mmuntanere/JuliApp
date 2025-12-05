@@ -36,6 +36,8 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 button {
