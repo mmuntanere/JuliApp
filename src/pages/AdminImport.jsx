@@ -1,10 +1,12 @@
 
 import React, { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { db } from '../firebase';
 import { collection, writeBatch, doc, serverTimestamp } from 'firebase/firestore';
 import { useAuth } from '../contexts/AuthContext';
 
 export default function AdminImport() {
+    const navigate = useNavigate();
     const [jsonInput, setJsonInput] = useState('');
     const [status, setStatus] = useState('');
     const [files, setFiles] = useState([]);
@@ -17,27 +19,53 @@ export default function AdminImport() {
     const validateJSON = (data) => {
         // Must have metadata and questions array
         if (!data.metadata || !data.questions || !Array.isArray(data.questions)) {
-            return { valid: false, error: 'Falta "metadata" o "questions" (array)' };
+            return { valid: false, error: 'Missing "metadata" or "questions" (array)' };
         }
         // Check required metadata fields
         const { category, type, subcategory } = data.metadata;
         if (!category || !type || !subcategory) {
-            return { valid: false, error: 'Metadata incompleta (category, type, subcategory)' };
+            return { valid: false, error: 'Incomplete metadata (category, type, subcategory)' };
         }
         return { valid: true };
     };
 
     const parseJSFile = (text) => {
         try {
-            // Extract the array part: look for [ ... ]
-            // This regex looks for the first [ and captures everything up to the last ]
-            const match = text.match(/\[([\s\S]*)\]/);
-            if (!match) return null;
+            // Strategy 1: Check for exported object "export const X = { ... }"
+            // Capture everything inside the first { ... } pair that likely represents the root object
+            // This is tricky with regex. Let's try to match the variable assignment format.
+            const objectMatch = text.match(/export\s+const\s+\w+\s*=\s*(\{[\s\S]*\});?/);
+            if (objectMatch) {
+                // We have the object string. However, keys might not be quoted in JS (e.g. metadata: {...}).
+                // JSON.parse requires quoted keys.
+                // If the user's file is valid JSON content assigned to a variable, this works.
+                // But looking at the user's file, it looks like valid JSON structure (keys quoted) assigned to JS var.
+                // Let's try parsing it.
+                try {
+                    // Remove trailing semicolon if captured
+                    let jsonString = objectMatch[1];
+                    // Clean up trailing ; if needed, though regex group shouldn't catch it if we are careful.
 
-            const arrayString = match[0];
-            // Parse as JSON. Note: This assumes the JS content is valid JSON (quoted keys).
-            // If keys are unquoted, we might need a more loose parser, but for now we assume standard JSON-like JS.
-            return JSON.parse(arrayString);
+                    // Note: If the file strict JS with unquoted keys, JSON.parse will fail.
+                    // We might need a loose parser or more regex hacking.
+                    // For now, let's assume it's JSON-compatible object syntax as seen in the user's file.
+                    return JSON.parse(jsonString);
+                } catch (jsonErr) {
+                    console.warn("Found object structure but failed to JSON parse it. It might use unquoted keys.", jsonErr);
+                    // Fallthrough to array strategy or handle unquoted keys?
+                    // Let's try a naive "key quoter" if it's simple
+                }
+            }
+
+            // Strategy 2: Legacy Array [ ... ]
+            // Extract the array part: look for [ ... ]
+            const match = text.match(/\[([\s\S]*)\]/);
+            if (match) {
+                const arrayString = match[0];
+                return JSON.parse(arrayString);
+            }
+
+            return null;
         } catch (e) {
             console.error("Error parsing JS file:", e);
             return null;
@@ -54,7 +82,8 @@ export default function AdminImport() {
             subcategory: firstItem.subcategoria || firstItem.subcategory || 'General',
             type: firstItem.tipus || firstItem.type || 'Test',
             createdAt: new Date().toISOString(),
-            author: currentUser?.email || 'Admin'
+            author: currentUser?.email || 'Admin',
+            name: '' // Will be populated from filename if empty
         };
 
         // B) Map questions
@@ -109,7 +138,7 @@ export default function AdminImport() {
             const isJS = file.name.endsWith('.js');
 
             if (!isJSON && !isJS) {
-                newFiles.push({ name: file.name, valid: false, error: 'Format no suportat (.json o .js)' });
+                newFiles.push({ name: file.name, valid: false, error: 'Unsupported format (.json or .js)' });
                 continue;
             }
 
@@ -118,14 +147,25 @@ export default function AdminImport() {
                 let data;
 
                 if (isJS) {
-                    const legacyArray = parseJSFile(text);
-                    if (!legacyArray) {
-                        newFiles.push({ name: file.name, valid: false, error: 'No s\'ha pogut extreure l\'array del fitxer JS' });
+                    const parsedData = parseJSFile(text);
+                    if (!parsedData) {
+                        newFiles.push({ name: file.name, valid: false, error: 'Could not parse JS file' });
                         continue;
                     }
-                    data = transformLegacyData(legacyArray);
-                    if (!data) {
-                        newFiles.push({ name: file.name, valid: false, error: 'Error transformant dades legacy' });
+
+                    // Check if it's the Full Object (Metadata + Questions) or just Array (Legacy)
+                    if (Array.isArray(parsedData)) {
+                        // It's just the array -> Transform
+                        data = transformLegacyData(parsedData);
+                        if (!data) {
+                            newFiles.push({ name: file.name, valid: false, error: 'Error transforming legacy data' });
+                            continue;
+                        }
+                    } else if (parsedData.questions && Array.isArray(parsedData.questions)) {
+                        // It's the Full Object -> Use as is
+                        data = parsedData;
+                    } else {
+                        newFiles.push({ name: file.name, valid: false, error: 'Unknown JS structure' });
                         continue;
                     }
                 } else {
@@ -134,6 +174,11 @@ export default function AdminImport() {
 
                 const validation = validateJSON(data);
 
+                // Auto-populate name from filename if missing
+                if (validation.valid && !data.metadata.name) {
+                    data.metadata.name = file.name.replace(/\.(json|js)$/i, '');
+                }
+
                 newFiles.push({
                     name: file.name,
                     data: data,
@@ -141,7 +186,7 @@ export default function AdminImport() {
                     error: validation.error
                 });
             } catch (e) {
-                newFiles.push({ name: file.name, valid: false, error: 'Error de lectura/parseig' });
+                newFiles.push({ name: file.name, valid: false, error: 'Read/Parse error' });
             }
         }
 
@@ -183,6 +228,8 @@ export default function AdminImport() {
         const collectionRef = collection(db, 'questions');
         const category = metadata.category || import.meta.env.VITE_CATEGORY || 'subalter';
         const subcategory = metadata.subcategory || null;
+        const type = metadata.type || 'Test';
+        const name = metadata.name || '';
 
         questions.forEach((item) => {
             const newDocRef = doc(collectionRef);
@@ -194,6 +241,8 @@ export default function AdminImport() {
                 image: item.image || null,
                 category: category,
                 subcategory: subcategory,
+                type: type, // Fix: Include type
+                name: name, // Save exam name
                 createdAt: serverTimestamp()
             };
             batch.set(newDocRef, questionData);
@@ -206,11 +255,10 @@ export default function AdminImport() {
     const handleBulkUpload = async () => {
         const validFiles = files.filter(f => f.valid);
         if (validFiles.length === 0) {
-            setStatus('No hi ha fitxers vàlids per pujar.');
+            setStatus('No valid files to upload.');
             return;
         }
-
-        setStatus('Pujant fitxers...');
+        setStatus('Uploading files...');
         let totalImported = 0;
         let errors = 0;
 
@@ -223,8 +271,7 @@ export default function AdminImport() {
                 errors++;
             }
         }
-
-        setStatus(`Procés finalitzat.Importades ${totalImported} preguntes.Errors: ${errors} `);
+        setStatus(`Process finished. Imported ${totalImported} questions. Errors: ${errors} `);
         if (errors === 0) {
             setFiles([]); // Clear list on full success
         }
@@ -232,12 +279,12 @@ export default function AdminImport() {
 
     const handleManualImport = async () => {
         if (!jsonInput.trim()) {
-            setStatus('Per favor, enganxa un JSON vàlid.');
+            setStatus('Please paste a valid JSON.');
             return;
         }
 
         try {
-            setStatus('Processant...');
+            setStatus('Processing...');
             const data = JSON.parse(jsonInput);
 
             let questionsToImport = [];
@@ -253,7 +300,7 @@ export default function AdminImport() {
             }
 
             const count = await uploadQuestions(questionsToImport, importMetadata);
-            setStatus(`Èxit! S'han importat ${count} preguntes.`);
+            setStatus(`Success! Imported ${count} questions.`);
             setJsonInput('');
         } catch (error) {
             console.error("Error importing data: ", error);
@@ -261,12 +308,19 @@ export default function AdminImport() {
         }
     };
 
-    if (!currentUser) return <div>Accés denegat</div>;
+    if (!currentUser) return <div>Access Denied</div>;
 
     return (
         <div className="glass-panel" style={{ maxWidth: '800px', margin: '2rem auto', padding: '2rem' }}>
+            <button
+                onClick={() => navigate('/admin')}
+                className="btn"
+                style={{ background: 'transparent', border: '1px solid var(--color-border)', marginBottom: '1.5rem' }}
+            >
+                ← Back to Dashboard
+            </button>
             <h1 style={{ color: 'var(--color-primary)', marginBottom: '1.5rem' }}>
-                Importar Preguntes
+                Import Questions
             </h1>
 
             {/* --- Drag & Drop Zone --- */}
@@ -296,10 +350,10 @@ export default function AdminImport() {
                     style={{ display: 'none' }}
                 />
                 <p style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>
-                    Arrossega fitxers JSON o JS (Legacy) aquí
+                    Drag JSON or JS (Legacy) files here
                 </p>
                 <p style={{ fontSize: '0.9rem', opacity: 0.7 }}>
-                    Format requerit: metadata + questions array
+                    Required format: metadata + questions array
                 </p>
             </div>
 
@@ -320,7 +374,7 @@ export default function AdminImport() {
                             <div>
                                 <span style={{ fontWeight: 'bold', marginRight: '1rem' }}>{file.name}</span>
                                 {!file.valid && <span style={{ color: 'var(--color-error)', fontSize: '0.9rem' }}>({file.error})</span>}
-                                {file.valid && <span style={{ color: 'var(--color-success)', fontSize: '0.9rem' }}>({file.data.questions.length} preguntes)</span>}
+                                {file.valid && <span style={{ color: 'var(--color-success)', fontSize: '0.9rem' }}>({file.data.questions.length} questions)</span>}
                             </div>
                             <button
                                 onClick={() => removeFile(index)}
@@ -337,7 +391,7 @@ export default function AdminImport() {
                         disabled={files.filter(f => f.valid).length === 0}
                         style={{ marginTop: '1rem', width: '100%' }}
                     >
-                        Pujar Fitxers Vàlids ({files.filter(f => f.valid).length})
+                        Upload Valid Files ({files.filter(f => f.valid).length})
                     </button>
                 </div>
             )}
@@ -345,7 +399,7 @@ export default function AdminImport() {
             <div style={{ borderBottom: '1px solid var(--color-border)', margin: '2rem 0' }}></div>
 
             {/* --- Manual Input --- */}
-            <h3 style={{ marginBottom: '1rem' }}>O enganxa JSON manualment</h3>
+            <h3 style={{ marginBottom: '1rem' }}>Or paste JSON manually</h3>
             <div style={{ marginBottom: '1.5rem' }}>
                 <textarea
                     value={jsonInput}
@@ -369,7 +423,7 @@ export default function AdminImport() {
                 onClick={handleManualImport}
                 style={{ width: '100%' }}
             >
-                Pujar Text Manual
+                Upload Manual Text
             </button>
 
             {status && (
@@ -377,8 +431,8 @@ export default function AdminImport() {
                     marginTop: '1.5rem',
                     padding: '1rem',
                     borderRadius: 'var(--radius-md)',
-                    backgroundColor: status.includes('Error') || status.includes('No hi ha') ? 'rgba(239, 68, 68, 0.1)' : 'rgba(34, 197, 94, 0.1)',
-                    color: status.includes('Error') || status.includes('No hi ha') ? 'var(--color-error)' : 'var(--color-success)',
+                    backgroundColor: status.includes('Error') || status.includes('No valid') ? 'rgba(239, 68, 68, 0.1)' : 'rgba(34, 197, 94, 0.1)',
+                    color: status.includes('Error') || status.includes('No valid') ? 'var(--color-error)' : 'var(--color-success)',
                     border: '1px solid currentColor'
                 }}>
                     {status}

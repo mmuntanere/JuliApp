@@ -4,7 +4,9 @@ import Menu from './components/Menu';
 import TestGame from './components/TestGame';
 import Results from './components/Results';
 import Login from './pages/Login';
+import AdminDashboard from './pages/AdminDashboard';
 import AdminImport from './pages/AdminImport';
+import AdminManager from './pages/AdminManager';
 import PrivateRoute from './components/PrivateRoute';
 import './index.css';
 
@@ -91,10 +93,26 @@ function App() {
           }
         />
         <Route
-          path="/admin"
+          path="/admin/import"
           element={
             <PrivateRoute>
               <AdminImport />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin"
+          element={
+            <PrivateRoute>
+              <AdminDashboard />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/manager"
+          element={
+            <PrivateRoute>
+              <AdminManager />
             </PrivateRoute>
           }
         />
