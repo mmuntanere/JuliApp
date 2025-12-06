@@ -25,9 +25,17 @@ export default function Login() {
             textAlign: 'center',
             marginTop: '10vh'
         }}>
-            <h1 style={{ marginBottom: '2rem', color: 'var(--color-primary)' }}>
-                Oposiciones Subalternos
-            </h1>
+            <div style={{ marginBottom: '3rem', display: 'flex', justifyContent: 'center' }}>
+                <img
+                    src="/logo.png"
+                    alt="JuliAPP"
+                    style={{
+                        height: '180px',
+                        width: 'auto',
+                        filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.2))'
+                    }}
+                />
+            </div>
 
             <button
                 onClick={handleLogin}

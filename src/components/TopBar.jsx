@@ -18,8 +18,8 @@ const TopBar = ({ user, onMenuClick }) => {
             backdropFilter: 'blur(10px)',
             borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
         }}>
-            <div style={{ fontWeight: 'bold', fontSize: '1.1rem', color: 'var(--color-text)' }}>
-                JuliAPP
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+                <img src="/logo.png" alt="JuliAPP" style={{ height: '40px', width: 'auto' }} />
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
