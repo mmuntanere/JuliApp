@@ -12,6 +12,7 @@ const TestGame = ({ test, onFinish, onExit }) => {
     useEffect(() => {
         if (test && test.questions) {
             const newQuestions = test.questions.map(q => {
+                console.log("Processing Question:", q);
                 // Shuffle options
                 const originalOptions = q.options;
                 // Create an array of indices [0, 1, 2, 3]
@@ -22,12 +23,17 @@ const TestGame = ({ test, onFinish, onExit }) => {
                 // Map new options based on shuffled indices
                 const newOptions = shuffledIndices.map(i => originalOptions[i]);
 
+                // Ensure correct_answer is a number (handle string "0" from legacy data)
+                // Fix: Firestore uses 'correctAnswer', legacy might use 'correct_answer'
+                const rawCorrect = q.correctAnswer !== undefined ? q.correctAnswer : q.correct_answer;
+                const originalCorrectIndex = parseInt(rawCorrect, 10);
+
                 // Find new correct answer index
                 // The original correct answer index is q.correct_answer
                 // We need to find where that index moved to in shuffledIndices
                 // shuffledIndices[newIndex] = originalIndex
                 // So if shuffledIndices[2] == q.correct_answer, then new correct answer is 2.
-                const newCorrectAnswerIndex = shuffledIndices.indexOf(q.correct_answer);
+                const newCorrectAnswerIndex = shuffledIndices.indexOf(originalCorrectIndex);
 
                 return {
                     ...q,

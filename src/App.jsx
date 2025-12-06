@@ -8,26 +8,68 @@ import AdminDashboard from './pages/AdminDashboard';
 import AdminImport from './pages/AdminImport';
 import AdminManager from './pages/AdminManager';
 import PrivateRoute from './components/PrivateRoute';
+import TopBar from './components/TopBar';
+import SideMenu from './components/SideMenu';
+import { useAuth } from './contexts/AuthContext';
+import { saveExamResult, processReviewResults } from './services/statsService';
+import Statistics from './components/Statistics';
 import './index.css';
 
 function MainApp() {
+  const { currentUser, logout } = useAuth();
   const [view, setView] = useState('menu'); // menu, game, results
   const [currentTest, setCurrentTest] = useState(null);
   const [testResults, setTestResults] = useState({ score: 0, failedQuestions: [] });
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Close menu and handle logout
+  const handleLogout = async () => {
+    try {
+      await logout();
+      // PrivateRoute will handle redirect to login
+    } catch (error) {
+      console.error("Failed to log out", error);
+    }
+  };
+
+  const handleOpenStats = () => {
+    setView('stats');
+    setIsMenuOpen(false); // Close side menu
+  };
 
   const handleSelectTest = (test) => {
     setCurrentTest(test);
     setView('game');
   };
 
-  const handleFinishTest = (score, failedQuestions) => {
+  const handleFinishTest = async (score, failedQuestions) => {
     setTestResults({ score, failedQuestions });
     setView('results');
 
-    // Save score logic could go here
-    if (currentTest && currentTest.id) {
-      const percentage = Math.round((score / currentTest.questions.length) * 100);
-      localStorage.setItem(`score_${currentTest.id}`, percentage);
+    if (currentTest && currentUser) {
+      if (currentTest.type === 'Repaso') {
+        // It's a review exam. We need to process streaks.
+        // We need to know which questions were answered correctly in THIS session.
+        // 'failedQuestions' only tells us what was WRONG.
+        // We can infer correct ones: All questions in currentTest - failedQuestions.
+
+        const failedIds = new Set(failedQuestions.map(q => q.id));
+        const results = currentTest.questions.map(q => ({
+          ...q, // contains _reviewId
+          correct: !failedIds.has(q.id)
+        }));
+
+        await processReviewResults(currentUser.uid, results);
+      } else {
+        // Normal exam
+        await saveExamResult(
+          currentUser.uid,
+          currentTest,
+          score,
+          currentTest.questions.length,
+          failedQuestions
+        );
+      }
     }
   };
 
@@ -49,32 +91,50 @@ function MainApp() {
   };
 
   return (
-    <div className="app-container">
+    <div className="app-container" style={{ paddingTop: '80px' }}> {/* Padding for TopBar */}
+      <TopBar
+        user={currentUser}
+        onMenuClick={() => setIsMenuOpen(true)}
+      />
+
+      <SideMenu
+        isOpen={isMenuOpen}
+        onClose={() => setIsMenuOpen(false)}
+        onLogout={handleLogout}
+        onStats={handleOpenStats}
+      />
+
       <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
-        <img src="/logo.png" alt="JuliAPP Logo" style={{ maxHeight: '150px', width: 'auto' }} />
+        <img src="/logo.png" alt="Logo" className="logo" />
       </div>
 
-      {view === 'menu' && (
-        <Menu onSelectTest={handleSelectTest} />
-      )}
+      <div className="main-content">
+        {view === 'menu' && (
+          <Menu onSelectTest={handleSelectTest} />
+        )}
 
-      {view === 'game' && currentTest && (
-        <TestGame
-          test={currentTest}
-          onFinish={handleFinishTest}
-          onExit={handleBackToMenu}
-        />
-      )}
+        {view === 'game' && currentTest && (
+          <TestGame
+            test={currentTest}
+            onFinish={handleFinishTest}
+            onExit={handleBackToMenu}
+          />
+        )}
 
-      {view === 'results' && (
-        <Results
-          score={testResults.score}
-          totalQuestions={currentTest.questions.length}
-          failedQuestions={testResults.failedQuestions}
-          onRetry={handleRetryFailed}
-          onMenu={handleBackToMenu}
-        />
-      )}
+        {view === 'results' && (
+          <Results
+            score={testResults.score}
+            totalQuestions={currentTest.questions.length}
+            failedQuestions={testResults.failedQuestions}
+            onRetry={handleRetryFailed}
+            onMenu={handleBackToMenu}
+          />
+        )}
+
+        {view === 'stats' && (
+          <Statistics onBack={() => setView('menu')} />
+        )}
+      </div>
     </div>
   );
 }
