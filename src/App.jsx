@@ -104,9 +104,11 @@ function MainApp() {
         onStats={handleOpenStats}
       />
 
-      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
-        <img src="/logo.png" alt="Logo" className="logo" />
-      </div>
+      {view !== 'game' && (
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
+          <img src="/logo.png" alt="Logo" className="logo" />
+        </div>
+      )}
 
       <div className="main-content">
         {view === 'menu' && (
