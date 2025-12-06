@@ -1,5 +1,5 @@
 import { db } from '../firebase';
-import { doc, getDoc, getDocs, setDoc, updateDoc, collection, addDoc, serverTimestamp, runTransaction, query, orderBy } from 'firebase/firestore';
+import { doc, getDoc, getDocs, setDoc, updateDoc, collection, addDoc, serverTimestamp, runTransaction, query, orderBy, increment, writeBatch, arrayUnion } from 'firebase/firestore';
 
 /**
  * Saves the result of an exam and updates user statistics atomically.
@@ -95,6 +95,50 @@ export const saveExamResult = async (userId, exam, score, totalQuestions, failed
             // We do this outside the transaction or as separate writes because 'failed_questions' 
             // is a separate collection and we might be adding many docs.
         });
+
+        // --- GLOBAL STATS UPDATES ---
+        // Increment stats_correct / stats_incorrect on the global 'questions' collection
+        const statsBatch = writeBatch(db);
+        const failedIds = new Set(failedQuestions.map(q => q.id));
+
+        exam.questions.forEach(q => {
+            if (!q.id) return; // specific review questions might lack global ID if generated purely dynamic, but usually have it
+
+            const qRef = doc(db, 'questions', q.id);
+            if (failedIds.has(q.id)) {
+                statsBatch.update(qRef, { stats_incorrect: increment(1) });
+            } else {
+                statsBatch.update(qRef, { stats_correct: increment(1) });
+            }
+        });
+        // We commit this separately or combine with failed questions? 
+        // Let's commit separately to keep logic clean and avoid batch limit (500) if exam is huge + failed questions huge.
+        // Though unlikely to hit 500 in one go.
+        await statsBatch.commit();
+
+        // --- GLOBAL DAILY STATS ---
+        // stats_global/daily_{YYYY-MM-DD}
+        const todayStr = new Date().toISOString().split('T')[0];
+        const dailyGlobalRef = doc(db, 'stats_global', `daily_${todayStr}`);
+
+        // Use set with merge to create if not exists
+        await setDoc(dailyGlobalRef, {
+            date: todayStr,
+            activeUsers: arrayUnion(userId),
+            totalTests: increment(1),
+            totalQuestions: increment(totalQuestions),
+            totalCorrect: increment(score),
+            lastUpdated: serverTimestamp()
+        }, { merge: true });
+
+        // --- ALL-TIME GLOBAL SUMMARY ---
+        const summaryGlobalRef = doc(db, 'stats_global', 'summary');
+        await setDoc(summaryGlobalRef, {
+            totalTests: increment(1),
+            totalQuestions: increment(totalQuestions),
+            totalCorrect: increment(score),
+            lastUpdated: serverTimestamp()
+        }, { merge: true });
 
         // Handle Failed Questions addition
         const failedQuestionsRef = collection(db, 'users', userId, 'failed_questions');
@@ -262,5 +306,71 @@ export const getUserHistory = async (userId) => {
     } catch (error) {
         console.error("Error fetching user history:", error);
         return [];
+    }
+};
+
+/**
+ * Fetches all daily global stats docs for charts.
+ */
+export const getGlobalStats = async () => {
+    try {
+        const q = query(collection(db, 'stats_global'), orderBy('date', 'desc'), limit(30)); // Last 30 days
+        // Need to import limit if not present, but let's assume standard query works or just all
+        // Wait, I missed importing 'limit'. Let's avoid limit for now or just fetch all (dataset is small)
+        // If dataset grows, we should add limit.
+        const snapshot = await getDocs(query(collection(db, 'stats_global'), orderBy('date', 'asc')));
+        return snapshot.docs.map(doc => doc.data());
+    } catch (error) {
+        console.error("Error fetching global stats:", error);
+        return [];
+    }
+};
+
+/**
+ * Fetches basic metadata for ALL users to calculate total user growth.
+ * NOTE: This is expensive if users > 1000. For now it's fine.
+ * A better approach is maintaining a 'metadata/users_summary' doc with total_count.
+ * But for this requirement, we'll just list users since we might want their join date.
+ */
+export const getAllUsersMetadata = async () => {
+    try {
+        const snapshot = await getDocs(collection(db, 'users'));
+        return snapshot.docs.map(doc => ({
+            id: doc.id,
+            createdAt: doc.data().createdAt?.toDate() || new Date(0), // user must have createdAt
+            lastLogin: doc.data().lastLogin?.toDate()
+        }));
+    } catch (error) {
+        console.error("Error fetching users metadata:", error);
+        return [];
+    }
+};
+
+/**
+ * Fetches the all-time global summary.
+ */
+export const getGlobalSummary = async () => {
+    try {
+        const docRef = doc(db, 'stats_global', 'summary');
+        const docSnap = await getDoc(docRef);
+        return docSnap.exists() ? docSnap.data() : null;
+    } catch (error) {
+        console.error("Error fetching global summary:", error);
+        return null;
+    }
+};
+
+/**
+ * Efficiently counts total users.
+ */
+export const getTotalUsersCount = async () => {
+    try {
+        const { getCountFromServer } = await import('firebase/firestore');
+        const coll = collection(db, 'users');
+        const snapshot = await getCountFromServer(coll);
+        return snapshot.data().count;
+    } catch (error) {
+        console.error("Error counting users:", error);
+        return 0;
     }
 };

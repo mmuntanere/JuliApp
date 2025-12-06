@@ -281,6 +281,7 @@ export default function AdminManager() {
                             <th style={{ textAlign: 'left', padding: '1rem' }}>Subcategory</th>
                             <th style={{ textAlign: 'left', padding: '1rem' }}>Type</th>
                             <th style={{ textAlign: 'center', padding: '1rem' }}>Questions</th>
+                            <th style={{ textAlign: 'center', padding: '1rem' }}>Success Rate</th>
                             <th style={{ textAlign: 'right', padding: '1rem' }}>Actions</th>
                         </tr>
                     </thead>
@@ -300,6 +301,26 @@ export default function AdminManager() {
                                 <td style={{ padding: '1rem' }}>{exam.metadata.subcategory}</td>
                                 <td style={{ padding: '1rem' }}>{exam.metadata.type}</td>
                                 <td style={{ textAlign: 'center', padding: '1rem' }}>{exam.questions.length}</td>
+                                <td style={{ textAlign: 'center', padding: '1rem' }}>
+                                    {(() => {
+                                        let correct = 0;
+                                        let total = 0;
+                                        exam.questions.forEach(q => {
+                                            correct += (q.stats_correct || 0);
+                                            total += (q.stats_correct || 0) + (q.stats_incorrect || 0);
+                                        });
+                                        if (total === 0) return <span style={{ opacity: 0.5 }}>-</span>;
+                                        const pct = Math.round((correct / total) * 100);
+                                        return (
+                                            <span style={{
+                                                color: pct < 50 ? 'var(--color-error)' : pct > 80 ? 'var(--color-success)' : 'var(--color-warning)',
+                                                fontWeight: 'bold'
+                                            }}>
+                                                {pct}% <span style={{ fontSize: '0.8rem', opacity: 0.7 }}>({total})</span>
+                                            </span>
+                                        );
+                                    })()}
+                                </td>
                                 <td style={{ textAlign: 'right', padding: '1rem' }}>
                                     <button
                                         onClick={() => handleEdit(exam)}
@@ -448,7 +469,22 @@ export default function AdminManager() {
                                 <div key={qIndex} style={{ padding: '1.5rem', background: 'rgba(255,255,255,0.05)', borderRadius: '8px', border: '1px solid var(--color-border)' }}>
                                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
                                         <span style={{ fontWeight: 'bold', opacity: 0.5 }}>#{qIndex + 1}</span>
-                                        <button onClick={() => removeQuestion(qIndex)} style={{ background: 'none', border: 'none', color: 'var(--color-error)', cursor: 'pointer' }}>Delete</button>
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                                            {(() => {
+                                                const correct = q.stats_correct || 0;
+                                                const total = correct + (q.stats_incorrect || 0);
+                                                if (total > 0) {
+                                                    const pct = Math.round((correct / total) * 100);
+                                                    return (
+                                                        <span style={{ fontSize: '0.9rem', color: pct < 50 ? 'var(--color-error)' : 'var(--color-success)' }}>
+                                                            Global Success: <b>{pct}%</b> ({total} attempts)
+                                                        </span>
+                                                    );
+                                                }
+                                                return null;
+                                            })()}
+                                            <button onClick={() => removeQuestion(qIndex)} style={{ background: 'none', border: 'none', color: 'var(--color-error)', cursor: 'pointer' }}>Delete</button>
+                                        </div>
                                     </div>
 
                                     <div style={{ marginBottom: '1rem' }}>

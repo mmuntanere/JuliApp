@@ -141,7 +141,12 @@ const Menu = ({ onSelectTest }) => {
                         className="btn glass-panel menu-item"
                         onClick={() => handleTypeSelect(type)}
                     >
-                        {type.toUpperCase()}
+                        {(() => {
+                            const t = type.toLowerCase();
+                            if (t.includes('exam')) return 'EXÁMENES';
+                            if (t.includes('them') || t.includes('tema')) return 'TEMAS';
+                            return type.toUpperCase();
+                        })()}
                     </button>
                 ))}
                 <button className="btn glass-panel menu-item danger" onClick={() => window.location.reload()}>
@@ -160,7 +165,14 @@ const Menu = ({ onSelectTest }) => {
 
         return (
             <div className="menu-list fade-in">
-                <h2 className="submenu-title" style={{ textTransform: 'uppercase' }}>{currentView}</h2>
+                <h2 className="submenu-title" style={{ textTransform: 'uppercase' }}>
+                    {(() => {
+                        const t = currentView.toLowerCase();
+                        if (t.includes('exam')) return 'EXÁMENES';
+                        if (t.includes('them') || t.includes('tema')) return 'TEMAS';
+                        return currentView;
+                    })()}
+                </h2>
                 <div className="submenu-grid">
                     {examNames.map(name => {
                         const examId = `${currentView}-${name}`;
