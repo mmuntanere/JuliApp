@@ -177,7 +177,20 @@ const Statistics = ({ onBack }) => {
                             return (
                                 <div key={type}>
                                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                                        <span style={{ fontWeight: 'bold' }}>{type}</span>
+                                        <span style={{ fontWeight: 'bold' }}>
+                                            {(() => {
+                                                const t = type.toLowerCase();
+                                                if (t.includes('exam')) return 'Examen';
+                                                if (t.includes('them') || t.includes('tema')) return 'Tema';
+
+                                                // If type is "General", maybe show "General" or blank?
+                                                // But usually it's "General" because it was missing.
+                                                // If we have "Tema 1", it shows "Tema 1".
+                                                // But 'stats.byType' keys are what we see. 
+                                                // If the key is 'General', let's just capitalize.
+                                                return type.charAt(0).toUpperCase() + type.slice(1);
+                                            })()}
+                                        </span>
                                         <span>{pct}% ({data.totalCorrect}/{data.totalQuestions})</span>
                                     </div>
                                     <div style={{

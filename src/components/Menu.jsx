@@ -88,6 +88,7 @@ const Menu = ({ onSelectTest }) => {
             id: `${type}-${name}`,
             name: name,
             examen: name, // Legacy field support
+            type: type, // Ensure type is passed for stats
             questions: questions
         };
         onSelectTest(exam);
