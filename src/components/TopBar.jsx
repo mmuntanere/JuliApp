@@ -19,7 +19,7 @@ const TopBar = ({ user, onMenuClick }) => {
             borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
         }}>
             <div style={{ display: 'flex', alignItems: 'center' }}>
-                <img src="/logo.png" alt="JuliAPP" style={{ height: '40px', width: 'auto' }} />
+                <img src="/logo.png" alt="Plazia" style={{ height: '40px', width: 'auto' }} />
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>

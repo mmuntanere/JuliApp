@@ -28,7 +28,7 @@ export default function Login() {
             <div style={{ marginBottom: '3rem', display: 'flex', justifyContent: 'center' }}>
                 <img
                     src="/logo.png"
-                    alt="JuliAPP"
+                    alt="Plazia"
                     style={{
                         height: '180px',
                         width: 'auto',
