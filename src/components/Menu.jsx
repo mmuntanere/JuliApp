@@ -4,7 +4,7 @@ import { collection, getDocs, query, where } from 'firebase/firestore';
 import { getUserStats, getFailedQuestionsCount, getFailedQuestionsExam } from '../services/statsService';
 import { useAuth } from '../contexts/AuthContext';
 
-const Menu = ({ onSelectTest }) => {
+const Menu = ({ onSelectTest, category }) => {
     const { currentUser } = useAuth();
     const [menuData, setMenuData] = useState({});
     const [userStats, setUserStats] = useState(null);
@@ -26,12 +26,14 @@ const Menu = ({ onSelectTest }) => {
                 }
 
                 // Fetch ALL questions to allow client-side case-insensitive filtering
+                // Ideally this should be a server-side query if 'category' is indexed
                 const q = collection(db, 'questions');
                 const snapshot = await getDocs(q);
                 const allQuestions = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 
                 // Determine target category
-                const targetCategory = (import.meta.env.VITE_CATEGORY || 'Subaltern').toLowerCase();
+                // Use the prop passed from selection, default to env if null (though selection should handle it)
+                const targetCategory = (category || import.meta.env.VITE_CATEGORY || 'Subaltern').toLowerCase();
 
                 // Client-side filter
                 const filteredQuestions = allQuestions.filter(q =>
@@ -58,10 +60,8 @@ const Menu = ({ onSelectTest }) => {
                     if (allQuestions.length === 0) {
                         setError("Database is empty. Please import exams in the Admin Panel.");
                     } else {
-                        // Fallback: If target not found, try to correct or show error
-                        // If env says 'Subalter' but DB has 'Subaltern', we might want to be lenient?
-                        // For now, let's just error but maybe suggest available.
-                        setError(`No exams found for category '${import.meta.env.VITE_CATEGORY}'. Available: ${availableCategories.join(', ')}`);
+                        // Fallback or info if no exams match
+                        setError(`No exams found for category '${targetCategory}'. Available: ${availableCategories.join(', ')}`);
                     }
                 }
 
@@ -75,7 +75,7 @@ const Menu = ({ onSelectTest }) => {
         };
 
         fetchData();
-    }, []);
+    }, [currentUser, category]);
 
     const handleTypeSelect = (type) => {
         setCurrentView(type);

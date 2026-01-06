@@ -10,14 +10,17 @@ import AdminManager from './pages/AdminManager';
 import PrivateRoute from './components/PrivateRoute';
 import TopBar from './components/TopBar';
 import SideMenu from './components/SideMenu';
+import OppositionSelector from './components/OppositionSelector';
 import { useAuth } from './contexts/AuthContext';
 import { saveExamResult, processReviewResults } from './services/statsService';
+import { getOppositionConfig } from './data/mockData';
 import Statistics from './components/Statistics';
 import './index.css';
 
 function MainApp() {
   const { currentUser, logout } = useAuth();
-  const [view, setView] = useState('menu'); // menu, game, results
+  const [view, setView] = useState('selector'); // selector, menu, game, results, stats
+  const [selectedOpposition, setSelectedOpposition] = useState(null);
   const [currentTest, setCurrentTest] = useState(null);
   const [testResults, setTestResults] = useState({ score: 0, failedQuestions: [] });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,6 +33,13 @@ function MainApp() {
     } catch (error) {
       console.error("Failed to log out", error);
     }
+  };
+
+
+
+  const handleSelectOpposition = (oppositionId) => {
+    setSelectedOpposition(oppositionId);
+    setView('menu');
   };
 
   const handleOpenStats = () => {
@@ -90,6 +100,14 @@ function MainApp() {
     setTestResults({ score: 0, failedQuestions: [] });
   };
 
+  const handleBackToSelector = () => {
+    setSelectedOpposition(null);
+    setView('selector');
+  };
+
+  // Get data based on selection
+  const oppositionConfig = selectedOpposition ? getOppositionConfig(selectedOpposition) : null;
+
   return (
     <div className="app-container" style={{ paddingTop: '80px' }}> {/* Padding for TopBar */}
       <TopBar
@@ -106,13 +124,22 @@ function MainApp() {
 
       {view !== 'game' && (
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
-          <img src="/logo.png" alt="Logo" className="logo" />
+          <img src="/logo.png" alt="Logo" className="logo" style={{ maxWidth: '300px', width: '100%', height: 'auto' }} />
         </div>
       )}
 
       <div className="main-content">
-        {view === 'menu' && (
-          <Menu onSelectTest={handleSelectTest} />
+        {view === 'selector' && (
+          <OppositionSelector onSelect={handleSelectOpposition} />
+        )}
+
+        {view === 'menu' && appData && (
+          <div>
+            <button onClick={handleBackToSelector} className="btn" style={{ marginBottom: '1rem' }}>
+              ← Cambiar Oposición
+            </button>
+            <Menu onSelectTest={handleSelectTest} category={oppositionConfig?.category} />
+          </div>
         )}
 
         {view === 'game' && currentTest && (
