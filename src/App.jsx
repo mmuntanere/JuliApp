@@ -133,7 +133,7 @@ function MainApp() {
           <OppositionSelector onSelect={handleSelectOpposition} />
         )}
 
-        {view === 'menu' && appData && (
+        {view === 'menu' && oppositionConfig && (
           <div>
             <button onClick={handleBackToSelector} className="btn" style={{ marginBottom: '1rem' }}>
               ← Cambiar Oposición
