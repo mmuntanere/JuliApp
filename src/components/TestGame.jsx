@@ -11,7 +11,7 @@ const TestGame = ({ test, onFinish, onExit }) => {
 
     useEffect(() => {
         if (test && test.questions) {
-            const newQuestions = test.questions.map(q => {
+            let newQuestions = test.questions.map(q => {
                 console.log("Processing Question:", q);
                 // Shuffle options
                 const originalOptions = q.options;
@@ -44,6 +44,17 @@ const TestGame = ({ test, onFinish, onExit }) => {
 
             // Shuffle questions order
             newQuestions.sort(() => Math.random() - 0.5);
+
+            // LIMIT LOGIC: If it's a "Tema" (Topic) and has > 25 questions, take only 25 random ones.
+            // "Exams" (Examen) will keep all questions.
+            const isTopic = test.type && (
+                test.type.toLowerCase().includes('tema') ||
+                test.type.toLowerCase().includes('theme')
+            );
+
+            if (isTopic && newQuestions.length > 25) {
+                newQuestions = newQuestions.slice(0, 25);
+            }
 
             setShuffledQuestions(newQuestions);
             setCurrentQuestionIndex(0);
