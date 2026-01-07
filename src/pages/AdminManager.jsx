@@ -41,7 +41,8 @@ export default function AdminManager() {
                             name: q.name || '',
                             category: q.category || 'Uncategorized',
                             subcategory: q.subcategory || 'General',
-                            type: q.type || 'Test'
+                            type: q.type || 'Test',
+                            group: q.group || ''
                         },
                         questions: []
                     };
@@ -176,7 +177,7 @@ export default function AdminManager() {
             }
 
             // Update or Create
-            const { name, category, subcategory, type } = currentExam.metadata;
+            const { name, category, subcategory, type, group } = currentExam.metadata;
 
             currentExam.questions.forEach(q => {
                 const questionData = {
@@ -188,7 +189,8 @@ export default function AdminManager() {
                     name: name || '', // Save name
                     category,
                     subcategory,
-                    type, // Note: Schema might not have 'type' on question level in some versions, but useful to keep
+                    type,
+                    group: group || null, // Added group
                     updatedAt: new Date().toISOString()
                 };
 
@@ -446,7 +448,7 @@ export default function AdminManager() {
                 {/* Section A: Metadata */}
                 <div style={{ marginBottom: '2rem', padding: '1.5rem', background: 'rgba(0,0,0,0.2)', borderRadius: '8px' }}>
                     <h3 style={{ marginTop: 0, marginBottom: '1rem', color: 'var(--color-primary)' }}>Metadata</h3>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', gap: '1rem' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
                         <div>
                             <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.9rem' }}>Name (Optional)</label>
                             <input
@@ -475,12 +477,24 @@ export default function AdminManager() {
                                 style={{ width: '100%', padding: '0.5rem', borderRadius: '4px', border: '1px solid #444', background: '#2a2a2a', color: 'white' }}
                             />
                         </div>
+                    </div>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                         <div>
                             <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.9rem' }}>Type</label>
                             <input
                                 type="text"
                                 value={currentExam.metadata.type}
                                 onChange={e => updateMetadata('type', e.target.value)}
+                                style={{ width: '100%', padding: '0.5rem', borderRadius: '4px', border: '1px solid #444', background: '#2a2a2a', color: 'white' }}
+                            />
+                        </div>
+                        <div>
+                            <label style={{ display: 'block', marginBottom: '0.5rem', fontSize: '0.9rem' }}>Group</label>
+                            <input
+                                type="text"
+                                value={currentExam.metadata.group || ''}
+                                onChange={e => updateMetadata('group', e.target.value)}
+                                placeholder="Optionally group themes (e.g. 'Group 1')"
                                 style={{ width: '100%', padding: '0.5rem', borderRadius: '4px', border: '1px solid #444', background: '#2a2a2a', color: 'white' }}
                             />
                         </div>
