@@ -241,6 +241,7 @@ export default function AdminImport() {
                 image: item.image || null,
                 category: category,
                 subcategory: subcategory,
+                group: metadata.group || null, // Added group field
                 type: type, // Fix: Include type
                 name: name, // Save exam name
                 createdAt: serverTimestamp()

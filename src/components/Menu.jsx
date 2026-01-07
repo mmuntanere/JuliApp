@@ -10,14 +10,16 @@ const Menu = ({ onSelectTest, category }) => {
     const [userStats, setUserStats] = useState(null);
     const [failedCount, setFailedCount] = useState(0);
     const [loading, setLoading] = useState(true);
-    const [currentView, setCurrentView] = useState('main'); // 'main' or specific type key
+
+    // Navigation State
+    const [currentType, setCurrentType] = useState(null); // 'Exam', 'Theme', etc.
+    const [selectedGroup, setSelectedGroup] = useState(null); // 'Group 1', etc.
     const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true);
             try {
-                // Fetch Stats if user is logged in
                 if (currentUser) {
                     const stats = await getUserStats(currentUser.uid);
                     setUserStats(stats);
@@ -25,17 +27,12 @@ const Menu = ({ onSelectTest, category }) => {
                     setFailedCount(count);
                 }
 
-                // Fetch ALL questions to allow client-side case-insensitive filtering
-                // Ideally this should be a server-side query if 'category' is indexed
                 const q = collection(db, 'questions');
                 const snapshot = await getDocs(q);
                 const allQuestions = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
 
-                // Determine target category
-                // Use the prop passed from selection, default to env if null (though selection should handle it)
                 const targetCategory = (category || import.meta.env.VITE_CATEGORY || 'Subaltern').toLowerCase();
 
-                // Client-side filter
                 const filteredQuestions = allQuestions.filter(q =>
                     (q.category || '').toLowerCase() === targetCategory
                 );
@@ -60,7 +57,6 @@ const Menu = ({ onSelectTest, category }) => {
                     if (allQuestions.length === 0) {
                         setError("Database is empty. Please import exams in the Admin Panel.");
                     } else {
-                        // Fallback or info if no exams match
                         setError(`No exams found for category '${targetCategory}'. Available: ${availableCategories.join(', ')}`);
                     }
                 }
@@ -78,20 +74,32 @@ const Menu = ({ onSelectTest, category }) => {
     }, [currentUser, category]);
 
     const handleTypeSelect = (type) => {
-        setCurrentView(type);
+        setCurrentType(type);
+        setSelectedGroup(null); // Reset group when changing type
+    };
+
+    const handleGroupSelect = (groupName) => {
+        setSelectedGroup(groupName);
     };
 
     const handleExamSelect = (name, type) => {
         const questions = menuData[type][name];
-        // Construct exam object compatible with TestGame
         const exam = {
             id: `${type}-${name}`,
             name: name,
-            examen: name, // Legacy field support
-            type: type, // Ensure type is passed for stats
+            examen: name,
+            type: type,
             questions: questions
         };
         onSelectTest(exam);
+    };
+
+    const handleBack = () => {
+        if (selectedGroup) {
+            setSelectedGroup(null);
+        } else {
+            setCurrentType(null);
+        }
     };
 
     if (loading) {
@@ -102,12 +110,12 @@ const Menu = ({ onSelectTest, category }) => {
         return <div className="menu-container"><div className="glass-panel" style={{ padding: '2rem', color: 'var(--color-error)' }}>{error}</div></div>;
     }
 
-    const renderMainMenu = () => {
+    // --- RENDERERS ---
+
+    // 1. Level 1: Select Type (Themes, Exams...)
+    const renderTypeSelection = () => {
         const types = Object.keys(menuData).sort();
-        /*
-          The user requested: 
-          "Al inicio, aparezcan tantos botones como type tenga esta categoría, y con el nombre del type en el botón."
-        */
+
         if (types.length === 0) {
             return <div className="glass-panel" style={{ padding: '2rem' }}>No hay exámenes disponibles en esta categoría.</div>
         }
@@ -157,33 +165,91 @@ const Menu = ({ onSelectTest, category }) => {
         );
     };
 
-    const renderSubMenu = () => {
-        /*
-          The user requested:
-          "Al entrar dentro del type, quiero que salgan tantos botones como exámenes haya dentro del type. El botón tendrá el nombre que aparece en Nombre."
-        */
-        const examNames = Object.keys(menuData[currentView] || {}).sort();
+    // 2. Level 2: Group Selection (Only for Themes) OR Exam List directly
+    const renderSecondLevel = () => {
+        // Check if this type has groups
+        // We iterate through all exams in this type and collect their groups
+        const examsMap = menuData[currentType] || {};
+        const examNames = Object.keys(examsMap);
+
+        // Find if any exam has a group defined
+        const groups = new Set();
+        let hasGroups = false;
+
+        examNames.forEach(name => {
+            const questions = examsMap[name];
+            const group = questions[0]?.group; // Look at first question for metadata
+            if (group) {
+                groups.add(group);
+                hasGroups = true;
+            } else {
+                groups.add('General'); // Default group
+            }
+        });
+
+        const sortedGroups = [...groups].sort();
+
+        // If it's "Themes" (Temas) AND we have multiple groups (or at least one explicit group), show Group Selector.
+        // Or if the user explicitly requested "En el menú, cuando se elija Temas, saldrá otro submenú"
+        const isTheme = currentType.toLowerCase().includes('tema') || currentType.toLowerCase().includes('them');
+
+        if (isTheme && hasGroups && !selectedGroup) {
+            return (
+                <div className="menu-list fade-in">
+                    <h2 className="submenu-title">SELECCIONA GRUPO</h2>
+                    <div className="submenu-grid">
+                        {sortedGroups.map(group => (
+                            <button
+                                key={group}
+                                className="btn glass-panel menu-item"
+                                onClick={() => handleGroupSelect(group)}
+                            >
+                                {group}
+                            </button>
+                        ))}
+                    </div>
+                    <button className="btn glass-panel menu-item back-btn" onClick={handleBack}>
+                        Volver
+                    </button>
+                </div>
+            );
+        }
+
+        // Otherwise (Exams, or Theme with Group Selected, or No Groups), show the List of Exams
+        // Filter by group if selected
+        let displayNames = examNames;
+        if (selectedGroup) {
+            displayNames = examNames.filter(name => {
+                const questions = examsMap[name];
+                const g = questions[0]?.group || 'General';
+                return g === selectedGroup;
+            });
+        }
+
+        displayNames.sort();
 
         return (
             <div className="menu-list fade-in">
                 <h2 className="submenu-title" style={{ textTransform: 'uppercase' }}>
-                    {(() => {
-                        const t = currentView.toLowerCase();
-                        if (t.includes('exam')) return 'EXÁMENES';
-                        if (t.includes('them') || t.includes('tema')) return 'TEMAS';
-                        return currentView;
-                    })()}
+                    {selectedGroup ? selectedGroup : (
+                        (() => {
+                            const t = currentType.toLowerCase();
+                            if (t.includes('exam')) return 'EXÁMENES';
+                            if (t.includes('them') || t.includes('tema')) return 'TEMAS';
+                            return currentType;
+                        })()
+                    )}
                 </h2>
                 <div className="submenu-grid">
-                    {examNames.map(name => {
-                        const examId = `${currentView}-${name}`;
+                    {displayNames.map(name => {
+                        const examId = `${currentType}-${name}`;
                         const bestScore = userStats?.bestScores?.[examId];
 
                         return (
                             <button
                                 key={name}
                                 className="btn glass-panel menu-item"
-                                onClick={() => handleExamSelect(name, currentView)}
+                                onClick={() => handleExamSelect(name, currentType)}
                                 style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
                             >
                                 <span>{name}</span>
@@ -202,7 +268,7 @@ const Menu = ({ onSelectTest, category }) => {
                         );
                     })}
                 </div>
-                <button className="btn glass-panel menu-item back-btn" onClick={() => setCurrentView('main')}>
+                <button className="btn glass-panel menu-item back-btn" onClick={handleBack}>
                     Volver
                 </button>
             </div>
@@ -211,7 +277,7 @@ const Menu = ({ onSelectTest, category }) => {
 
     return (
         <div className="menu-container">
-            {currentView === 'main' ? renderMainMenu() : renderSubMenu()}
+            {!currentType ? renderTypeSelection() : renderSecondLevel()}
         </div>
     );
 };
