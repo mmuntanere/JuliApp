@@ -89,7 +89,7 @@ const TestGame = ({ test, onFinish, onExit }) => {
         if (isCorrect) {
             setScore(score + 1);
         } else {
-            setFailedQuestions([...failedQuestions, currentQuestion]);
+            setFailedQuestions([...failedQuestions, { ...currentQuestion, correctAnswer: currentQuestion.correct_answer }]);
         }
     };
 
