@@ -236,7 +236,7 @@ export default function AdminImport() {
             const questionData = {
                 question: item.question || item.pregunta,
                 options: item.options || item.opcions,
-                correctAnswer: item.correct_answer !== undefined ? item.correct_answer : item.resposta_correcta,
+                correctAnswer: item.correct_answer !== undefined ? item.correct_answer : (item.correctAnswer !== undefined ? item.correctAnswer : item.resposta_correcta),
                 explanation: item.explanation || item.explicacio,
                 image: item.image || null,
                 category: category,
