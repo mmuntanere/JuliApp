@@ -8,6 +8,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import AdminImport from './pages/AdminImport';
 import AdminManager from './pages/AdminManager';
 import AdminUsers from './pages/AdminUsers';
+import AdminUserDetails from './pages/AdminUserDetails';
 import PrivateRoute from './components/PrivateRoute';
 import TopBar from './components/TopBar';
 import SideMenu from './components/SideMenu';
@@ -211,6 +212,14 @@ function App() {
           element={
             <PrivateRoute>
               <AdminUsers />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/admin/users/:userId"
+          element={
+            <PrivateRoute>
+              <AdminUserDetails />
             </PrivateRoute>
           }
         />

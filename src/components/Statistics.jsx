@@ -3,18 +3,21 @@ import { useAuth } from '../contexts/AuthContext';
 import { getUserStats, getUserHistory } from '../services/statsService';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
-const Statistics = ({ onBack }) => {
+const Statistics = ({ onBack, userId }) => {
     const { currentUser } = useAuth();
     const [stats, setStats] = useState(null);
     const [history, setHistory] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    // Determine target ID: passed prop OR current user
+    const targetId = userId || currentUser?.uid;
+
     useEffect(() => {
         const loadData = async () => {
-            if (currentUser) {
+            if (targetId) {
                 const [summaryData, historyData] = await Promise.all([
-                    getUserStats(currentUser.uid),
-                    getUserHistory(currentUser.uid)
+                    getUserStats(targetId),
+                    getUserHistory(targetId)
                 ]);
                 setStats(summaryData);
                 setHistory(historyData);
@@ -22,7 +25,7 @@ const Statistics = ({ onBack }) => {
             setLoading(false);
         };
         loadData();
-    }, [currentUser]);
+    }, [targetId]);
 
     // Calculate Daily Stats and Chart Data
     const { dailyStats, chartData } = useMemo(() => {

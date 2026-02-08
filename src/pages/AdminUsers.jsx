@@ -76,7 +76,7 @@ export default function AdminUsers() {
                                 <th style={{ textAlign: 'left', padding: '1rem' }}>Email</th>
                                 <th style={{ textAlign: 'left', padding: '1rem' }}>Joined</th>
                                 <th style={{ textAlign: 'left', padding: '1rem' }}>Last Login</th>
-                                <th style={{ textAlign: 'center', padding: '1rem' }}>UID</th>
+                                <th style={{ textAlign: 'center', padding: '1rem' }}>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -103,8 +103,20 @@ export default function AdminUsers() {
                                             </span>
                                         ) : 'N/A'}
                                     </td>
-                                    <td style={{ padding: '1rem', textAlign: 'center', opacity: 0.5, fontSize: '0.8rem' }}>
-                                        {user.id.substring(0, 8)}...
+                                    <td style={{ padding: '1rem', textAlign: 'center' }}>
+                                        <button
+                                            onClick={() => navigate(`/admin/users/${user.id}`)}
+                                            className="btn"
+                                            style={{
+                                                padding: '0.3rem 0.8rem',
+                                                fontSize: '0.8rem',
+                                                background: 'rgba(255,255,255,0.1)',
+                                                color: 'var(--color-primary)',
+                                                border: '1px solid var(--color-primary)'
+                                            }}
+                                        >
+                                            View Stats
+                                        </button>
                                     </td>
                                 </tr>
                             ))}
