@@ -14,6 +14,7 @@ export default function AdminManager() {
     const [filterText, setFilterText] = useState('');
     const [selectedExams, setSelectedExams] = useState(new Set()); // Store IDs of selected exams
     const [showJson, setShowJson] = useState(false);
+    const [jsonText, setJsonText] = useState('');
 
     // --- Data Fetching ---
 
@@ -407,7 +408,16 @@ export default function AdminManager() {
                         <button onClick={handleBack} className="btn" style={{ background: 'transparent', border: '1px solid var(--color-border)' }}>
                             ← Back
                         </button>
-                        <button onClick={() => setShowJson(!showJson)} className="btn" style={{ background: 'rgba(255,255,255,0.1)' }}>
+                        <button
+                            onClick={() => {
+                                if (!showJson) {
+                                    setJsonText(JSON.stringify(currentExam, null, 2));
+                                }
+                                setShowJson(!showJson);
+                            }}
+                            className="btn"
+                            style={{ background: 'rgba(255,255,255,0.1)' }}
+                        >
                             {showJson ? 'Hide JSON' : 'Show JSON'}
                         </button>
                     </div>
@@ -420,28 +430,54 @@ export default function AdminManager() {
                 {showJson && (
                     <div className="fade-in" style={{ marginBottom: '2rem', padding: '1rem', background: '#111', borderRadius: '8px', position: 'relative', border: '1px solid #333' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
-                            <span style={{ color: '#888', fontSize: '0.9rem' }}>JSON Structure</span>
-                            <button
-                                onClick={() => {
-                                    navigator.clipboard.writeText(JSON.stringify(currentExam, null, 2));
-                                    alert('JSON copied to clipboard!');
-                                }}
-                                className="btn"
-                                style={{ padding: '0.3rem 0.8rem', fontSize: '0.8rem', background: 'var(--color-primary)' }}
-                            >
-                                Copy to Clipboard
-                            </button>
+                            <span style={{ color: '#888', fontSize: '0.9rem' }}>Edit JSON</span>
+                            <div style={{ display: 'flex', gap: '1rem' }}>
+                                <button
+                                    onClick={() => {
+                                        try {
+                                            const parsed = JSON.parse(jsonText);
+                                            // Basic validation
+                                            if (!parsed.metadata || !parsed.questions) {
+                                                throw new Error("Invalid structure: missing metadata or questions");
+                                            }
+                                            setCurrentExam(parsed);
+                                            alert("Form updated from JSON! Remember to click 'Save Changes' to persist to database.");
+                                        } catch (e) {
+                                            alert("Invalid JSON: " + e.message);
+                                        }
+                                    }}
+                                    className="btn"
+                                    style={{ padding: '0.3rem 0.8rem', fontSize: '0.8rem', background: 'var(--color-primary)' }}
+                                >
+                                    Update Form from JSON
+                                </button>
+                                <button
+                                    onClick={() => {
+                                        navigator.clipboard.writeText(jsonText);
+                                        alert('JSON copied to clipboard!');
+                                    }}
+                                    className="btn"
+                                    style={{ padding: '0.3rem 0.8rem', fontSize: '0.8rem', background: '#444' }}
+                                >
+                                    Copy
+                                </button>
+                            </div>
                         </div>
-                        <pre style={{
-                            overflow: 'auto',
-                            maxHeight: '400px',
-                            fontSize: '0.8rem',
-                            color: '#a5d6ff',
-                            fontFamily: 'monospace',
-                            margin: 0
-                        }}>
-                            {JSON.stringify(currentExam, null, 2)}
-                        </pre>
+                        <textarea
+                            value={jsonText}
+                            onChange={(e) => setJsonText(e.target.value)}
+                            style={{
+                                width: '100%',
+                                minHeight: '400px',
+                                fontSize: '0.8rem',
+                                color: '#a5d6ff',
+                                fontFamily: 'monospace',
+                                background: '#000',
+                                border: 'none',
+                                outline: 'none',
+                                padding: '1rem'
+                            }}
+                        />
                     </div>
                 )}
 
