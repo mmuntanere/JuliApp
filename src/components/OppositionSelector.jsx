@@ -45,7 +45,8 @@ const OppositionSelector = ({ onSelect }) => {
                             cursor: 'pointer',
                             transition: 'all 0.2s ease',
                             border: '1px solid rgba(255, 255, 255, 0.1)',
-                            background: 'rgba(255, 255, 255, 0.05)'
+                            background: 'rgba(255, 255, 255, 0.05)',
+                            color: 'white'
                         }}
                         onMouseOver={(e) => {
                             e.currentTarget.style.transform = 'translateY(-5px)';
