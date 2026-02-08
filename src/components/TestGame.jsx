@@ -45,14 +45,13 @@ const TestGame = ({ test, onFinish, onExit }) => {
             // Shuffle questions order
             newQuestions.sort(() => Math.random() - 0.5);
 
-            // LIMIT LOGIC: If it's a "Tema" (Topic) and has > 25 questions, take only 25 random ones.
-            // "Exams" (Examen) will keep all questions.
-            const isTopic = test.type && (
-                test.type.toLowerCase().includes('tema') ||
-                test.type.toLowerCase().includes('theme')
-            );
-
-            if (isTopic && newQuestions.length > 25) {
+            // LIMIT: Always take max 25 questions to ensure consistent test size
+            // unless it's a "Review" (Repaso) which has its own logic (handled in generation or filtered here)
+            // But usually Review is also capped at 30 in statsService. 
+            // Let's enforce 25 for everything sourced from 'test.questions' to match user expectations.
+            // Exception: If the user specifically wants full exams later, we can add a flag.
+            // For now, user expects 25.
+            if (newQuestions.length > 25) {
                 newQuestions = newQuestions.slice(0, 25);
             }
 
@@ -73,8 +72,11 @@ const TestGame = ({ test, onFinish, onExit }) => {
     const currentQuestion = shuffledQuestions[currentQuestionIndex];
     const totalQuestions = shuffledQuestions.length;
 
+    // Prevent double submission
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
     const handleOptionClick = (index) => {
-        if (isAnswered) return;
+        if (isAnswered || isSubmitting) return;
 
         setSelectedOption(index);
         setIsAnswered(true);
@@ -94,6 +96,8 @@ const TestGame = ({ test, onFinish, onExit }) => {
     };
 
     const handleNext = () => {
+        if (isSubmitting) return;
+
         if (currentQuestionIndex < totalQuestions - 1) {
             const nextIndex = currentQuestionIndex + 1;
             setCurrentQuestionIndex(nextIndex);
@@ -107,11 +111,13 @@ const TestGame = ({ test, onFinish, onExit }) => {
                 setIsAnswered(false);
             }
         } else {
+            setIsSubmitting(true);
             onFinish(score, failedQuestions);
         }
     };
 
     const handlePrevious = () => {
+        if (isSubmitting) return;
         if (currentQuestionIndex > 0) {
             const prevIndex = currentQuestionIndex - 1;
             setCurrentQuestionIndex(prevIndex);
@@ -144,7 +150,7 @@ const TestGame = ({ test, onFinish, onExit }) => {
     return (
         <div className="test-container fade-in">
             <div className="test-header">
-                <button className="btn glass-panel" onClick={onExit} style={{ padding: '0.5rem 1rem', fontSize: '0.9rem' }}>
+                <button className="btn glass-panel" onClick={onExit} style={{ padding: '0.5rem 1rem', fontSize: '0.9rem' }} disabled={isSubmitting}>
                     ← Menú
                 </button>
                 <h2>{test.examen}</h2>
@@ -168,7 +174,7 @@ const TestGame = ({ test, onFinish, onExit }) => {
                             key={index}
                             className={getOptionClass(index)}
                             onClick={() => handleOptionClick(index)}
-                            disabled={isAnswered}
+                            disabled={isAnswered || isSubmitting}
                         >
                             {option}
                         </button>
@@ -179,7 +185,7 @@ const TestGame = ({ test, onFinish, onExit }) => {
                     <button
                         className="btn glass-panel"
                         onClick={handlePrevious}
-                        disabled={currentQuestionIndex === 0}
+                        disabled={currentQuestionIndex === 0 || isSubmitting}
                         style={{ opacity: currentQuestionIndex === 0 ? 0.5 : 1 }}
                     >
                         ← Anterior
@@ -192,8 +198,8 @@ const TestGame = ({ test, onFinish, onExit }) => {
                                 <br />
                                 {currentQuestion.explanation}
                             </p>
-                            <button className="btn btn-primary next-btn" onClick={handleNext} style={{ width: '100%' }}>
-                                {currentQuestionIndex < totalQuestions - 1 ? 'Siguiente Pregunta' : 'Finalizar Test'}
+                            <button className="btn btn-primary next-btn" onClick={handleNext} style={{ width: '100%' }} disabled={isSubmitting}>
+                                {isSubmitting ? 'Finalizando...' : (currentQuestionIndex < totalQuestions - 1 ? 'Siguiente Pregunta' : 'Finalizar Test')}
                             </button>
                         </div>
                     )}
