@@ -176,6 +176,27 @@ export default function AdminDashboard() {
                         <p style={{ margin: 0, opacity: 0.7, fontSize: '0.9rem' }}>Upload JSON/JS files</p>
                     </div>
                 </div>
+
+                <div
+                    onClick={() => navigate('/admin/users')}
+                    className="glass-panel"
+                    style={{
+                        padding: '2rem',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '1.5rem',
+                        transition: 'transform 0.2s',
+                    }}
+                    onMouseOver={e => e.currentTarget.style.transform = 'translateY(-2px)'}
+                    onMouseOut={e => e.currentTarget.style.transform = 'translateY(0)'}
+                >
+                    <div style={{ fontSize: '2.5rem' }}>👥</div>
+                    <div style={{ textAlign: 'left' }}>
+                        <h2 style={{ marginBottom: '0.2rem', margin: 0 }}>Users</h2>
+                        <p style={{ margin: 0, opacity: 0.7, fontSize: '0.9rem' }}>View registered users</p>
+                    </div>
+                </div>
             </div>
 
             {/* Charts Section */}

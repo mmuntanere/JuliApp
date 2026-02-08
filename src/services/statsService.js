@@ -337,6 +337,9 @@ export const getAllUsersMetadata = async () => {
         const snapshot = await getDocs(collection(db, 'users'));
         return snapshot.docs.map(doc => ({
             id: doc.id,
+            email: doc.data().email,
+            displayName: doc.data().displayName,
+            photoURL: doc.data().photoURL,
             createdAt: doc.data().createdAt?.toDate() || new Date(0), // user must have createdAt
             lastLogin: doc.data().lastLogin?.toDate()
         }));
